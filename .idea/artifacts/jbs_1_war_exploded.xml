@@ -8,6 +8,9 @@
           <element id="module-output" name="jbs_1" />
         </element>
       </element>
+      <element id="directory" name="web">
+        <element id="dir-copy" path="C:/Tomcat/webapps" />
+      </element>
     </root>
   </artifact>
 </component>
