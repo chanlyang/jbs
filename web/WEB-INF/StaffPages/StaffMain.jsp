@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: 13251666588
   Date: 2018/9/6
-  Time: 18:06
+  Time: 18:14
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -16,7 +16,7 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>首页 · JBS后台管理员系统</title>
+    <title>首页 · JBS后台工作人员系统</title>
     <link rel="stylesheet" href="<%=basePath%>/frame/layui/css/layui.css">
     <link rel="stylesheet" href="<%=basePath%>/frame/static/css/style.css">
     <link rel="icon" href="<%=basePath%>/frame/static/image/code.png">
@@ -27,9 +27,9 @@
 <div class="layui-layout layui-layout-admin"> <!-- 添加skin-1类可手动修改主题为纯白，添加skin-2类可手动修改主题为蓝白 -->
     <!-- header -->
     <div class="layui-header my-header">
-        <a href="AdminMain.jsp">
+        <a href="AdminMain.html">
             <!--<img class="my-header-logo" src="" alt="logo">-->
-            <div class="my-header-logo">JBS后台管理员系统</div>
+            <div class="my-header-logo">JBS后台工作人员系统</div>
         </a>
         <div class="my-header-btn">
             <button class="layui-btn layui-btn-small btn-nav"><i class="layui-icon">&#xe65f;</i></button>
@@ -46,7 +46,7 @@
                 </dl>
             </li>
             <li class="layui-nav-item">
-                <a class="name" href="javascript:;"><img src="./frame/static/image/code.png" alt="logo"> Admin </a>
+                <a class="name" href="javascript:;"><img src="./frame/static/image/code.png" alt="logo"> Staff </a>
                 <dl class="layui-nav-child">
                     <dd><a href="/"><i class="layui-icon">&#x1006;</i>退出</a></dd>
                 </dl>
@@ -60,31 +60,23 @@
             <!-- 左侧主菜单添加选项卡监听 -->
             <ul class="layui-nav layui-nav-tree" lay-filter="side-main">
                 <li class="layui-nav-item  layui-nav-itemed">
-                    <a href="javascript:;"><i class="layui-icon">&#xe620;</i>用户管理</a>
+                    <a href="javascript:;"><i class="layui-icon">&#xe620;</i>租车管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" href-url="demo/CustomQuery.html"><i class="layui-icon">&#xe621;</i>客户管理</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/StaffQuery.html"><i class="layui-icon">&#xe621;</i>员工管理</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/AdminQuery.html"><i class="layui-icon">&#xe621;</i>管理员管理</a></dd>
+                        <dd><a href="javascript:;" href-url="demo/RentList.html"><i class="layui-icon">&#xe621;</i>租赁单</a></dd>
+                        <dd><a href="javascript:;" href-url="demo/BackList.html"><i class="layui-icon">&#xe621;</i>还车单</a></dd>
+                        <dd><a href="javascript:;" href-url="demo/AutoChange.html"><i class="layui-icon">&#xe621;</i>租车变更处理</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;"><i class="layui-icon">&#xe628;</i>汽车管理</a>
+                    <a href="javascript:;"><i class="layui-icon">&#xe628;</i>汽车信息查询</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" href-url="demo/AutoManage.html"><i class="layui-icon">&#xe621;</i>汽车管理</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/MoneyChange.html"><i class="layui-icon">&#xe621;</i>租金变更记录管理</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:;"><i class="layui-icon">&#xe600;</i>租车/还车管理</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" href-url="demo/RentManage.html"><i class="layui-icon">&#xe621;</i>租车管理</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/BackManage.html"><i class="layui-icon">&#xe621;</i>还车管理</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/Historymanage.html"><i class="layui-icon">&#xe621;</i>租/还车记录管理</a></dd>
+                        <dd><a href="javascript:;" href-url="demo/AutoQuery.html"><i class="layui-icon">&#xe621;</i>汽车查询</a></dd>
+                        <dd><a href="javascript:;" href-url="demo/MoneyChangeQuery.html"><i class="layui-icon">&#xe621;</i>租金变更记录查询</a></dd>
+                        <dd><a href="javascript:;" href-url="demo/HistoryQuery.html"><i class="layui-icon">&#xe621;</i>租/还车记录查询</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item"><a target="_blank" href=""><i class="layui-icon">&#xe61e;</i>JBS租车网</a></li>
             </ul>
-
         </div>
     </div>
     <!-- body -->
