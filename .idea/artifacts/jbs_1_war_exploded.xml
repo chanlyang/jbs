@@ -7,10 +7,7 @@
           <element id="module-output" name="jbs_1" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="log4j-1.2.8" />
-          <element id="library" level="project" name="ojdbc6" />
-          <element id="library" level="project" name="jstl" />
-          <element id="library" level="project" name="standard" />
+          <element id="library" level="project" name="lib" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="jbs_1/web/Web" />
