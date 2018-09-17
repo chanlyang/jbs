@@ -7,7 +7,7 @@ import jbs.util.Log;
 
 public class UserBiz {
     public User login(String uname, String pwd) throws Exception {
-        Log.logger.info("login : uname=" + uname  + "---pwd=" + pwd);
+        System.out.println(uname+" "+pwd);
         User user = null;
         if(uname != null && pwd!= null && !uname.equals("") && !pwd.equals("")) {
             UserDao dao = new UserDao();

@@ -33,6 +33,7 @@
         <div class="layui-input-inline">
             <input type="password" name="password" lay-verify="password" placeholder="密码" autocomplete="off"
                    class="layui-input">
+            <p>${message}</p>
         </div>
         <div class="layui-input-inline login-btn">
             <button type="submit" class="layui-btn">登录</button>
@@ -46,21 +47,8 @@
 <script src="<%=basePath%>/frame/layui/layui.js"></script>
 <script type="text/javascript">
     layui.use(['form'], function () {
-
-        // 操作对象
         var form = layui.form
             , $ = layui.jquery;
-
-        // you code ...
-        form.verify({
-            username:function(value){
-                if(value.length == 0){
-                    return '用户名不能为空';
-                }
-            }
-            ,password: [/(.+){6,12}$/, '密码必须6到12位']
-        });
-
     });
 </script>
 </body>

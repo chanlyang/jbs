@@ -10,6 +10,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,9 +18,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>首页 · JBS后台工作人员系统</title>
-    <link rel="stylesheet" href="<%=basePath%>/frame/layui/css/layui.css">
-    <link rel="stylesheet" href="<%=basePath%>/frame/static/css/style.css">
-    <link rel="icon" href="<%=basePath%>/frame/static/image/code.png">
+    <link rel="stylesheet" href="../frame/layui/css/layui.css">
+    <link rel="stylesheet" href="../frame/static/css/style.css">
+    <link rel="icon" href="../frame/static/image/code.png">
 </head>
 <body>
 
@@ -27,7 +28,7 @@
 <div class="layui-layout layui-layout-admin"> <!-- 添加skin-1类可手动修改主题为纯白，添加skin-2类可手动修改主题为蓝白 -->
     <!-- header -->
     <div class="layui-header my-header">
-        <a href="AdminMain.html">
+        <a href="/WEB-INF/StaffPages/StaffMain.jsp">
             <!--<img class="my-header-logo" src="" alt="logo">-->
             <div class="my-header-logo">JBS后台工作人员系统</div>
         </a>
@@ -46,9 +47,9 @@
                 </dl>
             </li>
             <li class="layui-nav-item">
-                <a class="name" href="javascript:;"><img src="./frame/static/image/code.png" alt="logo"> Staff </a>
+                <a class="name" href="javascript:;"><img src="../frame/static/image/code.png" alt="logo"> Staff </a>
                 <dl class="layui-nav-child">
-                    <dd><a href="/"><i class="layui-icon">&#x1006;</i>退出</a></dd>
+                    <dd><a href="<%=basePath%>Login.jsp"><i class="layui-icon">&#x1006;</i>退出</a></dd>
                 </dl>
             </li>
         </ul>
@@ -113,8 +114,8 @@
     </table>
 </div>
 
-<script type="text/javascript" src="<%=basePath%>/frame/layui/layui.js"></script>
-<script type="text/javascript" src="<%=basePath%>/frame/static/js/vip_comm.js"></script>
+<script type="text/javascript" src="../frame/layui/layui.js"></script>
+<script type="text/javascript" src="../frame/static/js/vip_comm.js"></script>
 <script type="text/javascript">
     layui.use(['layer','vip_nav'], function () {
 
@@ -124,9 +125,9 @@
             ,$          = layui.jquery;
 
         // 顶部左侧菜单生成 [请求地址,过滤ID,是否展开,携带参数]
-        vipNav.top_left('<%=basePath%>/json/nav_top_left.json','side-top-left',false);
+       // vipNav.top_left('../json/nav_top_left.json','side-top-left',false);
         // 主体菜单生成 [请求地址,过滤ID,是否展开,携带参数]
-        vipNav.main('<%=basePath%>/json/nav_main.json','side-main',true);
+        //vipNav.main('../json/nav_main.json','side-main',true);
 
         // you code ...
 

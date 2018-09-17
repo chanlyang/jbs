@@ -17,9 +17,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>首页 · JBS后台管理员系统</title>
-    <link rel="stylesheet" href="<%=basePath%>/frame/layui/css/layui.css">
-    <link rel="stylesheet" href="<%=basePath%>/frame/static/css/style.css">
-    <link rel="icon" href="<%=basePath%>/frame/static/image/code.png">
+    <link rel="stylesheet" href="<%=basePath%>frame/layui/css/layui.css">
+    <link rel="stylesheet" href="<%=basePath%>frame/static/css/style.css">
+    <link rel="icon" href="<%=basePath%>frame/static/image/code.png">
 </head>
 <body>
 
@@ -48,7 +48,7 @@
             <li class="layui-nav-item">
                 <a class="name" href="javascript:;"><img src="./frame/static/image/code.png" alt="logo"> Admin </a>
                 <dl class="layui-nav-child">
-                    <dd><a href="/"><i class="layui-icon">&#x1006;</i>退出</a></dd>
+                    <dd><a href="<%=basePath%>Login.jsp"><i class="layui-icon">&#x1006;</i>退出</a></dd>
                 </dl>
             </li>
         </ul>
@@ -62,7 +62,7 @@
                 <li class="layui-nav-item  layui-nav-itemed">
                     <a href="javascript:;"><i class="layui-icon">&#xe620;</i>用户管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" href-url="demo/CustomQuery.html"><i class="layui-icon">&#xe621;</i>客户管理</a></dd>
+                        <dd><a href="javascript:;" href-url="<%=basePath%>CustomServlet"><i class="layui-icon">&#xe621;</i>客户管理</a></dd>
                         <dd><a href="javascript:;" href-url="demo/StaffQuery.html"><i class="layui-icon">&#xe621;</i>员工管理</a></dd>
                         <dd><a href="javascript:;" href-url="demo/AdminQuery.html"><i class="layui-icon">&#xe621;</i>管理员管理</a></dd>
                     </dl>
@@ -121,8 +121,8 @@
     </table>
 </div>
 
-<script type="text/javascript" src="<%=basePath%>/frame/layui/layui.js"></script>
-<script type="text/javascript" src="<%=basePath%>/frame/static/js/vip_comm.js"></script>
+<script type="text/javascript" src="<%=basePath%>frame/layui/layui.js"></script>
+<script type="text/javascript" src="<%=basePath%>frame/static/js/vip_comm.js"></script>
 <script type="text/javascript">
     layui.use(['layer','vip_nav'], function () {
 
@@ -132,9 +132,9 @@
             ,$          = layui.jquery;
 
         // 顶部左侧菜单生成 [请求地址,过滤ID,是否展开,携带参数]
-        vipNav.top_left('<%=basePath%>/json/nav_top_left.json','side-top-left',false);
+        //vipNav.top_left('<%=basePath%>json/nav_top_left.json','side-top-left',false);
         // 主体菜单生成 [请求地址,过滤ID,是否展开,携带参数]
-        vipNav.main('<%=basePath%>/json/nav_main.json','side-main',true);
+        //vipNav.main('<%=basePath%>json/nav_main.json','side-main',true);
 
         // you code ...
 

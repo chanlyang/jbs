@@ -17,26 +17,24 @@ public class UserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         String name = request.getParameter("uname");
-        System.out.println(name);
         session.setAttribute("uname", name);
         String pwd = request.getParameter("password");
         UserBiz biz = new UserBiz();
-        try {
+        try{
             User user = biz.login(name,pwd);
             int role = user.getUrole();
+            System.out.println(role);
             if(role == 1){
                 request.getRequestDispatcher("/Login.jsp").forward(request,response);
             }else if(role ==2){
                 request.getRequestDispatcher("/WEB-INF/StaffPages/StaffMain.jsp").forward(request,response);
             }else if(role == 3) {
-                request.getRequestDispatcher("/WEB-INF/AdminPages/AdminMain.jsp").forward(request, response);
-            }else{
-                request.setAttribute("message", "您的账号或密码有误，请重新登录！");
-                RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
-                rd.forward(request, response);
+                request.getRequestDispatcher("/WEB-INF/AdminPages/AdminMain.jsp").forward(request,response);
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+        }catch (Exception e){
+            request.setAttribute("message", "您的账号或密码有误，请重新登录！");
+            RequestDispatcher rd = request.getRequestDispatcher("/Login.jsp");
+            rd.forward(request, response);
         }
     }
 
