@@ -1,4 +1,4 @@
-package jbs.action;
+package jbs.backaction;
 
 import jbs.Entity.User;
 import jbs.biz.UserBiz;

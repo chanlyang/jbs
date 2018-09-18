@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: 13251666588
   Date: 2018/9/6
-  Time: 18:06
+  Time: 18:14
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -10,6 +10,7 @@
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,9 +18,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>首页 · JBS后台管理员系统</title>
-    <link rel="stylesheet" href="<%=basePath%>frame/layui/css/layui.css">
-    <link rel="stylesheet" href="<%=basePath%>frame/static/css/style.css">
-    <link rel="icon" href="<%=basePath%>frame/static/image/code.png">
+    <link rel="stylesheet" href="../frame/layui/css/layui.css">
+    <link rel="stylesheet" href="../frame/static/css/style.css">
+    <link rel="icon" href="../frame/static/image/code.png">
 </head>
 <body>
 
@@ -27,7 +28,7 @@
 <div class="layui-layout layui-layout-admin"> <!-- 添加skin-1类可手动修改主题为纯白，添加skin-2类可手动修改主题为蓝白 -->
     <!-- header -->
     <div class="layui-header my-header">
-        <a href="AdminMain.jsp">
+        <a href="/WEB-INF/AdminPages/AdminMain.jsp">
             <!--<img class="my-header-logo" src="" alt="logo">-->
             <div class="my-header-logo">JBS后台管理员系统</div>
         </a>
@@ -46,7 +47,7 @@
                 </dl>
             </li>
             <li class="layui-nav-item">
-                <a class="name" href="javascript:;"><img src="./frame/static/image/code.png" alt="logo"> Admin </a>
+                <a class="name" href="javascript:;"><img src="../frame/static/image/code.png" alt="logo"> Admin </a>
                 <dl class="layui-nav-child">
                     <dd><a href="<%=basePath%>Login.jsp"><i class="layui-icon">&#x1006;</i>退出</a></dd>
                 </dl>
@@ -63,28 +64,27 @@
                     <a href="javascript:;"><i class="layui-icon">&#xe620;</i>用户管理</a>
                     <dl class="layui-nav-child">
                         <dd><a href="javascript:;" href-url="<%=basePath%>CustomServlet"><i class="layui-icon">&#xe621;</i>客户管理</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/StaffQuery.html"><i class="layui-icon">&#xe621;</i>员工管理</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/AdminQuery.html"><i class="layui-icon">&#xe621;</i>管理员管理</a></dd>
+                        <dd><a href="javascript:;" href-url="<%=basePath%>StaffServlet"><i class="layui-icon">&#xe621;</i>员工管理</a></dd>
+                        <dd><a href="javascript:;" href-url="demo/AutoChange.html"><i class="layui-icon">&#xe621;</i>管理员管理</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;"><i class="layui-icon">&#xe628;</i>汽车管理</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" href-url="demo/AutoManage.html"><i class="layui-icon">&#xe621;</i>汽车管理</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/MoneyChange.html"><i class="layui-icon">&#xe621;</i>租金变更记录管理</a></dd>
-                    </dl>
+                <a href="javascript:;"><i class="layui-icon">&#xe628;</i>汽车管理</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" href-url="demo/AutoQuery.html"><i class="layui-icon">&#xe621;</i>汽车管理</a></dd>
+                    <dd><a href="javascript:;" href-url="demo/MoneyChangeQuery.html"><i class="layui-icon">&#xe621;</i>租金变更记录管理</a></dd>
+                </dl>
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;"><i class="layui-icon">&#xe600;</i>租车/还车管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" href-url="demo/RentManage.html"><i class="layui-icon">&#xe621;</i>租车管理</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/BackManage.html"><i class="layui-icon">&#xe621;</i>还车管理</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/Historymanage.html"><i class="layui-icon">&#xe621;</i>租/还车记录管理</a></dd>
+                        <dd><a href="javascript:;" href-url="demo/AutoQuery.html"><i class="layui-icon">&#xe621;</i>租车管理</a></dd>
+                        <dd><a href="javascript:;" href-url="demo/MoneyChangeQuery.html"><i class="layui-icon">&#xe621;</i>还车管理</a></dd>
+                        <dd><a href="javascript:;" href-url="demo/MoneyChangeQuery.html"><i class="layui-icon">&#xe621;</i>租/还车记录管理</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item"><a target="_blank" href=""><i class="layui-icon">&#xe61e;</i>JBS租车网</a></li>
             </ul>
-
         </div>
     </div>
     <!-- body -->
@@ -121,8 +121,8 @@
     </table>
 </div>
 
-<script type="text/javascript" src="<%=basePath%>frame/layui/layui.js"></script>
-<script type="text/javascript" src="<%=basePath%>frame/static/js/vip_comm.js"></script>
+<script type="text/javascript" src="../frame/layui/layui.js"></script>
+<script type="text/javascript" src="../frame/static/js/vip_comm.js"></script>
 <script type="text/javascript">
     layui.use(['layer','vip_nav'], function () {
 
@@ -132,9 +132,9 @@
             ,$          = layui.jquery;
 
         // 顶部左侧菜单生成 [请求地址,过滤ID,是否展开,携带参数]
-        //vipNav.top_left('<%=basePath%>json/nav_top_left.json','side-top-left',false);
+        // vipNav.top_left('../json/nav_top_left.json','side-top-left',false);
         // 主体菜单生成 [请求地址,过滤ID,是否展开,携带参数]
-        //vipNav.main('<%=basePath%>json/nav_main.json','side-main',true);
+        //vipNav.main('../json/nav_main.json','side-main',true);
 
         // you code ...
 

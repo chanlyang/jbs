@@ -4,7 +4,29 @@ article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, s
 ol,ul{list-style:none;margin:0;padding:0;}
 blockquote,q{quotes:none;}
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+.conShow {
+	margin-top: 30px;
+}
 table{border-collapse:collapse;border-spacing:0;}
+td {
+	text-align: center;
+	border: 1px solid #dcdbdb;
+}
+
+.tdColor {
+	height: 40px;
+	background-color: #f2f2f2;
+	color: #438eb9;
+}
+.tdC {
+	color: #333;
+}
+.paging {
+	width: 100%;
+	margin-top: 50px;
+	margin-bottom: 90px;
+	text-align: right;
+}
 /* start editing from here */
 a{text-decoration:none;}
 .txt-rt{text-align:right;}/* text align right */
