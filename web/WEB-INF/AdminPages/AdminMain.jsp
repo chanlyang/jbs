@@ -71,7 +71,7 @@
                 <li class="layui-nav-item">
                 <a href="javascript:;"><i class="layui-icon">&#xe628;</i>汽车管理</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;" href-url="demo/AutoQuery.html"><i class="layui-icon">&#xe621;</i>汽车管理</a></dd>
+                    <dd><a href="javascript:;" href-url="<%=basePath%>AutoServlet"><i class="layui-icon">&#xe621;</i>汽车管理</a></dd>
                     <dd><a href="javascript:;" href-url="demo/MoneyChangeQuery.html"><i class="layui-icon">&#xe621;</i>租金变更记录管理</a></dd>
                 </dl>
                 </li>

@@ -12,7 +12,6 @@
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,7 +24,37 @@
     <link rel="icon" href="<%=basePath%>frame/static/image/code.png">
 </head>
 <body class="body">
-
+<style>
+    .table4_3 table {
+        width:100%;
+        margin:15px 0;
+        border:0;
+    }
+    .table4_3 th {
+        background-color:#86A5FF;
+        color:#FFFFFF
+    }
+    .table4_3,.table4_3 th,.table4_3 td {
+        font-size:1.2em;
+        text-align:center;
+        padding:4px;
+        border-collapse:collapse;
+        white-space: nowrap;
+    }
+    .table4_3 th,.table4_3 td {
+        border: 1px solid #b9cbfe;
+        border-width:1px 0 1px 0;
+    }
+    .table4_3 tr {
+        border: 1px solid #b9cbfe;
+    }
+    .table4_3 tr:nth-child(odd){
+        background-color:#d6e1fe;
+    }
+    .table4_3 tr:nth-child(even){
+        background-color:#fdfdfd;
+    }
+</style>
 <!-- 工具集 -->
 <div class="my-btn-box">
     <span class="fl">
@@ -57,7 +86,7 @@
 </div>
 
 <!-- 表格 -->
-<table align="center">
+<table class="table4_3" align="center">
     <tr><td>客户编号</td><td>客户姓名</td><td>身份证号</td><td>电话号码</td><td>出生日期</td> </tr>
     <c:forEach items="${clist}" var="cinfo">
         <tr><td>${cinfo.cno}</td><td>${cinfo.cname}</td><td>${cinfo.cidcard}</td><td>${cinfo.phonenum}</td>
