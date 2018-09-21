@@ -35,7 +35,7 @@
         color:#FFFFFF
     }
     .table4_3,.table4_3 th,.table4_3 td {
-        font-size:1.2em;
+        font-size:1.1em;
         text-align:center;
         padding:4px;
         border-collapse:collapse;
@@ -108,10 +108,13 @@
 
 <!-- 表格 -->
 <table class="table4_3" align="center">
-    <tr><td>车牌号</td><td>汽车类型</td><td>品牌</td><td>汽车名称</td><td>颜色</td><td>座位数</td><td>档位类型</td><td>排量</td><td>日租金</td></tr>
+    <tr><td>选择</td><td>车牌号</td><td>汽车类型</td><td>品牌</td><td>汽车名称</td><td>颜色</td><td>座位数</td><td>档位类型</td><td>排量</td><td>日租金</td><td>操作</td></tr>
     <c:forEach items="${alist}" var="ainfo">
-        <tr><td>${ainfo.autocard}</td><td>${ainfo.atype}</td><td>${ainfo.bname}</td><td>${ainfo.tname}</td><td>${ainfo.color}</td><td>${ainfo.seat}</td>
-            <td>${ainfo.gear}</td><td>${ainfo.tubo}</td><td>${ainfo.dayrent}</td></tr>
+        <tr><td><input type="checkbox" name="select" value="${ainfo.autocard}"></td><td>${ainfo.autocard}</td><td>${ainfo.atype}</td><td>${ainfo.bname}</td><td>${ainfo.tname}</td><td>${ainfo.color}</td><td>${ainfo.seat}</td>
+            <td>${ainfo.gear}</td><td>${ainfo.tubo}</td><td>${ainfo.dayrent}</td>
+            <td><a class="layui-btn layui-btn-mini" lay-event="detail" href="<%=basePath%>AutoDetailServlet?autocard=${ainfo.autocard}">查看</a>
+                <a class="layui-btn layui-btn-mini layui-btn-normal" lay-event="edit" href="<%=basePath%>AutoUpdateServlet?autocard=${ainfo.autocard}">编辑</a>
+                <a class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del">删除</a></td></tr>
     </c:forEach>
     <tr><td colspan="9">
         <table id="tblTurnPage" cellSpacing="0" cellPadding="1" width="100%" border="0" style="font-family:arial;color:red;font-size:12px;">
@@ -119,10 +122,10 @@
                 <td>总记录数：${tp.allRows}</td>
                 <td>总页数：${tp.allPages}</td>
                 <td>当前页：${tp.page}</td>
-                <td><a href="CustomServlet?page=1&uname=${uname}&beginDate=${begin}&endDate=${end}">首页|</a>
-                    <a href="CustomServlet?page=${tp.page-1}&uname=${uname}&beginDate=${begin}&endDate=${end}">《前页|</a>
-                    <a href="CustomServlet?page=${tp.page+1}&uname=${uname}&beginDate=${begin}&endDate=${end}">后页》|</a>
-                    <a href="CustomServlet?page=${tp.allPages}&uname=${uname}&beginDate=${begin}&endDate=${end}">末页|</a></td>
+                <td><a href="AutoServlet?page=1&uname=${uname}&beginDate=${begin}&endDate=${end}">首页|</a>
+                    <a href="AutoServlet?page=${tp.page-1}&uname=${uname}&beginDate=${begin}&endDate=${end}">《前页|</a>
+                    <a href="AutoServlet?page=${tp.page+1}&uname=${uname}&beginDate=${begin}&endDate=${end}">后页》|</a>
+                    <a href="AutoServlet?page=${tp.allPages}&uname=${uname}&beginDate=${begin}&endDate=${end}">末页|</a></td>
                 <td >跳转到:第<input type="text" size="3" >页<input type="button" value="go"></td>
             </tr>
         </table></td></tr>
@@ -131,9 +134,5 @@
 <script type="text/javascript" src="../frame/layui/layui.js"></script>
 <script type="text/javascript" src="../js/index.js"></script>
 
-<!-- 表格操作按钮集 -->
-<script type="text/html" id="barOption">
-    <a class="layui-btn layui-btn-mini" lay-event="detail">查看</a>
-</script>
 </body>
 </html>

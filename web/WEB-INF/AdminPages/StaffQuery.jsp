@@ -25,7 +25,37 @@
     <link rel="icon" href="../frame/static/image/code.png">
 </head>
 <body class="body">
-
+<style>
+    .table4_3 table {
+        width:100%;
+        margin:15px 0;
+        border:0;
+    }
+    .table4_3 th {
+        background-color:#86A5FF;
+        color:#FFFFFF
+    }
+    .table4_3,.table4_3 th,.table4_3 td {
+        font-size:1.2em;
+        text-align:center;
+        padding:4px;
+        border-collapse:collapse;
+        white-space: nowrap;
+    }
+    .table4_3 th,.table4_3 td {
+        border: 1px solid #b9cbfe;
+        border-width:1px 0 1px 0;
+    }
+    .table4_3 tr {
+        border: 1px solid #b9cbfe;
+    }
+    .table4_3 tr:nth-child(odd){
+        background-color:#d6e1fe;
+    }
+    .table4_3 tr:nth-child(even){
+        background-color:#fdfdfd;
+    }
+</style>
 <!-- 工具集 -->
 <div class="my-btn-box">
     <span class="fl">
@@ -59,11 +89,14 @@
 </div>
 
 <!-- 表格 -->
-<table align="center">
-    <tr><td>员工号</td><td>员工姓名</td><td>性别</td><td>电话号码</td><td>出生日期</td><td>身份证</td></tr>
+<table align="center" class="table4_3">
+    <tr><td>选择</td><td>员工号</td><td>员工姓名</td><td>性别</td><td>电话号码</td><td>出生日期</td><td>身份证</td><td>操作</td></tr>
     <c:forEach items="${slist}" var="sinfo">
-        <tr><td>${sinfo.sno}</td><td>${sinfo.sname}</td><td>${sinfo.sex}</td><td>${sinfo.phonenum}</td>
-            <td> <fmt:formatDate value="${sinfo.birthday}" pattern="yyyy/MM/dd"/> </td><td>${sinfo.sidcard}</td></tr>
+        <tr><td><input type="checkbox" name="select" value="${sinfo.sno}"></td><td>${sinfo.sno}</td><td>${sinfo.sname}</td><td>${sinfo.sex}</td><td>${sinfo.phonenum}</td>
+            <td> <fmt:formatDate value="${sinfo.birthday}" pattern="yyyy/MM/dd"/> </td><td>${sinfo.sidcard}</td>
+            <td><a class="layui-btn layui-btn-mini" lay-event="detail">查看</a>
+                <a class="layui-btn layui-btn-mini layui-btn-normal" lay-event="edit">编辑</a>
+                <a class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del">删除</a></td></tr>
     </c:forEach>
     <tr><td colspan="6">
         <table id="tblTurnPage" cellSpacing="0" cellPadding="1" width="100%" border="0" style="font-family:arial;color:red;font-size:12px;">
@@ -71,10 +104,10 @@
                 <td>总记录数：${tp.allRows}</td>
                 <td>总页数：${tp.allPages}</td>
                 <td>当前页：${tp.page}</td>
-                <td><a href="CustomServlet?page=1&uname=${uname}&beginDate=${begin}&endDate=${end}">首页|</a>
-                    <a href="CustomServlet?page=${tp.page-1}&uname=${uname}&beginDate=${begin}&endDate=${end}">《前页|</a>
-                    <a href="CustomServlet?page=${tp.page+1}&uname=${uname}&beginDate=${begin}&endDate=${end}">后页》|</a>
-                    <a href="CustomServlet?page=${tp.allPages}&uname=${uname}&beginDate=${begin}&endDate=${end}">末页|</a></td>
+                <td><a href="StaffServlet?page=1&uname=${uname}&beginDate=${begin}&endDate=${end}">首页|</a>
+                    <a href="StaffServlet?page=${tp.page-1}&uname=${uname}&beginDate=${begin}&endDate=${end}">《前页|</a>
+                    <a href="StaffServlet?page=${tp.page+1}&uname=${uname}&beginDate=${begin}&endDate=${end}">后页》|</a>
+                    <a href="StaffServlet?page=${tp.allPages}&uname=${uname}&beginDate=${begin}&endDate=${end}">末页|</a></td>
                 <td >跳转到:第<input type="text" size="3" >页<input type="button" value="go"></td>
             </tr>
         </table></td></tr>

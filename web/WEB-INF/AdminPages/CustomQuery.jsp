@@ -87,10 +87,13 @@
 
 <!-- 表格 -->
 <table class="table4_3" align="center">
-    <tr><td>客户编号</td><td>客户姓名</td><td>身份证号</td><td>电话号码</td><td>出生日期</td> </tr>
+    <tr><td>选择</td><td>客户编号</td><td>客户姓名</td><td>身份证号</td><td>电话号码</td><td>出生日期</td><td>操作</td></tr>
     <c:forEach items="${clist}" var="cinfo">
-        <tr><td>${cinfo.cno}</td><td>${cinfo.cname}</td><td>${cinfo.cidcard}</td><td>${cinfo.phonenum}</td>
-            <td> <fmt:formatDate value="${cinfo.birthday}" pattern="yyyy/MM/dd"/> </td></tr>
+        <tr><td><input type="checkbox" name="select" value="${cinfo.cno}"></td><td>${cinfo.cno}</td><td>${cinfo.cname}</td><td>${cinfo.cidcard}</td><td>${cinfo.phonenum}</td>
+            <td> <fmt:formatDate value="${cinfo.birthday}" pattern="yyyy/MM/dd"/> </td>
+            <td><a class="layui-btn layui-btn-mini" lay-event="detail">查看</a>
+                <a class="layui-btn layui-btn-mini layui-btn-normal" lay-event="edit">编辑</a>
+                <a class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del">删除</a></td></tr>
     </c:forEach>
     <tr><td colspan="5">
         <table id="tblTurnPage" cellSpacing="0" cellPadding="1" width="100%" border="0" style="font-family:arial;color:red;font-size:12px;">

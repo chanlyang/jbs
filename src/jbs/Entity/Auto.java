@@ -6,13 +6,14 @@ public class Auto {
     private String tno;
     private String tname;
     private String color;
-    private int seat;
+    private Integer seat;
     private String gear;
     private String tubo;
     private double dayrent;
-    private byte[] pic;
     private String bname;
     private String atype;
+    private String picurl;
+    private String pic;
 
     public String getAtype() {
         return atype;
@@ -70,11 +71,11 @@ public class Auto {
         this.color = color;
     }
 
-    public int getSeat() {
+    public Integer getSeat() {
         return seat;
     }
 
-    public void setSeat(int seat) {
+    public void setSeat(Integer seat) {
         this.seat = seat;
     }
 
@@ -102,11 +103,19 @@ public class Auto {
         this.dayrent = dayrent;
     }
 
-    public byte[] getPic() {
+    public String getPicurl() {
+        return picurl;
+    }
+
+    public void setPicurl(String picurl) {
+        this.picurl = picurl;
+    }
+
+    public String getPic() {
         return pic;
     }
 
-    public void setPic(byte[] pic) {
+    public void setPic(String pic) {
         this.pic = pic;
     }
 }

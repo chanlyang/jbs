@@ -8,6 +8,7 @@ import jbs.dto.AutoInfo;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,6 +70,11 @@ public class AutoDao extends BaseDao{
         return alist;
     }
 
+    /**
+     * 添加车辆
+     * @param auto
+     * @throws Exception
+     */
     public void addAuto(Auto auto) throws Exception {
         String sql = "insert into auto values(?,?,?,?,?,?,?,?,?,?)";
         this.openConnection();
@@ -87,6 +93,11 @@ public class AutoDao extends BaseDao{
         ps.close();
     }
 
+    /**
+     * 汽车类型查询（下拉框使用）
+     * @return
+     * @throws Exception
+     */
     public List<AutoType> getAutoType() throws Exception {
         List<AutoType> atlist;
         String sql = "select tno,atype from autotype";
@@ -105,6 +116,11 @@ public class AutoDao extends BaseDao{
         return atlist;
     }
 
+    /**
+     * 汽车品牌查询（下拉框使用）
+     * @return
+     * @throws Exception
+     */
     public List<Brand> getBrand() throws Exception {
         List<Brand> blist;
         String sql = "select bno,bname from brand";
@@ -121,5 +137,64 @@ public class AutoDao extends BaseDao{
         rs.close();
         ps.close();
         return blist;
+    }
+
+    /**
+     * 查看某车辆细节
+     * @param autocard
+     * @return
+     * @throws Exception
+     */
+    public Auto getAutoDetail(String autocard) throws Exception {
+        Auto auto = null;
+        this.openConnection();
+        String sql = "select a.autocard,c.atype,b.bname,a.tname,a.color,a.seat,a.gear,a.tubo,a.dayrent,a.pic "
+                + "from auto a,brand b,autotype c "
+                + "where a.bno = b.bno and a.tno = c.tno and a.autocard=?";
+        PreparedStatement ps = this.conn.prepareStatement(sql);
+        ps.setString(1,autocard);
+        ResultSet rs = ps.executeQuery();
+        while(rs.next()){
+            auto = new Auto();
+            auto.setAutocard(rs.getString("autocard"));
+            auto.setAtype(rs.getString("atype"));
+            auto.setBname(rs.getString("bname"));
+            auto.setTname(rs.getString("tname"));
+            auto.setColor(rs.getString("color"));
+            auto.setSeat(rs.getInt("seat"));
+            auto.setGear(rs.getString("gear"));
+            auto.setTubo(rs.getString("tubo"));
+            auto.setDayrent(rs.getDouble("dayrent"));
+            auto.setPicurl(rs.getString("pic"));
+            break;
+        }
+        rs.close();
+        ps.close();
+        return auto;
+    }
+
+    /**
+     * 修改汽车信息
+     * @param auto
+     * @return
+     * @throws Exception
+     */
+    public int AutoUpdate(Auto auto) throws Exception {
+        int iRet;
+        this.openConnection();
+        String sql = "update auto set autocard=?,bno=?,tno=?,color=?,seat=?,gear=?,tubo=?,dayrent=? where autocard=?";
+        PreparedStatement ps = this.conn.prepareStatement(sql);
+        ps.setString(1,auto.getAutocard());
+        ps.setString(2,auto.getBno());
+        ps.setString(3,auto.getTno());
+        ps.setString(4,auto.getColor());
+        ps.setInt(5,auto.getSeat());
+        ps.setString(6,auto.getGear());
+        ps.setString(7,auto.getTubo());
+        ps.setDouble(8,auto.getDayrent());
+        ps.setString(9,auto.getAutocard());
+        iRet = ps.executeUpdate();
+        ps.close();
+        return iRet;
     }
 }

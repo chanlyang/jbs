@@ -25,6 +25,7 @@ public class AutoAddServlet extends HttpServlet {
         String tname = request.getParameter("tname");
         String color = request.getParameter("color");
         int seat = Integer.parseInt(request.getParameter("seat"));
+        String gear = request.getParameter("gear");
         String tubo = request.getParameter("tubo");
         Double dayrent = Double.parseDouble(request.getParameter("dayrent"));
         String picurl = request.getParameter("pic");
@@ -35,6 +36,7 @@ public class AutoAddServlet extends HttpServlet {
         auto.setTname(tname);
         auto.setColor(color);
         auto.setSeat(seat);
+        auto.setGear(gear);
         auto.setTubo(tubo);
         auto.setDayrent(dayrent);
         try {
