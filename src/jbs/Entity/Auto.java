@@ -10,7 +10,7 @@ public class Auto {
     private String gear;
     private String tubo;
     private double dayrent;
-    private byte[] pic;
+    private String pic;
     private String bname;
     private String atype;
 
@@ -102,11 +102,11 @@ public class Auto {
         this.dayrent = dayrent;
     }
 
-    public byte[] getPic() {
+    public String getPic() {
         return pic;
     }
 
-    public void setPic(byte[] pic) {
+    public void setPic(String pic) {
         this.pic = pic;
     }
 }

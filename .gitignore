@@ -1,0 +1,4 @@
+$ cat .gitignore
+# commit phirs
+*.log
+*.xml
