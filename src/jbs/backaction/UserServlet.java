@@ -23,7 +23,6 @@ public class UserServlet extends HttpServlet {
         try{
             User user = biz.login(name,pwd);
             int role = user.getUrole();
-            System.out.println(role);
             if(role == 1){
                 request.getRequestDispatcher("/Login.jsp").forward(request,response);
             }else if(role ==2){

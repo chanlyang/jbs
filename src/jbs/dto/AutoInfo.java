@@ -1,25 +1,15 @@
-package jbs.Entity;
+package jbs.dto;
 
-public class Auto {
+public class AutoInfo {
     private String autocard;
-    private String bno;
-    private String tno;
+    private String atype;
+    private String bname;
+    private String tname;
     private String color;
     private int seat;
     private String gear;
     private String tubo;
-    private Double dayrent;
-    private String picurl;
-    private byte[] pic;
-    private String tname;
-
-    public String getTname() {
-        return tname;
-    }
-
-    public void setTname(String tname) {
-        this.tname = tname;
-    }
+    private double dayrent;
 
     public String getAutocard() {
         return autocard;
@@ -29,20 +19,28 @@ public class Auto {
         this.autocard = autocard;
     }
 
-    public String getBno() {
-        return bno;
+    public String getAtype() {
+        return atype;
     }
 
-    public void setBno(String bno) {
-        this.bno = bno;
+    public void setAtype(String atype) {
+        this.atype = atype;
     }
 
-    public String getTno() {
-        return tno;
+    public String getBname() {
+        return bname;
     }
 
-    public void setTno(String tno) {
-        this.tno = tno;
+    public void setBname(String bname) {
+        this.bname = bname;
+    }
+
+    public String getTname() {
+        return tname;
+    }
+
+    public void setTname(String tname) {
+        this.tname = tname;
     }
 
     public String getColor() {
@@ -77,27 +75,11 @@ public class Auto {
         this.tubo = tubo;
     }
 
-    public Double getDayrent() {
+    public double getDayrent() {
         return dayrent;
     }
 
     public void setDayrent(double dayrent) {
         this.dayrent = dayrent;
-    }
-
-    public String getPicurl() {
-        return picurl;
-    }
-
-    public void setPicurl(String picurl) {
-        this.picurl = picurl;
-    }
-
-    public byte[] getPic() {
-        return pic;
-    }
-
-    public void setPic(byte[] pic) {
-        this.pic = pic;
     }
 }

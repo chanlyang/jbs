@@ -3,6 +3,7 @@ package jbs.backaction;
 import jbs.Entity.Auto;
 import jbs.Entity.TurnPage;
 import jbs.biz.AutoBiz;
+import jbs.dto.AutoInfo;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,6 +20,7 @@ public class AutoServlet extends HttpServlet {
         String atype = req.getParameter("atype");
         String bname = req.getParameter("bname");
         String tname = req.getParameter("tname");
+        String tubo = req.getParameter("tubo");
         String page = req.getParameter("page");
         try{
             TurnPage tp = new TurnPage();
@@ -30,13 +32,13 @@ public class AutoServlet extends HttpServlet {
                 }
                 tp.page = iPage;         //当前页号，永远不能<1
             }
-            List<Auto> alist = biz.getAutoInfo(atype,bname,tname,tp);
+            List<AutoInfo> alist = biz.getAutoInfo(atype,bname,tname,tubo,tp);
             req.setAttribute("alist",alist);
             req.setAttribute("atype",atype);
             req.setAttribute("bname",bname);
             req.setAttribute("tname",tname);
+            req.setAttribute("tubo",tubo);
             req.setAttribute("tp",tp);
-            System.out.println(atype+" "+bname+" "+tname);
             req.getRequestDispatcher("/WEB-INF/AdminPages/AutoQuery.jsp").forward(req, resp);
         }catch (Exception e){
                 e.printStackTrace();

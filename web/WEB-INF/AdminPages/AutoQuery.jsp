@@ -6,6 +6,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -52,19 +57,25 @@
 </style>
 <!-- 工具集 -->
 <div class="my-btn-box">
+     <span class="fl">
+        <a class="layui-btn layui-btn-danger radius btn-delect" id="btn-delete-all">批量删除</a>
+        <a class="layui-btn btn-add btn-default" id="btn-refresh" href="<%=basePath%>AutoServlet"><i class="layui-icon">&#x1002;</i></a>
+         <a class="layui-btn layui-btn-danger radius btn-add" id="btn-add" href="<%=basePath%>AutoAddServlet">添加</a>
+    </span>
     <span class="f2">
+        <form action="<%=basePath%>AutoServlet" method="post">
         <span class="layui-form-label">搜索条件：</span>
 		<div class="layui-input-inline">
-            <select name="quiz1">
+            <select name="atype">
                 <option value="">汽车类型</option>
-                <option value="轿车" >轿车</option>
+                <option value="高级轿车" >高级轿车</option>
                 <option value="面包车">面包车</option>
                 <option value="客车">客车</option>
 				<option value="卡车">卡车</option>
             </select>
         </div>
         <div class="layui-input-inline">
-            <select name="quiz2">
+            <select name="bname">
                 <option value="">汽车品牌</option>
                 <option value="奥迪" >奥迪</option>
                 <option value="奔驰">奔驰</option>
@@ -72,7 +83,7 @@
             </select>
         </div>
         <div class="layui-input-inline">
-            <select name="quiz3">
+            <select name="tname">
                 <option value="">汽车车型</option>
                 <option value="A6">A6</option>
                 <option value="Q7">Q7</option>
@@ -81,7 +92,7 @@
             </select>
         </div>
         <div class="layui-input-inline">
-            <select name="quiz4">
+            <select name="tubo">
                 <option value="">汽车排量</option>
                 <option value="1.6T">1.6T</option>
                 <option value="2.4T">2.4T</option>
@@ -89,8 +100,10 @@
 				<option value="4.2T">4.2T</option>
             </select>
         </div>
+            <button class="layui-btn mgl-20">查询</button>
+    </form>
     </span>
-    <button class="layui-btn mgl-20">查询</button>
+
 </div>
 
 <!-- 表格 -->

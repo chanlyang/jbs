@@ -2,7 +2,7 @@ package jbs.Entity;
 
 public class AutoType {
     private String tno;
-    private String aType;
+    private String atype;
 
     public String getTno() {
         return tno;
@@ -12,11 +12,11 @@ public class AutoType {
         this.tno = tno;
     }
 
-    public String getaType() {
-        return aType;
+    public String getAtype() {
+        return atype;
     }
 
-    public void setaType(String aType) {
-        this.aType = aType;
+    public void setAtype(String atype) {
+        this.atype = atype;
     }
 }

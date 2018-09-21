@@ -28,7 +28,7 @@
 <div class="layui-layout layui-layout-admin"> <!-- 添加skin-1类可手动修改主题为纯白，添加skin-2类可手动修改主题为蓝白 -->
     <!-- header -->
     <div class="layui-header my-header">
-        <a href="/WEB-INF/AdminPages/AdminMain.jsp">
+        <a href="<%=basePath%>AdminMain.jsp">
             <!--<img class="my-header-logo" src="" alt="logo">-->
             <div class="my-header-logo">JBS后台管理员系统</div>
         </a>

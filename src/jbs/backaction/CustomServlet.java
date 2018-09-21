@@ -38,7 +38,6 @@ public class CustomServlet extends HttpServlet {
                 tp.page = iPage;         //当前页号，永远不能<1
             }
             List<Custom> clist = biz.getCustomInfo(cno,cname,bday,tp);
-            System.out.println(cno+" "+cname+" "+bday+" "+tp);
             req.setAttribute("clist", clist);
             req.setAttribute("cno", cno);
             req.setAttribute("cname", cname);

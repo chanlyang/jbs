@@ -31,7 +31,6 @@ public class StaffServlet extends HttpServlet {
                 tp.page = iPage;         //当前页号，永远不能<1
             }
             List<Staff> slist = biz.getStaffInfo(sno,sname,sex,tp);
-            System.out.println(sno+" "+sname+" "+sex+" "+tp);
             req.setAttribute("slist", slist);
             req.setAttribute("sno", sno);
             req.setAttribute("sname", sname);
