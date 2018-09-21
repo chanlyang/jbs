@@ -4,14 +4,31 @@ public class Auto {
     private String autocard;
     private String bno;
     private String tno;
+    private String tname;
     private String color;
     private int seat;
     private String gear;
     private String tubo;
-    private Double dayrent;
-    private String picurl;
+    private double dayrent;
     private byte[] pic;
-    private String tname;
+    private String bname;
+    private String atype;
+
+    public String getAtype() {
+        return atype;
+    }
+
+    public void setAtype(String atype) {
+        this.atype = atype;
+    }
+
+    public String getBname() {
+        return bname;
+    }
+
+    public void setBname(String bname) {
+        this.bname = bname;
+    }
 
     public String getTname() {
         return tname;
@@ -77,20 +94,12 @@ public class Auto {
         this.tubo = tubo;
     }
 
-    public Double getDayrent() {
+    public double getDayrent() {
         return dayrent;
     }
 
     public void setDayrent(double dayrent) {
         this.dayrent = dayrent;
-    }
-
-    public String getPicurl() {
-        return picurl;
-    }
-
-    public void setPicurl(String picurl) {
-        this.picurl = picurl;
     }
 
     public byte[] getPic() {
