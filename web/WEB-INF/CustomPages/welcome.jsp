@@ -5,7 +5,7 @@
   Time: 14:44
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" pageEncoding="GB2312" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
     String path = request.getContextPath();
@@ -13,7 +13,7 @@
 %>
 <html>
 <head>
-    <title>Home</title>
+    <title> ◊“≥</title>
     <link href="<%=basePath%>css/style.css" rel="stylesheet" type="text/css" media="all"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -28,18 +28,18 @@
         images[2] = "<%=basePath%>images/banner3.jpg";
         images[3] = "<%=basePath%>images/banner4.jpg";
 
-        function displayNextImage() {//ÊòæÁ§∫‰∏ã‰∏ÄÂº†
-            x = (x === images.length - 1) ? 0 : x + 1; //Â¶ÇÊûúÊòØÊúÄÂêé‰∏ÄÂº†ÔºåÈÇ£‰πàÂàáÊç¢Âà∞Á¨¨‰∏ÄÂº†
-            document.getElementById("img").src = images[x];//ÊääËé∑ÂèñÂà∞ÁöÑÂÄºÁªôimgÊ†áÁ≠æÔºåËÆ©‰ªñÊòæÁ§∫
+        function displayNextImage() {//œ‘ æœ¬“ª’≈
+            x = (x === images.length - 1) ? 0 : x + 1; //»Áπ˚ «◊Ó∫Û“ª’≈£¨ƒ«√¥«–ªªµΩµ⁄“ª’≈
+            document.getElementById("img").src = images[x];//∞—ªÒ»°µΩµƒ÷µ∏¯img±Í«©£¨»√À˚œ‘ æ
         }
 
-        function displayPreviousImage() {//ÊòæÁ§∫‰∏ä‰∏ÄÂº†
-            x = (x <= 0) ? images.length - 1 : x - 1;//Ëé∑ÂèñÊï∞ÁªÑ‰∏≠ÁöÑ‰∏ä‰∏Ä‰∏™ÂÄº
-            document.getElementById("img").src = images[x]; //ÊääËé∑ÂèñÂà∞ÁöÑÂÄºÁªôimgÊ†áÁ≠æÔºåËÆ©‰ªñÊòæÁ§∫
+        function displayPreviousImage() {//œ‘ æ…œ“ª’≈
+            x = (x <= 0) ? images.length - 1 : x - 1;//ªÒ»° ˝◊È÷–µƒ…œ“ª∏ˆ÷µ
+            document.getElementById("img").src = images[x]; //∞—ªÒ»°µΩµƒ÷µ∏¯img±Í«©£¨»√À˚œ‘ æ
         }
 
-        function startTimer() {//ÂÆöÊó∂Âô®ÔºådomÂä†ËΩΩÂêéË∞ÉÁî®
-            setInterval(displayNextImage, 2000);  //ÊØèÈöî3ÁßíË∞ÉÁî®‰∏ÄÊ¨°ÊòæÁ§∫ÂõæÁâáÁöÑÊñπÊ≥ï„ÄÇ
+        function startTimer() {//∂® ±∆˜£¨domº”‘ÿ∫Ûµ˜”√
+            setInterval(displayNextImage, 2000);  //√ø∏Ù2√Îµ˜”√“ª¥Œœ‘ æÕº∆¨µƒ∑Ω∑®°£
         }
 
     </script>
@@ -52,17 +52,17 @@
                 <div class="header">
                     <div class="box_header_user_menu">
                         <ul class="user_menu">
-                            <li class="act first"><a href="">
-                                <div class="button-t"><span>Shipping &amp; Returns</span></div>
+                            <li class="act first"><a href="MainServlet">
+                                <div class="button-t"><span>∑µªÿ ◊“≥</span></div>
                             </a></li>
                             <li class=""><a href="">
-                                <div class="button-t"><span>Advanced Search</span></div>
+                                <div class="button-t"><span>∏ˆ»À÷––ƒ</span></div>
                             </a></li>
                             <li class=""><a href="">
-                                <div class="button-t"><span>Create an Account</span></div>
+                                <div class="button-t"><span>◊¢≤·</span></div>
                             </a></li>
                             <li class="last"><a href="">
-                                <div class="button-t"><span>Log in</span></div>
+                                <div class="button-t"><span>µ«¬º</span></div>
                             </a></li>
                         </ul>
                     </div>
@@ -82,132 +82,122 @@
                         </div>
                         <div class="content-wrapper">
                             <div class="content-top">
-                                <div class="box_wrapper"><h1>Ë∑ëËΩ¶</h1>
-                                </div>
-                                <div class="grid_1_of_3 images_1_of_3">
-                                    <c:forEach var="car1" items="${autos1}">
-                                        <div class="grid_1">
-                                            <a href="single.html"><img src="${car1.pic}"
-                                                                       title="continue reading"
-                                                                       alt=""></a>
-                                            <div class="grid_desc">
-                                                <p class="title">${car1.autocard} ${car1.color} ${car1.tname}</p>
-                                                <p class="title1">Lorem ipsum dolor sitconsectetuer adipiscing elit</p>
-                                                <div class="price" style="height: 19px;">
-                                                    <span class="reducedfrom">Ôø•${car1.dayrent}</span>
-                                                    <span class="actual">$12.00</span>
-                                                </div>
-                                                <div class="cart-button">
-                                                    <div class="cart">
-                                                        <a href="#"><img src="<%=basePath%>images/cart.png" alt=""/></a>
-                                                    </div>
-                                                    <button class="button"><span>Details</span></button>
-                                                    <div class="clear"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="clear"></div>
-                                    </c:forEach>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="paging" align="center">
-                                    <ul>
-                                        <li><a href="#" target="_parent">Previous</a></li>
-                                        <li><a href="#" target="_parent">1</a></li>
-                                        <li><a href="#" target="_parent">2</a></li>
-                                        <li><a href="#" target="_parent">3</a></li>
-                                        <li><a href="#" target="_parent">4</a></li>
-                                        <li><a href="#" target="_parent">5</a></li>
-                                        <li><a href="#" target="_parent">6</a></li>
-                                        <li><a href="#" target="_parent">Next</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div></div>
-                        <div class="content-top">
-                            <div class="box_wrapper"><h1>Featured Products</h1>
-                            </div>
-                            <div class="text">
-                                <div class="grid_1_of_3 images_1_of_3">
-                                    <c:forEach var="car2" items="${autos2}">
-                                        <div class="grid_1">
-                                            <a href="single.html"><img src="${car2.pic}"></a>
-                                            <div class="grid_desc">
-                                                <p class="title">${car2.autocard} ${car2.color} ${car2.tname}</p>
-                                                <p class="title1">Lorem ipsum dolor sitconsectetuer adipiscing elit</p>
-                                                <div class="price" style="height: 19px;">
-                                                    <span class="reducedfrom">$66.00</span>
-                                                    <span class="actual">$12.00</span>
-                                                </div>
-                                                <div class="cart-button">
-                                                    <div class="cart">
-                                                        <a href="#"><img src="<%=basePath%>images/cart.png" alt=""/></a>
-                                                    </div>
-                                                    <button class="button"><span>Details</span></button>
-                                                    <div class="clear"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="clear"></div>
-                                    </c:forEach>
-                                </div>
-                                <div class="clear"></div>
-                                <div class="paging" align="center">
-                                    <ul>
-                                        <li><a href="#" target="_parent">Previous</a></li>
-                                        <li><a href="#" target="_parent">1</a></li>
-                                        <li><a href="#" target="_parent">2</a></li>
-                                        <li><a href="#" target="_parent">3</a></li>
-                                        <li><a href="#" target="_parent">4</a></li>
-                                        <li><a href="#" target="_parent">5</a></li>
-                                        <li><a href="#" target="_parent">6</a></li>
-                                        <li><a href="#" target="_parent">Next</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="content-top">
-                                <div class="box_wrapper"><h1>Featured Products</h1>
+                                <div class="box_wrapper"><h1>∆’Õ®ΩŒ≥µ</h1>
                                 </div>
                                 <div class="text">
-                                    <div class="grid_1_of_3 images_1_of_3">
-                                        <c:forEach var="car3" items="${autos3}">
+                                    <c:forEach var="car1" items="${autos1}">
+                                        <div class="grid_1_of_3 images_1_of_3">
                                             <div class="grid_1">
-                                                <a href="single.html"><img src="${car3.pic}"></a>
+                                                <a href="single.html"><img src="${car1.pic}"
+                                                                           title="continue reading" alt=""></a>
                                                 <div class="grid_desc">
-                                                    <p class="title">${car3.autocard} ${car3.color} ${car3.tname}</p>
-                                                    <p class="title1">Lorem ipsum dolor sitconsectetuer adipiscing elit</p>
+                                                    <p class="title">∆∑≈∆£∫${car1.bname} ${car1.tname}</p>
+                                                    <p class="title1">—’…´£∫${car1.color}</p>
+                                                    <p class="title1">µ≤Œª£∫${car1.gear}</p>
+                                                    <p class="title1">◊˘Œª ˝£∫${car1.seat}</p>
+                                                    <p class="title1">≈≈¡ø£∫${car1.tubo}</p>
                                                     <div class="price" style="height: 19px;">
-                                                        <span class="reducedfrom">$66.00</span>
-                                                        <span class="actual">$12.00</span>
+                                                        <span class="reducedfrom">£§${car1.dayrent}</span>
+                                                       <%-- <span class="actual">$12.00</span>--%>
                                                     </div>
                                                     <div class="cart-button">
-                                                        <div class="cart">
-                                                            <a href="#"><img src="<%=basePath%>images/cart.png" alt=""/></a>
-                                                        </div>
-                                                        <button class="button"><span>Details</span></button>
+                                                        <button class="button"><span>¡¢º¥‘§‘º</span></button>
                                                         <div class="clear"></div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="clear"></div>
-                                        </c:forEach>
-                                    </div>
+                                        </div>
+                                    </c:forEach>
                                     <div class="clear"></div>
                                     <div class="paging" align="center">
                                         <ul>
-                                            <li><a href="#" target="_parent">Previous</a></li>
-                                            <li><a href="#" target="_parent">1</a></li>
-                                            <li><a href="#" target="_parent">2</a></li>
-                                            <li><a href="#" target="_parent">3</a></li>
-                                            <li><a href="#" target="_parent">4</a></li>
-                                            <li><a href="#" target="_parent">5</a></li>
-                                            <li><a href="#" target="_parent">6</a></li>
-                                            <li><a href="#" target="_parent">Next</a></li>
+                                            <ul>
+                                                <li><p>◊‹≥µ ˝£∫${tp1.allRows}</p></li>
+                                                <li><a href="CarAServlet?type=t001" target="_parent">≤Èø¥∏¸∂‡</a></li>
+                                            </ul>
                                         </ul>
                                     </div>
+                                    <div class="clear"></div>
                                 </div>
+
+                            </div>
+                            <div class="content-top">
+                                <div class="box_wrapper"><h1>∏ﬂ∂ÀΩŒ≥µ</h1>
+                                </div>
+                                <div class="text">
+                                    <c:forEach var="car2" items="${autos2}">
+                                        <div class="grid_1_of_3 images_1_of_3">
+                                            <div class="grid_1">
+                                                <a href="single.html"><img src="${car2.pic}"
+                                                                           title="continue reading" alt=""></a>
+                                                <div class="grid_desc">
+                                                    <p class="title">∆∑≈∆£∫${car2.bname} ${car2.tname}</p>
+                                                    <p class="title1">—’…´£∫${car2.color}</p>
+                                                    <p class="title1">µ≤Œª£∫${car2.gear}</p>
+                                                    <p class="title1">◊˘Œª ˝£∫${car2.seat}</p>
+                                                    <p class="title1">≈≈¡ø£∫${car2.tubo}</p>
+                                                    <div class="price" style="height: 19px;">
+                                                        <span class="reducedfrom">£§${car2.dayrent}</span>
+                                                    </div>
+                                                    <div class="cart-button">
+                                                        <button class="button"><span>¡¢º¥‘§‘º</span></button>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </c:forEach>
+                                    <div class="clear"></div>
+                                    <div class="paging" align="center">
+                                        <ul>
+                                            <ul>
+                                                <li><p>◊‹≥µ ˝£∫${tp2.allRows}</p></li>
+                                                <li><a href="CarAServlet?type=t002" target="_parent">≤Èø¥∏¸∂‡</a></li>
+                                            </ul>
+                                        </ul>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+
+                            </div>
+                            <div class="content-top">
+                                <div class="box_wrapper"><h1>–¬ƒ‹‘¥≥µ</h1>
+                                </div>
+                                <div class="text">
+                                    <c:forEach var="car3" items="${autos3}">
+                                        <div class="grid_1_of_3 images_1_of_3">
+                                            <div class="grid_1">
+                                                <a href="single.html"><img src="${car3.pic}"
+                                                                           title="continue reading" alt=""></a>
+                                                <div class="grid_desc">
+                                                    <p class="title">∆∑≈∆£∫${car3.bname} ${car3.tname}</p>
+                                                    <p class="title1">—’…´£∫${car3.color}</p>
+                                                    <p class="title1">µ≤Œª£∫${car3.gear}</p>
+                                                    <p class="title1">◊˘Œª ˝£∫${car3.seat}</p>
+                                                    <p class="title1">≈≈¡ø£∫${car3.tubo}</p>
+                                                    <div class="price" style="height: 19px;">
+                                                        <span class="reducedfrom">£§${car3.dayrent}</span>
+                                                    </div>
+                                                    <div class="cart-button">
+                                                        <button class="button"><span>¡¢º¥‘§‘º</span></button>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </c:forEach>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="paging" align="center">
+                                    <ul>
+                                        <li><p>◊‹≥µ ˝£∫${tp3.allRows}</p></li>
+                                        <li><a href="CarAServlet?type=t004" target="_parent">≤Èø¥∏¸∂‡</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -215,7 +205,7 @@
                     <div class="categories">
                         <div class="list-categories">
                             <div class="first-list">
-                                <div class="div_2"><a href="">È´òÁ´ØËΩøËΩ¶</a></div>
+                                <div class="div_2"><a href="CarAServlet?type=t001">∆’Õ®ΩŒ≥µ</a></div>
                                 <div class="div_img">
                                     <img src="<%=basePath%>images/car1.jpg" alt="Cars" title="Cars" width="60"
                                          height="39">
@@ -223,7 +213,7 @@
                                 <div class="clear"></div>
                             </div>
                             <div class="first-list">
-                                <div class="div_2"><a href="">ÊôÆÈÄöËΩøËΩ¶</a></div>
+                                <div class="div_2"><a href="CarAServlet?type=t002">∏ﬂ∂ÀΩŒ≥µ</a></div>
                                 <div class="div_img">
                                     <img src="<%=basePath%>images/car2.jpg" alt="Cars" title="Cars" width="60"
                                          height="39">
@@ -231,59 +221,55 @@
                                 <div class="clear"></div>
                             </div>
                             <div class="first-list">
-                                <div class="div_2"><a href="">Êñ∞ËÉΩÊ∫êËΩ¶</a></div>
+                                <div class="div_2"><a href="CarAServlet?type=t004">–¬ƒ‹‘¥≥µ</a></div>
                                 <div class="div_img">
                                     <img src="<%=basePath%>images/car3.jpg" alt="Cars" title="Cars" width="60"
                                          height="39">
                                 </div>
                                 <div class="clear"></div>
                             </div>
-                            <div class="first-list">
-                                <div class="div_2"><a href="">Â§ßÂûãÂÆ¢ËΩ¶</a></div>
-                                <div class="div_img">
-                                    <img src="<%=basePath%>images/car4.jpg" alt="Cars" title="Cars" width="60"
-                                         height="39">
-                                </div>
-                                <div class="clear"></div>
-                            </div>
                         </div>
-                        <div class="box">
+                        <%--<div class="box">
                             <div class="box-heading"><h1><a href="#">Cart:&nbsp;</a></h1></div>
                             <div class="box-content">
                                 Now in your cart&nbsp;<strong> 0 items</strong>
                             </div>
-                        </div>
+                        </div>--%>
                         <div class="box-title">
-                            <h1><span class="title-icon"></span><a href="">Branches</a></h1>
+                            <h1><span class="title-icon"></span><a href=""> ∫¿ª™ΩŒ≥µ</a></h1>
                         </div>
                         <div class="section group example">
+                            <div class="col_1_of_2 span_1_of_2">
+                                <img src="<%=basePath%>images/pic21.jpg" alt=""/>
+                                <img src="<%=basePath%>images/pic24.jpg" alt=""/>
+                                <img src="<%=basePath%>images/pic25.jpg" alt=""/>
+                                <img src="<%=basePath%>images/pic27.jpg" alt=""/>
+                            </div>
                             <div class="col_1_of_2 span_1_of_2">
                                 <img src="<%=basePath%>images/pic22.jpg" alt=""/>
                                 <img src="<%=basePath%>images/pic23.jpg" alt=""/>
                                 <img src="<%=basePath%>images/pic26.jpg" alt=""/>
                                 <img src="<%=basePath%>images/pic28.jpg" alt=""/>
-                                <div class="col_1_of_2 span_1_of_2">
-                                    <img src="<%=basePath%>images/pic22.jpg" alt=""/>
-                                    <img src="<%=basePath%>images/pic23.jpg" alt=""/>
-                                    <img src="<%=basePath%>images/pic26.jpg" alt=""/>
-                                    <img src="<%=basePath%>images/pic28.jpg" alt=""/>
-                                    <div class="clear"></div>
-                                </div>
-                                <div class="clear"></div>
                             </div>
+                            <div class="clear"></div>
                         </div>
                         <div class="clear"></div>
-                        <div class="footer-bottom">
-                            <div class="copy">
-                            </div>
-                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="footer-bottom">
+                    <div class="copy">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</div>
+</div>
 
 </body>
 </html>
+
+
 

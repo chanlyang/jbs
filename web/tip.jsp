@@ -33,8 +33,6 @@
 <script type="text/javascript" src="frame/layui/layui.js"></script>
 <script type="text/javascript">
     // you code ...
-
-
 </script>
 </body>
 </html>

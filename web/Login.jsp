@@ -5,7 +5,7 @@
   Time: 18:17
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" pageEncoding="GB2312" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -16,7 +16,7 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>ç™»å½•</title>
+    <title>µÇÂ¼</title>
     <link rel="stylesheet" href="frame/layui/css/layui.css">
     <link rel="stylesheet" href="frame/static/css/style.css">
     <link rel="icon" href="frame/static/image/code.png">
@@ -24,22 +24,22 @@
 <body>
 
 <div class="login-main">
-    <header class="layui-elip">åŽå°ç™»å½•</header>
+    <header class="layui-elip">»¶Ó­µÇÂ¼</header>
     <form class="layui-form" action="/UserServlet" method="post">
         <div class="layui-input-inline">
-            <input type="text" name="uname" lay-verify="uname" placeholder="ç”¨æˆ·å" autocomplete="off"
+            <input type="text" name="uname" lay-verify="uname" placeholder="ÓÃ»§Ãû" autocomplete="off"
                    class="layui-input">
         </div>
         <div class="layui-input-inline">
-            <input type="password" name="password" lay-verify="password" placeholder="å¯†ç " autocomplete="off"
+            <input type="password" name="password" lay-verify="password" placeholder="ÃÜÂë" autocomplete="off"
                    class="layui-input">
             <p>${message}</p>
         </div>
         <div class="layui-input-inline login-btn">
-            <button type="submit" class="layui-btn">ç™»å½•</button>
+            <button type="submit" class="layui-btn">µÇÂ¼</button>
         </div>
         <hr/>
-        <p><a href="javascript:;" class="fl">ç«‹å³æ³¨å†Œ</a><a href="javascript:;" class="fr">å¿˜è®°å¯†ç ï¼Ÿ</a></p>
+        <p><a href="javascript:;" class="fl">Á¢¼´×¢²á</a><%--<a href="javascript:;" class="fr">Íü¼ÇÃÜÂë£¿</a>--%></p>
     </form>
 </div>
 
