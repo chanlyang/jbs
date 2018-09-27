@@ -63,7 +63,7 @@
                 <li class="layui-nav-item  layui-nav-itemed">
                     <a href="javascript:;"><i class="layui-icon">&#xe620;</i>租车管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" href-url="demo/RentList.html"><i class="layui-icon">&#xe621;</i>租赁单</a></dd>
+                        <dd><a href="javascript:;" href-url="<%=basePath%>RentListServlet"><i class="layui-icon">&#xe621;</i>租赁单</a></dd>
                         <dd><a href="javascript:;" href-url="demo/BackList.html"><i class="layui-icon">&#xe621;</i>还车单</a></dd>
                         <dd><a href="javascript:;" href-url="demo/AutoChange.html"><i class="layui-icon">&#xe621;</i>租车变更处理</a></dd>
                     </dl>

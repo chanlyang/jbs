@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Staff {
     private String sno;
-    private String userid;
+    private int userid;
     private String sname;
     private String sex;
     private String phonenum;
@@ -51,11 +51,11 @@ public class Staff {
         this.sno = sno;
     }
 
-    public String getUserid() {
+    public int getUserid() {
         return userid;
     }
 
-    public void setUserid(String userid) {
+    public void setUserid(int userid) {
         this.userid = userid;
     }
 

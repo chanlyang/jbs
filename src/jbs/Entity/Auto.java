@@ -10,6 +10,7 @@ public class Auto {
     private String gear;
     private String tubo;
     private double dayrent;
+    private double extra;
     private String bname;
     private String atype;
     private String picurl;
@@ -117,5 +118,13 @@ public class Auto {
 
     public void setPic(String pic) {
         this.pic = pic;
+    }
+
+    public double getExtra() {
+        return extra;
+    }
+
+    public void setExtra(double extra) {
+        this.extra = extra;
     }
 }

@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package filter;
+package jbs.filter;
 
 
 import java.io.IOException;

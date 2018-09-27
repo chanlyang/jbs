@@ -10,6 +10,7 @@ public class AutoInfo {
     private String gear;
     private String tubo;
     private double dayrent;
+    private double extra;
 
     public String getAutocard() {
         return autocard;
@@ -81,5 +82,13 @@ public class AutoInfo {
 
     public void setDayrent(double dayrent) {
         this.dayrent = dayrent;
+    }
+
+    public double getExtra() {
+        return extra;
+    }
+
+    public void setExtra(double extra) {
+        this.extra = extra;
     }
 }

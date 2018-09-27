@@ -74,10 +74,17 @@
                 <input type="text" name="dayrent" lay-verify="price" autocomplete="off" class="layui-input" value="${auto.dayrent}" readonly>
             </div>
         </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">押金</label>
+            <div class="layui-input-inline" style="width: 100px;">
+                <input type="text" name="extra" lay-verify="price" autocomplete="off" class="layui-input" value="${auto.extra}" readonly>
+            </div>
+        </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">图片</label><img src="${auto.picurl}" alt="无法显示图片" name="pic"><br><br><br>
         <input class="layui-btn" lay-filter="demo2" type="submit" value="返回">
+        <input class="layui-btn" lay-filter="demo2" type="submit" value="返回" onclick="window.close()">
     </div>
     <br>
     <div>${msg}</div>

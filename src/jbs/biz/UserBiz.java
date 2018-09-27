@@ -5,6 +5,7 @@ import jbs.Entity.Custom;
 import jbs.Entity.Staff;
 import jbs.Entity.TurnPage;
 import jbs.Entity.User;
+import jbs.dao.AutoDao;
 import jbs.dao.UserDao;
 import jbs.util.Log;
 
@@ -53,4 +54,83 @@ public class UserBiz {
         }
         return sList;
     }
+
+    public Staff getStaffDetail(String sno) throws Exception {
+        Staff staff ;
+        UserDao dao = new UserDao();
+        try{
+            staff = dao.getStaffDetail(sno);
+        } catch (Exception e) {
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return staff;
+    }
+
+    public Custom getCustomDetail(String cno) throws Exception {
+        Custom custom;
+        UserDao dao = new UserDao();
+        try{
+            custom = dao.getCustomDetail(cno);
+        } catch (Exception e) {
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return custom;
+    }
+
+    public int CustomUpdate(Custom custom) throws Exception {
+        int iRet;
+        UserDao dao = new UserDao();
+        try{
+            iRet = dao.CustomUpdate(custom);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return iRet;
+    }
+
+    public boolean CustomDelete(Custom custom) throws Exception {
+        boolean b;
+        UserDao dao = new UserDao();
+        try {
+            b = dao.CustomDelete(custom);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return b;
+    }
+
+    public int StaffUpdate(Staff staff) throws Exception {
+        int iRet;
+        UserDao dao = new UserDao();
+        try{
+            iRet = dao.StaffUpdate(staff);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return iRet;
+    }
+
+    public boolean StaffDelete(Staff staff) throws Exception {
+        boolean b;
+        UserDao dao = new UserDao();
+        try {
+            b = dao.StaffDelete(staff);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return b;
+    }
+
 }

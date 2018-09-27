@@ -24,41 +24,16 @@
     <link rel="icon" href="../frame/static/image/code.png">
 </head>
 <body class="body">
-<style>
-    .table4_3 table {
-        width:100%;
-        margin:15px 0;
-        border:0;
+<script type="text/javascript">
+    function del() {
+        if(!confirm("您确认删除吗？")){
+            window.event.returnValue = false;
+        }
     }
-    .table4_3 th {
-        background-color:#86A5FF;
-        color:#FFFFFF
-    }
-    .table4_3,.table4_3 th,.table4_3 td {
-        font-size:1.1em;
-        text-align:center;
-        padding:4px;
-        border-collapse:collapse;
-        white-space: nowrap;
-    }
-    .table4_3 th,.table4_3 td {
-        border: 1px solid #b9cbfe;
-        border-width:1px 0 1px 0;
-    }
-    .table4_3 tr {
-        border: 1px solid #b9cbfe;
-    }
-    .table4_3 tr:nth-child(odd){
-        background-color:#d6e1fe;
-    }
-    .table4_3 tr:nth-child(even){
-        background-color:#fdfdfd;
-    }
-</style>
+</script>
 <!-- 工具集 -->
 <div class="my-btn-box">
      <span class="fl">
-        <a class="layui-btn layui-btn-danger radius btn-delect" id="btn-delete-all">批量删除</a>
         <a class="layui-btn btn-add btn-default" id="btn-refresh" href="<%=basePath%>AutoServlet"><i class="layui-icon">&#x1002;</i></a>
          <a class="layui-btn layui-btn-danger radius btn-add" id="btn-add" href="<%=basePath%>AutoAddServlet">添加</a>
     </span>
@@ -107,18 +82,20 @@
 </div>
 
 <!-- 表格 -->
-<table class="table4_3" align="center">
-    <tr><td>选择</td><td>车牌号</td><td>汽车类型</td><td>品牌</td><td>汽车名称</td><td>颜色</td><td>座位数</td><td>档位类型</td><td>排量</td><td>日租金</td><td>操作</td></tr>
+<form action="AutoDeleteAllServlet" method="post">
+<table class="layui-table" lay-even="" lay-skin="nob">
+    <tr><td>选择</td><td>车牌号</td><td>汽车类型</td><td>品牌</td><td>汽车名称</td><td>颜色</td><td>座位数</td><td>档位类型</td><td>排量</td><td>日租金</td><td>押金</td><td>操作</td></tr>
     <c:forEach items="${alist}" var="ainfo">
         <tr><td><input type="checkbox" name="select" value="${ainfo.autocard}"></td><td>${ainfo.autocard}</td><td>${ainfo.atype}</td><td>${ainfo.bname}</td><td>${ainfo.tname}</td><td>${ainfo.color}</td><td>${ainfo.seat}</td>
-            <td>${ainfo.gear}</td><td>${ainfo.tubo}</td><td>${ainfo.dayrent}</td>
+            <td>${ainfo.gear}</td><td>${ainfo.tubo}</td><td>${ainfo.dayrent}</td><td>${ainfo.extra}</td>
             <td><a class="layui-btn layui-btn-mini" lay-event="detail" href="<%=basePath%>AutoDetailServlet?autocard=${ainfo.autocard}">查看</a>
                 <a class="layui-btn layui-btn-mini layui-btn-normal" lay-event="edit" href="<%=basePath%>AutoUpdateServlet?autocard=${ainfo.autocard}">编辑</a>
-                <a class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del">删除</a></td></tr>
+                <a class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del" href="<%=basePath%>AutoDeleteServlet?autocard=${ainfo.autocard}" onclick="return del()">删除</a></td></tr>
     </c:forEach>
-    <tr><td colspan="9">
-        <table id="tblTurnPage" cellSpacing="0" cellPadding="1" width="100%" border="0" style="font-family:arial;color:red;font-size:12px;">
+    <tr><td colspan="11">
+        <table id="tblTurnPage" cellSpacing="0" cellPadding="1" width="100%" border="0" style="font-family:arial;color:red;font-size:15px;" >
             <tr>
+                <td> <input type="submit" class="layui-btn layui-btn-danger radius btn-delect" id="btn-delete-all" value="批量删除"></td>
                 <td>总记录数：${tp.allRows}</td>
                 <td>总页数：${tp.allPages}</td>
                 <td>当前页：${tp.page}</td>
@@ -126,11 +103,16 @@
                     <a href="AutoServlet?page=${tp.page-1}&uname=${uname}&beginDate=${begin}&endDate=${end}">《前页|</a>
                     <a href="AutoServlet?page=${tp.page+1}&uname=${uname}&beginDate=${begin}&endDate=${end}">后页》|</a>
                     <a href="AutoServlet?page=${tp.allPages}&uname=${uname}&beginDate=${begin}&endDate=${end}">末页|</a></td>
-                <td >跳转到:第<input type="text" size="3" >页<input type="button" value="go"></td>
+                <td >跳转到:第<input type="text" size="3" >页</td>
+                <td><input type="button" class="layui-btn layui-btn-danger radius btn-delect" value="go"></td>
+
             </tr>
-        </table></td></tr>
+        </table>
+
+    </td></tr>
 </table>
 
+</form>
 <script type="text/javascript" src="../frame/layui/layui.js"></script>
 <script type="text/javascript" src="../js/index.js"></script>
 

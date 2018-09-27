@@ -31,13 +31,13 @@
     <div class="layui-form-item">
         <label class="layui-form-label">车牌号</label>
         <div class="layui-input-inline">
-            <input type="text" name="autocard" lay-verify="autocard" value="${auto.autocard}" autocomplete="off" class="layui-input">
+            <input type="text" name="autocard" lay-verify="autocard" value="${auto.autocard}" readonly autocomplete="off" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">汽车类别</label>
         <div class="layui-input-block">
-            <select name="atype" lay-filter="aihao">
+            <select name="tno" lay-filter="aihao">
                 <optgroup>汽车类别</optgroup>
                 <option value="${auto.tno}" disabled="disabled" selected>${auto.atype}</option>
                 <c:forEach var="tp" items="${atlist}">
@@ -69,7 +69,7 @@
         <div class="layui-input-inline">
             <select name="color">
                 <option value="">颜色</option>
-                <option value="${auto.color}" selected disabled>${auto.color}</option>
+                <option value="${auto.color}" selected >${auto.color}</option>
                 <option value="黑色">黑色</option>
                 <option value="银色">银色</option>
                 <option value="红色">红色</option>
@@ -102,7 +102,7 @@
         <div class="layui-input-inline">
             <select name="tubo">
                 <option value="">排量</option>
-                <option value="${auto.tubo}">${auto.tubo}</option>
+                <option value="${auto.tubo}" selected>${auto.tubo}</option>
                 <option value="1.2T">1.2T</option>
                 <option value="1.6T">1.6T</option>
                 <option value="2.0T">2.0T</option>
@@ -125,6 +125,7 @@
         <label class="layui-form-label">上传图片</label><input class = "layui-btn" type="file" name="pic"><br><br><br>
         <input class="layui-btn" lay-submit="" lay-filter="demo2" type="submit" value="提交">
     </div>
+    <input type="hidden" name="cdate" id="clock">
     <br>
     <div>${msg}</div>
     <br>
@@ -168,6 +169,21 @@
             }
         });
     });
+</script>
+<script>
+    function showTime() {
+        var t = new Date();
+        var year = t.getFullYear();
+        var month = t.getMonth();
+        var day = t.getDate();
+        var week = t.getDay();
+        var arr = new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+        var hour = t.getHours();
+        var minute = t.getMinutes();
+        var showTime = year+"/"+month+"/"+day+" "+arr[week]+" "+hour+((minute<10)?":0":":")+minute+((hour>12)?".pm":".am");
+        document.getElementById("clock").value = showTime;
+    }
+    setInterval(showTime(),1000);
 </script>
 </body>
 </html>

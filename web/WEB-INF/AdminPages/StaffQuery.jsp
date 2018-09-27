@@ -25,38 +25,14 @@
     <link rel="icon" href="../frame/static/image/code.png">
 </head>
 <body class="body">
-<style>
-    .table4_3 table {
-        width:100%;
-        margin:15px 0;
-        border:0;
-    }
-    .table4_3 th {
-        background-color:#86A5FF;
-        color:#FFFFFF
-    }
-    .table4_3,.table4_3 th,.table4_3 td {
-        font-size:1.2em;
-        text-align:center;
-        padding:4px;
-        border-collapse:collapse;
-        white-space: nowrap;
-    }
-    .table4_3 th,.table4_3 td {
-        border: 1px solid #b9cbfe;
-        border-width:1px 0 1px 0;
-    }
-    .table4_3 tr {
-        border: 1px solid #b9cbfe;
-    }
-    .table4_3 tr:nth-child(odd){
-        background-color:#d6e1fe;
-    }
-    .table4_3 tr:nth-child(even){
-        background-color:#fdfdfd;
-    }
-</style>
 <!-- 工具集 -->
+<script type="text/javascript">
+    function del() {
+        if(!confirm("您确认删除吗？")){
+            window.event.returnValue = false;
+        }
+    }
+</script>
 <div class="my-btn-box">
     <span class="fl">
         <a class="layui-btn layui-btn-danger radius btn-delect" id="btn-delete-all">批量删除</a>
@@ -77,8 +53,8 @@
         <div class="layui-input-inline">
             <select name="color" class="layui-select">
                 <option value="">请选择性别</option>
-                <option value="male">男</option>
-                <option value="female">女</option>
+                <option value="${sex}">男</option>
+                <option value="${sex}">女</option>
             </select>
         </div>
     </span>
@@ -89,16 +65,16 @@
 </div>
 
 <!-- 表格 -->
-<table align="center" class="table4_3">
+<table class="layui-table" lay-even="" lay-skin="nob">
     <tr><td>选择</td><td>员工号</td><td>员工姓名</td><td>性别</td><td>电话号码</td><td>出生日期</td><td>身份证</td><td>操作</td></tr>
     <c:forEach items="${slist}" var="sinfo">
         <tr><td><input type="checkbox" name="select" value="${sinfo.sno}"></td><td>${sinfo.sno}</td><td>${sinfo.sname}</td><td>${sinfo.sex}</td><td>${sinfo.phonenum}</td>
             <td> <fmt:formatDate value="${sinfo.birthday}" pattern="yyyy/MM/dd"/> </td><td>${sinfo.sidcard}</td>
-            <td><a class="layui-btn layui-btn-mini" lay-event="detail">查看</a>
-                <a class="layui-btn layui-btn-mini layui-btn-normal" lay-event="edit">编辑</a>
-                <a class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del">删除</a></td></tr>
+            <td><a class="layui-btn layui-btn-mini" lay-event="detail" href="<%=basePath%>StaffDetailServlet?sno=${sinfo.sno}">查看</a>
+                <a class="layui-btn layui-btn-mini layui-btn-normal" lay-event="edit" href="<%=basePath%>StaffUpdateServlet?sno=${sinfo.sno}">编辑</a>
+                <a class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del" href="<%=basePath%>StaffDeleteServlet?sno=${sinfo.sno}" onclick="return del()">删除</a></td></tr>
     </c:forEach>
-    <tr><td colspan="6">
+    <tr><td colspan="8">
         <table id="tblTurnPage" cellSpacing="0" cellPadding="1" width="100%" border="0" style="font-family:arial;color:red;font-size:12px;">
             <tr>
                 <td>总记录数：${tp.allRows}</td>

@@ -1,13 +1,9 @@
 package jbs.biz;
 
-import jbs.Entity.Auto;
-import jbs.Entity.AutoType;
-import jbs.Entity.Brand;
-import jbs.Entity.TurnPage;
+import jbs.Entity.*;
 import jbs.dao.AutoDao;
 import jbs.dto.AutoInfo;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public class AutoBiz {
@@ -105,6 +101,12 @@ public class AutoBiz {
         return auto;
     }
 
+    /**
+     * 修改汽车信息
+     * @param auto
+     * @return
+     * @throws Exception
+     */
     public int AutoUpdate(Auto auto) throws Exception {
         int iRet;
         AutoDao dao = new AutoDao();
@@ -116,5 +118,87 @@ public class AutoBiz {
             dao.closeConnection();
         }
         return iRet;
+    }
+
+    /**
+     * 删除汽车信息
+     * @param auto
+     * @return
+     * @throws Exception
+     */
+    public boolean AutoDelete(Auto auto) throws Exception {
+        boolean b;
+        AutoDao dao = new AutoDao();
+        try {
+            b = dao.AutoDelete(auto);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return b;
+    }
+
+    public boolean AutoDeleteAll(String[] autocards) throws Exception {
+        boolean b;
+        AutoDao dao = new AutoDao();
+        try {
+            b = dao.AutoDeleteAll(autocards);
+        } catch (Exception e) {
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return b;
+    }
+
+    public void addChangeMoney(ChangeMoney changeMoney) throws Exception {
+        AutoDao dao = new AutoDao();
+        try {
+            dao.addChangeMoney(changeMoney);
+        } catch (Exception e) {
+            throw e;
+        }finally{
+            dao.closeConnection();
+        }
+    }
+
+    public List<ChangeMoney> changeMoneyQuery(String autocard,TurnPage tp) throws Exception {
+        List<ChangeMoney> changeMoneyList;
+        AutoDao dao = new AutoDao();
+        try{
+            changeMoneyList = dao.ChangeMoneyQuery(autocard,tp);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return changeMoneyList;
+    }
+
+    public ChangeMoney getChangeMoneyDetail(String cid) throws Exception {
+        ChangeMoney changeMoney;
+        AutoDao dao = new AutoDao();
+        try{
+            changeMoney = dao.getChangeMoneyDetail(cid);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return changeMoney;
+    }
+
+    public boolean ChangeMoneyDelete(ChangeMoney changeMoney) throws Exception {
+        boolean b;
+        AutoDao dao = new AutoDao();
+        try {
+            b = dao.ChangeMoneyDelete(changeMoney);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return b;
     }
 }

@@ -1,6 +1,5 @@
 package jbs.backaction;
 
-import jbs.Entity.Auto;
 import jbs.Entity.TurnPage;
 import jbs.biz.AutoBiz;
 import jbs.dto.AutoInfo;
@@ -24,7 +23,7 @@ public class AutoServlet extends HttpServlet {
         String page = req.getParameter("page");
         try{
             TurnPage tp = new TurnPage();
-            tp.rows = 8;
+            tp.rows = 6;
             if(page != null) {
                 int iPage = Integer.parseInt(page);
                 if (iPage < 1) {
