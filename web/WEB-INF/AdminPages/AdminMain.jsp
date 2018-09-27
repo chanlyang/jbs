@@ -65,21 +65,20 @@
                     <dl class="layui-nav-child">
                         <dd><a href="javascript:;" href-url="<%=basePath%>CustomServlet"><i class="layui-icon">&#xe621;</i>客户管理</a></dd>
                         <dd><a href="javascript:;" href-url="<%=basePath%>StaffServlet"><i class="layui-icon">&#xe621;</i>员工管理</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/AutoChange.html"><i class="layui-icon">&#xe621;</i>管理员管理</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
                 <a href="javascript:;"><i class="layui-icon">&#xe628;</i>汽车管理</a>
                 <dl class="layui-nav-child">
                     <dd><a href="javascript:;" href-url="<%=basePath%>AutoServlet"><i class="layui-icon">&#xe621;</i>汽车管理</a></dd>
-                    <dd><a href="javascript:;" href-url="demo/MoneyChangeQuery.html"><i class="layui-icon">&#xe621;</i>租金变更记录管理</a></dd>
+                    <dd><a href="javascript:;" href-url="<%=basePath%>ChangeMoneyServlet"><i class="layui-icon">&#xe621;</i>租金变更记录管理</a></dd>
                 </dl>
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;"><i class="layui-icon">&#xe600;</i>租车/还车管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" href-url="demo/AutoQuery.html"><i class="layui-icon">&#xe621;</i>租车管理</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/MoneyChangeQuery.html"><i class="layui-icon">&#xe621;</i>还车管理</a></dd>
+                        <dd><a href="javascript:;" href-url="<%=basePath%>RentListInfoServlet"><i class="layui-icon">&#xe621;</i>租车管理</a></dd>
+                        <dd><a href="javascript:;" href-url="<%=basePath%>BackListInfoServlet"><i class="layui-icon">&#xe621;</i>还车管理</a></dd>
                         <dd><a href="javascript:;" href-url="demo/MoneyChangeQuery.html"><i class="layui-icon">&#xe621;</i>租/还车记录管理</a></dd>
                     </dl>
                 </li>

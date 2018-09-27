@@ -1,4 +1,8 @@
 $ cat .gitignore
 # commit phirs
 *.log
+<<<<<<< Updated upstream
 *.xml
+=======
+*.xml
+>>>>>>> Stashed changes

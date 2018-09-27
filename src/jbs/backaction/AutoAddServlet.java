@@ -21,10 +21,11 @@ public class AutoAddServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String autocard = request.getParameter("autocard");
         String bno = request.getParameter("bno");
-        String tno = request.getParameter("tno");
+        String tno = request.getParameter("atype");
         String tname = request.getParameter("tname");
         String color = request.getParameter("color");
         int seat = Integer.parseInt(request.getParameter("seat"));
+        String gear = request.getParameter("gear");
         String tubo = request.getParameter("tubo");
         Double dayrent = Double.parseDouble(request.getParameter("dayrent"));
         String picurl = request.getParameter("pic");
@@ -35,10 +36,12 @@ public class AutoAddServlet extends HttpServlet {
         auto.setTname(tname);
         auto.setColor(color);
         auto.setSeat(seat);
+        auto.setGear(gear);
         auto.setTubo(tubo);
         auto.setDayrent(dayrent);
         try {
-            String pictureurl = "D:\\文档\\Java课程\\8-16\\jbs_1\\web\\picture"+picurl;
+            //String pictureurl = "D:\\文档\\Java课程\\8-16\\jbs_1\\web\\picture"+picurl;
+            String pictureurl = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+"/images/"+picurl;
             auto.setPicurl(pictureurl);
             File newFile = new File(pictureurl);
             if(!newFile.exists())
@@ -65,8 +68,8 @@ public class AutoAddServlet extends HttpServlet {
             List<Brand> blist = biz.getBrand();
             request.setAttribute("atlist",atlist);
             request.setAttribute("blist",blist);
-            request.setAttribute("msg", "添加成功--" +auto.getAutocard());
-            request.getRequestDispatcher("/WEB-INF/AdminPages/AutoQuery.jsp").forward(request, response);
+            //request.setAttribute("msg", "添加成功--" +auto.getAutocard());
+            response.sendRedirect("/AutoServlet");
         }catch (IllegalStateException e){
             AutoBiz biz = new AutoBiz();
             try {
@@ -77,7 +80,7 @@ public class AutoAddServlet extends HttpServlet {
             } catch (Exception e2) {
             }
             request.setAttribute("msg", "添加失败，文件不能大于100K" );
-            request.getRequestDispatcher("/WEB-INF/AdminPages/AutoAdd.jsp").forward(request, response);
+            request.getRequestDispatcher("/AutoServlet").forward(request, response);
         } catch (Exception e){
             e.printStackTrace();
             request.getRequestDispatcher("/tip.jsp").forward(request, response);

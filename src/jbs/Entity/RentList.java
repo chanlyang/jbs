@@ -4,7 +4,6 @@ import java.util.Date;
 
 public class RentList {
     private String rno;//租单号
-    private String cno;//客户编号
     private String sno;//员工号
     private Date rDate;//租赁日期
     private Date rDays;//租赁天数
@@ -17,14 +16,6 @@ public class RentList {
 
     public void setRno(String rno) {
         this.rno = rno;
-    }
-
-    public String getCno() {
-        return cno;
-    }
-
-    public void setCno(String cno) {
-        this.cno = cno;
     }
 
     public String getSno() {

@@ -5,8 +5,7 @@ import java.util.Date;
 public class BackList {
     private String rno;//租单号
     private Date bDate;//还车时间
-    private String extraMessage;//备注
-
+    private double realmoney;//实际价格
     public String getRno() {
         return rno;
     }
@@ -23,11 +22,11 @@ public class BackList {
         this.bDate = bDate;
     }
 
-    public String getExtraMessage() {
-        return extraMessage;
+    public double getRealmoney() {
+        return realmoney;
     }
 
-    public void setExtraMessage(String extraMessage) {
-        this.extraMessage = extraMessage;
+    public void setRealmoney(double realmoney) {
+        this.realmoney = realmoney;
     }
 }

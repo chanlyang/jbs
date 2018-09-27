@@ -35,6 +35,9 @@
                    class="layui-input">
             <p>${message}</p>
         </div>
+        <div>
+            <input type="hidden" name="userid">
+        </div>
         <div class="layui-input-inline login-btn">
             <button type="submit" class="layui-btn">µÇÂ¼</button>
         </div>

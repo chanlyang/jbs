@@ -24,38 +24,14 @@
     <link rel="icon" href="<%=basePath%>frame/static/image/code.png">
 </head>
 <body class="body">
-<style>
-    .table4_3 table {
-        width:100%;
-        margin:15px 0;
-        border:0;
-    }
-    .table4_3 th {
-        background-color:#86A5FF;
-        color:#FFFFFF
-    }
-    .table4_3,.table4_3 th,.table4_3 td {
-        font-size:1.2em;
-        text-align:center;
-        padding:4px;
-        border-collapse:collapse;
-        white-space: nowrap;
-    }
-    .table4_3 th,.table4_3 td {
-        border: 1px solid #b9cbfe;
-        border-width:1px 0 1px 0;
-    }
-    .table4_3 tr {
-        border: 1px solid #b9cbfe;
-    }
-    .table4_3 tr:nth-child(odd){
-        background-color:#d6e1fe;
-    }
-    .table4_3 tr:nth-child(even){
-        background-color:#fdfdfd;
-    }
-</style>
 <!-- 工具集 -->
+<script type="text/javascript">
+    function del() {
+        if(!confirm("您确认删除吗？")){
+            window.event.returnValue = false;
+        }
+    }
+</script>
 <div class="my-btn-box">
     <span class="fl">
         <a class="layui-btn layui-btn-danger radius btn-delect" id="btn-delete-all">批量删除</a>
@@ -86,13 +62,16 @@
 </div>
 
 <!-- 表格 -->
-<table class="table4_3" align="center">
-    <tr><td>客户编号</td><td>客户姓名</td><td>身份证号</td><td>电话号码</td><td>出生日期</td> </tr>
+<table class="layui-table" lay-even="" lay-skin="nob">
+    <tr><td>选择</td><td>客户编号</td><td>客户姓名</td><td>身份证号</td><td>电话号码</td><td>出生日期</td><td>操作</td></tr>
     <c:forEach items="${clist}" var="cinfo">
-        <tr><td>${cinfo.cno}</td><td>${cinfo.cname}</td><td>${cinfo.cidcard}</td><td>${cinfo.phonenum}</td>
-            <td> <fmt:formatDate value="${cinfo.birthday}" pattern="yyyy/MM/dd"/> </td></tr>
+        <tr><td><input type="checkbox" name="select" value="${cinfo.cno}"></td><td>${cinfo.cno}</td><td>${cinfo.cname}</td><td>${cinfo.cidcard}</td><td>${cinfo.phonenum}</td>
+            <td> <fmt:formatDate value="${cinfo.birthday}" pattern="yyyy/MM/dd"/> </td>
+            <td><a class="layui-btn layui-btn-mini" lay-event="detail" href="<%=basePath%>CustomDetailServlet?cno=${cinfo.cno}">查看</a>
+                <a class="layui-btn layui-btn-mini layui-btn-normal" lay-event="edit" href="<%=basePath%>CustomUpdateServlet?cno=${cinfo.cno}">编辑</a>
+                <a class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del" href="<%=basePath%>CustomDeleteServlet?cno=${cinfo.cno}" onclick="return del()">删除</a></td></tr>
     </c:forEach>
-    <tr><td colspan="5">
+    <tr><td colspan="7">
         <table id="tblTurnPage" cellSpacing="0" cellPadding="1" width="100%" border="0" style="font-family:arial;color:red;font-size:12px;">
             <tr>
                 <td>总记录数：${tp.allRows}</td>

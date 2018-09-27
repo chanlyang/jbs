@@ -10,10 +10,12 @@ public class Auto {
     private String gear;
     private String tubo;
     private double dayrent;
+    private double extra;
     private String pic;
     private String bname;
     private String atype;
     private String picurl;
+
 
     public String getAtype() {
         return atype;
@@ -103,12 +105,17 @@ public class Auto {
         this.dayrent = dayrent;
     }
 
-    public String getPic() {
-        return pic;
-    }
+
 
     public void setPic(String pic) {
         this.pic = pic;
+    }
+    public double getExtra() {
+        return extra;
+    }
+
+    public void setExtra(double extra) {
+        this.extra = extra;
     }
 
     public String getPicurl() {

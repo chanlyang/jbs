@@ -6,49 +6,50 @@ import java.util.Date;
  * 租金历史变更
  */
 public class ChangeMoney {
-    private Date cDate;  //变更日期
-    private String cType;//变更型号
-    private String tubo;
-    private Double bRent;//变更前日租金
-    private Double aRent;//变更后日租金
+    private int cid;
+    private String autocard;
+    private String cdate;  //变更日期
+    private Double brent;//变更前日租金
+    private Double arent;//变更后日租金
 
-    public Date getcDate() {
-        return cDate;
+
+    public String getAutocard() {
+        return autocard;
     }
 
-    public void setcDate(Date cDate) {
-        this.cDate = cDate;
+    public void setAutocard(String autocard) {
+        this.autocard = autocard;
     }
 
-    public String getcType() {
-        return cType;
+    public int getCid() {
+        return cid;
     }
 
-    public void setcType(String cType) {
-        this.cType = cType;
+    public void setCid(int cid) {
+        this.cid = cid;
     }
 
-    public String getTubo() {
-        return tubo;
+    public String getCdate() {
+        return cdate;
     }
 
-    public void setTubo(String tubo) {
-        this.tubo = tubo;
+    public void setCdate(String cdate) {
+        this.cdate = cdate;
     }
 
-    public Double getbRent() {
-        return bRent;
+    public Double getBrent() {
+        return brent;
     }
 
-    public void setbRent(Double bRent) {
-        this.bRent = bRent;
+    public void setBrent(Double brent) {
+        this.brent = brent;
     }
 
-    public Double getaRent() {
-        return aRent;
+    public Double getArent() {
+        return arent;
     }
 
-    public void setaRent(Double aRent) {
-        this.aRent = aRent;
+    public void setArent(Double arent) {
+        this.arent = arent;
     }
 }
