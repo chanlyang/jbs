@@ -92,17 +92,17 @@
                 <a class="layui-btn layui-btn-mini layui-btn-normal" lay-event="edit" href="<%=basePath%>AutoUpdateServlet?autocard=${ainfo.autocard}">编辑</a>
                 <a class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del" href="<%=basePath%>AutoDeleteServlet?autocard=${ainfo.autocard}" onclick="return del()">删除</a></td></tr>
     </c:forEach>
-    <tr><td colspan="11">
+    <tr><td colspan="12">
         <table id="tblTurnPage" cellSpacing="0" cellPadding="1" width="100%" border="0" style="font-family:arial;color:red;font-size:15px;" >
             <tr>
                 <td> <input type="submit" class="layui-btn layui-btn-danger radius btn-delect" id="btn-delete-all" value="批量删除"></td>
                 <td>总记录数：${tp.allRows}</td>
                 <td>总页数：${tp.allPages}</td>
                 <td>当前页：${tp.page}</td>
-                <td><a href="AutoServlet?page=1&uname=${uname}&beginDate=${begin}&endDate=${end}">首页|</a>
-                    <a href="AutoServlet?page=${tp.page-1}&uname=${uname}&beginDate=${begin}&endDate=${end}">《前页|</a>
-                    <a href="AutoServlet?page=${tp.page+1}&uname=${uname}&beginDate=${begin}&endDate=${end}">后页》|</a>
-                    <a href="AutoServlet?page=${tp.allPages}&uname=${uname}&beginDate=${begin}&endDate=${end}">末页|</a></td>
+                <td><a href="AutoServlet?page=1&beginDate=${begin}&endDate=${end}">首页|</a>
+                    <a href="AutoServlet?page=${tp.page-1}&beginDate=${begin}&endDate=${end}">《前页|</a>
+                    <a href="AutoServlet?page=${tp.page+1}&beginDate=${begin}&endDate=${end}">后页》|</a>
+                    <a href="AutoServlet?page=${tp.allPages}&beginDate=${begin}&endDate=${end}">末页|</a></td>
                 <td >跳转到:第<input type="text" size="3" >页</td>
                 <td><input type="button" class="layui-btn layui-btn-danger radius btn-delect" value="go"></td>
 

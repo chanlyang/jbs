@@ -4,8 +4,8 @@ import java.util.Date;
 
 public class BackListInfo {
     private String rno;//租单号
-    private String cno;//客户编号
-    private String sno;//员工号
+    private String cuname;//客户用户名
+    private String suname;//员工用户名
     private String autocard;//车牌号
     private Date rdate;//租赁日期
     private int rdays;//租赁天数
@@ -20,20 +20,20 @@ public class BackListInfo {
         this.rno = rno;
     }
 
-    public String getCno() {
-        return cno;
+    public String getCuname() {
+        return cuname;
     }
 
-    public void setCno(String cno) {
-        this.cno = cno;
+    public void setCuname(String cuname) {
+        this.cuname = cuname;
     }
 
-    public String getSno() {
-        return sno;
+    public String getSuname() {
+        return suname;
     }
 
-    public void setSno(String sno) {
-        this.sno = sno;
+    public void setSuname(String suname) {
+        this.suname = suname;
     }
 
     public String getAutocard() {

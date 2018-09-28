@@ -16,7 +16,7 @@ import java.util.List;
 public class StaffServlet extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         UserBiz biz = new UserBiz();
-        String sno = req.getParameter("sno");
+        String name = req.getParameter("name");
         String sname = req.getParameter("sname");
         String sex = req.getParameter("sex");
         String page = req.getParameter("page");
@@ -30,9 +30,9 @@ public class StaffServlet extends HttpServlet {
                 }
                 tp.page = iPage;         //当前页号，永远不能<1
             }
-            List<Staff> slist = biz.getStaffInfo(sno,sname,sex,tp);
+            List<Staff> slist = biz.getStaffInfo(name,sname,sex,tp);
             req.setAttribute("slist", slist);
-            req.setAttribute("sno", sno);
+            req.setAttribute("name", name);
             req.setAttribute("sname", sname);
             req.setAttribute("sex", sex);
             req.setAttribute("tp", tp);

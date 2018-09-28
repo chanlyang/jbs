@@ -29,9 +29,9 @@
 
 <form class="layui-form" action="<%=basePath%>CustomUpdateServlet" method="post">
     <div class="layui-form-item">
-        <label class="layui-form-label">客户编号</label>
+        <label class="layui-form-label">客户用户名</label>
         <div class="layui-input-block">
-            <input type="text" name="cno" lay-verify="staffid" autocomplete="off" value="${custom.cno}" class="layui-input">
+            <input type="text" name="uname" lay-verify="staffid" autocomplete="off" value="${custom.uname}" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item">

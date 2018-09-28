@@ -16,9 +16,9 @@ import java.util.List;
 public class RentListInfoServlet extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RentListBiz biz = new RentListBiz();
-        String sno = req.getParameter("sno");
+        String suname = req.getParameter("suname");
         String rno = req.getParameter("rno");
-        String cno = req.getParameter("cno");
+        String cuname = req.getParameter("cuname");
         String autocard = req.getParameter("autocard");
         String page = req.getParameter("page");
         try{
@@ -31,11 +31,11 @@ public class RentListInfoServlet extends HttpServlet {
                 }
                 tp.page = iPage;         //当前页号，永远不能<1
             }
-            List<RentListInfo> rentListInfoList = biz.getRentListInfo(rno,sno,cno,autocard,tp);
+            List<RentListInfo> rentListInfoList = biz.getRentListInfo(rno,suname,cuname,autocard,tp);
             req.setAttribute("rentListInfoList",rentListInfoList);
-            req.setAttribute("sno",sno);
+            req.setAttribute("suname",suname);
             req.setAttribute("rno",rno);
-            req.setAttribute("cno",cno);
+            req.setAttribute("cuname",cuname);
             req.setAttribute("autocard",autocard);
             req.setAttribute("tp",tp);
             req.getRequestDispatcher("/WEB-INF/AdminPages/RentList.jsp").forward(req, resp);

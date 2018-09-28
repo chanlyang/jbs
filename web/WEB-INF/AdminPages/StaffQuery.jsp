@@ -36,14 +36,13 @@
 <div class="my-btn-box">
     <span class="fl">
         <a class="layui-btn layui-btn-danger radius btn-delect" id="btn-delete-all">批量删除</a>
-        <a href="StaffAdd.html" class="layui-btn btn-add btn-default" id="btn-add">添加</a>
         <a class="layui-btn btn-add btn-default" id="btn-refresh" href="<%=basePath%>StaffServlet"><i class="layui-icon">&#x1002;</i></a>
     </span>
     <form action="<%=basePath%>StaffServlet" method="post">
     <span class="f3">
         <span class="layui-form-label">搜索条件：</span>
         <div class="layui-input-inline">
-            <input type="text" name="sno" autocomplete="off" placeholder="请输入员工编号" class="layui-input" value="${sno}">
+            <input type="text" name="name" autocomplete="off" placeholder="请输入员工编号" class="layui-input" value="${name}">
         </div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div class="layui-input-inline">
@@ -68,11 +67,11 @@
 <table class="layui-table" lay-even="" lay-skin="nob">
     <tr><td>选择</td><td>员工号</td><td>员工姓名</td><td>性别</td><td>电话号码</td><td>出生日期</td><td>身份证</td><td>操作</td></tr>
     <c:forEach items="${slist}" var="sinfo">
-        <tr><td><input type="checkbox" name="select" value="${sinfo.sno}"></td><td>${sinfo.sno}</td><td>${sinfo.sname}</td><td>${sinfo.sex}</td><td>${sinfo.phonenum}</td>
+        <tr><td><input type="checkbox" name="select" value="${sinfo.uname}"></td><td>${sinfo.uname}</td><td>${sinfo.sname}</td><td>${sinfo.sex}</td><td>${sinfo.phonenum}</td>
             <td> <fmt:formatDate value="${sinfo.birthday}" pattern="yyyy/MM/dd"/> </td><td>${sinfo.sidcard}</td>
-            <td><a class="layui-btn layui-btn-mini" lay-event="detail" href="<%=basePath%>StaffDetailServlet?sno=${sinfo.sno}">查看</a>
-                <a class="layui-btn layui-btn-mini layui-btn-normal" lay-event="edit" href="<%=basePath%>StaffUpdateServlet?sno=${sinfo.sno}">编辑</a>
-                <a class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del" href="<%=basePath%>StaffDeleteServlet?sno=${sinfo.sno}" onclick="return del()">删除</a></td></tr>
+            <td><a class="layui-btn layui-btn-mini" lay-event="detail" href="<%=basePath%>StaffDetailServlet?uname=${sinfo.uname}">查看</a>
+                <a class="layui-btn layui-btn-mini layui-btn-normal" lay-event="edit" href="<%=basePath%>StaffUpdateServlet?uname=${sinfo.uname}">编辑</a>
+                <a class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del" href="<%=basePath%>StaffDeleteServlet?uname=${sinfo.uname}" onclick="return del()">删除</a></td></tr>
     </c:forEach>
     <tr><td colspan="8">
         <table id="tblTurnPage" cellSpacing="0" cellPadding="1" width="100%" border="0" style="font-family:arial;color:red;font-size:12px;">

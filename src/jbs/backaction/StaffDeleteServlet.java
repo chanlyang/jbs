@@ -17,9 +17,9 @@ public class StaffDeleteServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String sno = request.getParameter("sno");
+        String uname = request.getParameter("uname");
         Staff staff = new Staff();
-        staff.setSno(sno);
+        staff.setUname(uname);
         UserBiz biz = new UserBiz();
         try {
             boolean b = biz.StaffDelete(staff);

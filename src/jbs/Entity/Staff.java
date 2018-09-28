@@ -3,8 +3,7 @@ package jbs.Entity;
 import java.util.Date;
 
 public class Staff {
-    private String sno;
-    private int userid;
+    private String uname;
     private String sname;
     private String sex;
     private String phonenum;
@@ -43,20 +42,12 @@ public class Staff {
         this.sidcard = sidcard;
     }
 
-    public String getSno() {
-        return sno;
+    public String getUname() {
+        return uname;
     }
 
-    public void setSno(String sno) {
-        this.sno = sno;
-    }
-
-    public int getUserid() {
-        return userid;
-    }
-
-    public void setUserid(int userid) {
-        this.userid = userid;
+    public void setUname(String uname) {
+        this.uname = uname;
     }
 
     public String getSname() {

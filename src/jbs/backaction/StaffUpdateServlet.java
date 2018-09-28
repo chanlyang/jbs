@@ -15,19 +15,19 @@ import java.text.SimpleDateFormat;
 public class StaffUpdateServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            String sno = request.getParameter("sno");
+            String uname = request.getParameter("uname");
             String sname = request.getParameter("sname");
             String sex = request.getParameter("sex");
             String sidcard = request.getParameter("sidcard");
             String phonenum = request.getParameter("phonenum");
             String birthday = request.getParameter("birthday");
             Staff staff = new Staff();
-            staff.setSno(sno);
+            staff.setUname(uname);
             staff.setSname(sname);
             staff.setSex(sex);
             staff.setSidcard(sidcard);
             staff.setPhonenum(phonenum);
-            SimpleDateFormat sd = new SimpleDateFormat("yyyy/MM/dd");
+            SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd");
             staff.setBirthday(sd.parse(birthday));
 
             UserBiz biz = new UserBiz();
@@ -44,10 +44,10 @@ public class StaffUpdateServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String sno = request.getParameter("sno");
+        String uname = request.getParameter("uname");
         UserBiz biz = new UserBiz();
         try {
-            Staff staff = biz.getStaffDetail(sno);
+            Staff staff = biz.getStaffDetail(uname);
             request.setAttribute("staff",staff);
             request.getRequestDispatcher("/WEB-INF/AdminPages/StaffUpdate.jsp").forward(request, response);
         } catch (Exception e) {

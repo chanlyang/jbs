@@ -32,7 +32,7 @@
     <div class="layui-form-item">
         <label class="layui-form-label">员工号</label>
         <div class="layui-input-inline">
-            <input type="text" name="sno" autocomplete="off" class="layui-input" value="${staff.sno}" readonly>
+            <input type="text" name="uname" autocomplete="off" class="layui-input" value="${staff.uname}" readonly>
         </div>
     </div>
     <div class="layui-form-item">
@@ -63,7 +63,6 @@
     </div>
     <div class="layui-form-item">
         <input class="layui-btn" lay-filter="demo2" type="submit" value="返回">
-        <input class="layui-btn" lay-filter="demo2" type="submit" value="关闭" onclick="window.close() ">
     </div>
     <br>
     <div>${msg}</div>

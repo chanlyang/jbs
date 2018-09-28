@@ -18,7 +18,7 @@ import java.util.List;
 public class CustomServlet extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         UserBiz biz = new UserBiz();
-        String cno = req.getParameter("cno");
+        String name = req.getParameter("name");
         String cname = req.getParameter("cname");
         String page = req.getParameter("page");
         String birthday = req.getParameter("birthday");
@@ -37,9 +37,9 @@ public class CustomServlet extends HttpServlet {
                 }
                 tp.page = iPage;         //当前页号，永远不能<1
             }
-            List<Custom> clist = biz.getCustomInfo(cno,cname,bday,tp);
+            List<Custom> clist = biz.getCustomInfo(name,cname,bday,tp);
             req.setAttribute("clist", clist);
-            req.setAttribute("cno", cno);
+            req.setAttribute("name", name);
             req.setAttribute("cname", cname);
             req.setAttribute("birthday", birthday);
             req.setAttribute("tp", tp);

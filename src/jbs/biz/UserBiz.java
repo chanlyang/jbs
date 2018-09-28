@@ -30,11 +30,11 @@ public class UserBiz {
         }
         return user;
     }
-    public List<Custom> getCustomInfo(String cno, String cname, Date birthday, TurnPage tp) throws Exception {
+    public List<Custom> getCustomInfo(String uname, String cname, Date birthday, TurnPage tp) throws Exception {
         List<Custom> clist;
         UserDao dao = new UserDao();
         try {
-            clist = dao.getCustomInfo(cno,cname,birthday,tp);
+            clist = dao.getCustomInfo(uname,cname,birthday,tp);
         } catch (Exception e) {
             throw e;
         }finally{
@@ -42,11 +42,11 @@ public class UserBiz {
         }
         return clist;
     }
-    public List<Staff> getStaffInfo(String sno,String sname,String sex,TurnPage tp) throws Exception{
+    public List<Staff> getStaffInfo(String uname,String sname,String sex,TurnPage tp) throws Exception{
         List<Staff> sList;
         UserDao dao = new UserDao();
         try{
-            sList = dao.getStaffInfo(sno,sname,sex,tp);
+            sList = dao.getStaffInfo(uname,sname,sex,tp);
         }catch (Exception e){
             throw e;
         }finally {
@@ -55,11 +55,11 @@ public class UserBiz {
         return sList;
     }
 
-    public Staff getStaffDetail(String sno) throws Exception {
+    public Staff getStaffDetail(String uname) throws Exception {
         Staff staff ;
         UserDao dao = new UserDao();
         try{
-            staff = dao.getStaffDetail(sno);
+            staff = dao.getStaffDetail(uname);
         } catch (Exception e) {
             throw e;
         }finally {
@@ -68,11 +68,11 @@ public class UserBiz {
         return staff;
     }
 
-    public Custom getCustomDetail(String cno) throws Exception {
+    public Custom getCustomDetail(String uname) throws Exception {
         Custom custom;
         UserDao dao = new UserDao();
         try{
-            custom = dao.getCustomDetail(cno);
+            custom = dao.getCustomDetail(uname);
         } catch (Exception e) {
             throw e;
         }finally {

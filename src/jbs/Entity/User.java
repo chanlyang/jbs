@@ -1,18 +1,9 @@
 package jbs.Entity;
 
 public class User {
-    private int userid;
     private String uname;
     private String password;
     private int urole;
-
-    public int getUserid() {
-        return userid;
-    }
-
-    public void setUserid(int userid) {
-        this.userid = userid;
-    }
 
     public String getUname() {
         return uname;

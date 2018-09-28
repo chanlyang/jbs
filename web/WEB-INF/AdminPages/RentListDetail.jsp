@@ -38,14 +38,14 @@
     <div class="layui-form-item">
         <label class="layui-form-label">员工号</label>
         <div class="layui-input-inline">
-            <input type="text" name="sno" autocomplete="off" class="layui-input" value="${rentListInfo.sno}" readonly>
+            <input type="text" name="suname" autocomplete="off" class="layui-input" value="${rentListInfo.suname}" readonly>
         </div>
         <a href="#" onclick="openwindow1()">详细信息</a>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">客户编号</label>
         <div class="layui-input-inline">
-            <input type="text" name="cno" autocomplete="off" class="layui-input" value="${rentListInfo.cno}" readonly>
+            <input type="text" name="cuname" autocomplete="off" class="layui-input" value="${rentListInfo.cuname}" readonly>
         </div>
         <a href="#" onclick="openwindow2()">详细信息</a>
     </div>
@@ -95,13 +95,13 @@
 </script>
 <script type="text/javascript">
     function openwindow1() {
-        window.open ("<%=basePath%>StaffDetailServlet?sno=${rentListInfo.sno}", "员工详细信息", "height=400, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
+        window.open ("<%=basePath%>StaffDetailServlet?uname=${rentListInfo.suname}", "员工详细信息", "height=400, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
     }
     function openwindow2() {
-        window.open ("<%=basePath%>CustomDetailServlet?cno=${rentListInfo.cno}", "客户详细信息", "height=320, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
+        window.open ("<%=basePath%>CustomDetailServlet?uname=${rentListInfo.cuname}", "客户详细信息", "height=320, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
     }
     function openwindow3() {
-        window.open ("<%=basePath%>AutoDetailServlet?autocard=${rentListInfo.autocard}", "汽车详细信息", "height=700, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
+        window.open ("<%=basePath%>AutoDetailServlet?autocard=${rentListInfo.autocard}", "汽车详细信息", "height=800, width=400, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no")
     }
 </script>
 </body>

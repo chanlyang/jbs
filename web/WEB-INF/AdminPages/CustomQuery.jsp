@@ -42,7 +42,7 @@
 
         <span class="layui-form-label">搜索条件：</span>
         <div class="layui-input-inline">
-            <input type="text" name="cno" autocomplete="off" placeholder="请输入客户编号" class="layui-input" value="${cno}">
+            <input type="text" name="name" autocomplete="off" placeholder="请输入客户用户名" class="layui-input" value="${name}">
         </div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div class="layui-input-inline">
@@ -63,13 +63,13 @@
 
 <!-- 表格 -->
 <table class="layui-table" lay-even="" lay-skin="nob">
-    <tr><td>选择</td><td>客户编号</td><td>客户姓名</td><td>身份证号</td><td>电话号码</td><td>出生日期</td><td>操作</td></tr>
+    <tr><td>选择</td><td>客户用户名</td><td>客户姓名</td><td>身份证号</td><td>电话号码</td><td>出生日期</td><td>操作</td></tr>
     <c:forEach items="${clist}" var="cinfo">
-        <tr><td><input type="checkbox" name="select" value="${cinfo.cno}"></td><td>${cinfo.cno}</td><td>${cinfo.cname}</td><td>${cinfo.cidcard}</td><td>${cinfo.phonenum}</td>
+        <tr><td><input type="checkbox" name="select" value="${cinfo.uname}"></td><td>${cinfo.uname}</td><td>${cinfo.cname}</td><td>${cinfo.cidcard}</td><td>${cinfo.phonenum}</td>
             <td> <fmt:formatDate value="${cinfo.birthday}" pattern="yyyy/MM/dd"/> </td>
-            <td><a class="layui-btn layui-btn-mini" lay-event="detail" href="<%=basePath%>CustomDetailServlet?cno=${cinfo.cno}">查看</a>
-                <a class="layui-btn layui-btn-mini layui-btn-normal" lay-event="edit" href="<%=basePath%>CustomUpdateServlet?cno=${cinfo.cno}">编辑</a>
-                <a class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del" href="<%=basePath%>CustomDeleteServlet?cno=${cinfo.cno}" onclick="return del()">删除</a></td></tr>
+            <td><a class="layui-btn layui-btn-mini" lay-event="detail" href="<%=basePath%>CustomDetailServlet?uname=${cinfo.uname}">查看</a>
+                <a class="layui-btn layui-btn-mini layui-btn-normal" lay-event="edit" href="<%=basePath%>CustomUpdateServlet?uname=${cinfo.uname}">编辑</a>
+                <a class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del" href="<%=basePath%>CustomDeleteServlet?uname=${cinfo.uname}" onclick="return del()">删除</a></td></tr>
     </c:forEach>
     <tr><td colspan="7">
         <table id="tblTurnPage" cellSpacing="0" cellPadding="1" width="100%" border="0" style="font-family:arial;color:red;font-size:12px;">
