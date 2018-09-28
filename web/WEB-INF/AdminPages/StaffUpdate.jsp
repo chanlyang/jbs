@@ -31,14 +31,16 @@
     <div class="layui-form-item">
         <label class="layui-form-label">员工编号</label>
         <div class="layui-input-block">
-            <input type="text" name="sno" lay-verify="staffid" autocomplete="off" value="${staff.sno}" class="layui-input">
+            <input type="text" name="uname" lay-verify="staffid" autocomplete="off" value="${staff.uname}" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">员工姓名</label>
         <div class="layui-input-block">
-            <input type="text" name="cname" lay-verify="name" value="${staff.sname}" autocomplete="off" class="layui-input">
+            <input type="text" name="sname" lay-verify="name" value="${staff.sname}" autocomplete="off" class="layui-input">
         </div>
+    </div>
+    <div class="layui-form-item">
         <label class="layui-form-label">性别</label>
         <div class="layui-input-block">
             <input type="text" name="sex" lay-verify="name" value="${staff.sex}" autocomplete="off" class="layui-input">

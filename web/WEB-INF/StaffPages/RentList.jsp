@@ -45,7 +45,7 @@
         </div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div class="layui-input-inline">
-            <input type="text" name="cno" autocomplete="off" placeholder="请输入顾客编号" class="layui-input" value="${cno}">
+            <input type="text" name="cuname" autocomplete="off" placeholder="请输入顾客编号" class="layui-input" value="${cuname}">
         </div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <div class="layui-input-inline">
@@ -62,24 +62,24 @@
 <!-- 表格 -->
 <form action="AutoDeleteAllServlet" method="post">
     <table class="layui-table" lay-even="" lay-skin="nob">
-        <tr><td>选择</td><td>租赁单号</td><td>客户编号</td><td>车牌号</td><td>租赁日期</td><td>租赁天数</td><td>租赁总金额</td><td>押金</td><td>操作</td></tr>
+        <tr><td>选择</td><td>租赁单号</td><td>客户编号</td><td>车牌号</td><td>租赁日期</td><td>租赁天数</td><td>操作</td></tr>
         <c:forEach items="${rentListInfoList}" var="rl">
-            <tr><td><input type="checkbox" name="select" value="${rl.rno}"></td><td>${rl.rno}</td><td>${rl.cno}</td><td>${rl.autocard}</td>
-                <td> <fmt:formatDate value="${rl.rdate}" pattern="yyyy/MM/dd"/> </td><td>${rl.rdays}</td><td>${rl.allmoney}</td><td>${rl.extra}</td>
-                <td><a class="layui-btn layui-btn-mini" lay-event="detail" href="<%=basePath%>RentListDetailServlet?rno=${rl.rno}&cno=${rl.cno}&autocard=${rl.autocard}">查看</a>
-                    <a class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del" href="<%=basePath%>RentListDeleteServlet?sno=${rl.sno}" onclick="return del()">删除</a></td></tr>
+            <tr><td><input type="checkbox" name="select" value="${rl.rno}"></td><td>${rl.rno}</td><td>${rl.cuname}</td><td>${rl.autocard}</td>
+                <td> <fmt:formatDate value="${rl.rdate}" pattern="yyyy/MM/dd"/> </td><td>${rl.rdays}</td>
+                <td><a class="layui-btn layui-btn-mini" lay-event="detail" href="<%=basePath%>RentListDetailServlet?rno=${rl.rno}&uname=${rl.cuname}&autocard=${rl.autocard}">查看</a>
+                    <a class="layui-btn layui-btn-mini layui-btn-danger" lay-event="del" href="<%=basePath%>RentListDeleteServlet?rno=${rl.rno}" onclick="return del()">删除</a></td></tr>
         </c:forEach>
-        <tr><td colspan="9">
+        <tr><td colspan="7">
             <table id="tblTurnPage" cellSpacing="0" cellPadding="1" width="100%" border="0" style="font-family:arial;color:red;font-size:15px;" >
                 <tr>
                     <td> <input type="submit" class="layui-btn layui-btn-danger radius btn-delect" id="btn-delete-all" value="批量删除"></td>
                     <td>总记录数：${tp.allRows}</td>
                     <td>总页数：${tp.allPages}</td>
                     <td>当前页：${tp.page}</td>
-                    <td><a href="RentListInfoServlet?page=1&uname=${uname}&beginDate=${begin}&endDate=${end}">首页|</a>
-                        <a href="RentListInfoServlet?page=${tp.page-1}&uname=${uname}&beginDate=${begin}&endDate=${end}">《前页|</a>
-                        <a href="RentListInfoServlet?page=${tp.page+1}&uname=${uname}&beginDate=${begin}&endDate=${end}">后页》|</a>
-                        <a href="RentListInfoServlet?page=${tp.allPages}&uname=${uname}&beginDate=${begin}&endDate=${end}">末页|</a></td>
+                    <td><a href="RentListInfoServlet?page=1&beginDate=${begin}&endDate=${end}">首页|</a>
+                        <a href="RentListInfoServlet?page=${tp.page-1}&beginDate=${begin}&endDate=${end}">《前页|</a>
+                        <a href="RentListInfoServlet?page=${tp.page+1}&beginDate=${begin}&endDate=${end}">后页》|</a>
+                        <a href="RentListInfoServlet?page=${tp.allPages}&beginDate=${begin}&endDate=${end}">末页|</a></td>
                     <td >跳转到:第<input type="text" size="3" >页</td>
                     <td><input type="button" class="layui-btn layui-btn-danger radius btn-delect" value="go"></td>
 

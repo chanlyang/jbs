@@ -13,10 +13,10 @@ import java.io.IOException;
 @WebServlet(name = "CustomDetailServlet",urlPatterns = "/CustomDetailServlet")
 public class CustomDetailServlet extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String cno = req.getParameter("cno");
+        String uname = req.getParameter("uname");
         UserBiz biz = new UserBiz();
         try {
-            Custom custom = biz.getCustomDetail(cno);
+            Custom custom = biz.getCustomDetail(uname);
             req.setAttribute("custom",custom);
             req.getRequestDispatcher("/WEB-INF/AdminPages/CustomDetail.jsp").forward(req, resp);
         } catch (Exception e) {

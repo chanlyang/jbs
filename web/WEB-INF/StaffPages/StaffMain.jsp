@@ -64,19 +64,19 @@
                     <a href="javascript:;"><i class="layui-icon">&#xe620;</i>租车管理</a>
                     <dl class="layui-nav-child">
                         <dd><a href="javascript:;" href-url="<%=basePath%>RentListServlet"><i class="layui-icon">&#xe621;</i>租赁单</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/BackList.html"><i class="layui-icon">&#xe621;</i>还车单</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/AutoChange.html"><i class="layui-icon">&#xe621;</i>租车变更处理</a></dd>
+                        <dd><a href="javascript:;" href-url="<%=basePath%>RentAllListServlet"><i class="layui-icon">&#xe621;</i>租赁列表</a></dd>
+                        <dd><a href="javascript:;" href-url="<%=basePath%>BackListServlet"><i class="layui-icon">&#xe621;</i>还车单</a></dd>
+                        <dd><a href="javascript:;" href-url="<%=basePath%>ChangeListAddServlet"><i class="layui-icon">&#xe621;</i>租车变更处理</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;"><i class="layui-icon">&#xe628;</i>汽车信息查询</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" href-url="demo/AutoQuery.html"><i class="layui-icon">&#xe621;</i>汽车查询</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/MoneyChangeQuery.html"><i class="layui-icon">&#xe621;</i>租金变更记录查询</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/HistoryQuery.html"><i class="layui-icon">&#xe621;</i>租/还车记录查询</a></dd>
+                        <dd><a href="javascript:;" href-url="<%=basePath%>AutoQueryServlet"><i class="layui-icon">&#xe621;</i>汽车查询</a></dd>
+                        <dd><a href="javascript:;" href-url="<%=basePath%>ChangeMoneyQueryServlet"><i class="layui-icon">&#xe621;</i>租金变更记录查询</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a target="_blank" href=""><i class="layui-icon">&#xe61e;</i>JBS租车网</a></li>
+                <li class="layui-nav-item"><a target="_blank" href="MainServlet"><i class="layui-icon">&#xe61e;</i>JBS租车网</a></li>
             </ul>
         </div>
     </div>
@@ -88,7 +88,7 @@
             </ul>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
-                    <iframe id="iframe" src="" frameborder="0"></iframe>
+                    <iframe id="iframe" src="/WelcomeServlet" frameborder="0"></iframe>
                 </div>
             </div>
         </div>

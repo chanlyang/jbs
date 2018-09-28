@@ -15,13 +15,13 @@ import java.text.SimpleDateFormat;
 public class CustomUpdateServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            String cno = request.getParameter("cno");
+            String uname = request.getParameter("uname");
             String cname = request.getParameter("cname");
             String cidcard = request.getParameter("cidcard");
             String phonenum = request.getParameter("phonenum");
             String birthday = request.getParameter("birthday");
             Custom custom = new Custom();
-            custom.setCno(cno);
+            custom.setUname(uname);
             custom.setCname(cname);
             custom.setCidcard(cidcard);
             custom.setPhonenum(phonenum);
@@ -42,10 +42,10 @@ public class CustomUpdateServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String cno = request.getParameter("cno");
+        String uname = request.getParameter("uname");
         UserBiz biz = new UserBiz();
         try {
-            Custom custom = biz.getCustomDetail(cno);
+            Custom custom = biz.getCustomDetail(uname);
             request.setAttribute("custom",custom);
             request.getRequestDispatcher("/WEB-INF/AdminPages/CustomUpdate.jsp").forward(request, response);
         } catch (Exception e) {

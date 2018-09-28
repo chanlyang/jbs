@@ -11,6 +11,15 @@ public class AutoInfo {
     private String tubo;
     private double dayrent;
     private String pic;
+    private int state;
+
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int state) {
+        this.state = state;
+    }
 
     public String getPic() {
         return pic;

@@ -79,10 +79,9 @@
                     <dl class="layui-nav-child">
                         <dd><a href="javascript:;" href-url="<%=basePath%>RentListInfoServlet"><i class="layui-icon">&#xe621;</i>租车管理</a></dd>
                         <dd><a href="javascript:;" href-url="<%=basePath%>BackListInfoServlet"><i class="layui-icon">&#xe621;</i>还车管理</a></dd>
-                        <dd><a href="javascript:;" href-url="demo/MoneyChangeQuery.html"><i class="layui-icon">&#xe621;</i>租/还车记录管理</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a target="_blank" href=""><i class="layui-icon">&#xe61e;</i>JBS租车网</a></li>
+                <li class="layui-nav-item"><a target="_blank" href="MainServlet"><i class="layui-icon">&#xe61e;</i>JBS租车网</a></li>
             </ul>
         </div>
     </div>
@@ -94,7 +93,7 @@
             </ul>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
-                    <iframe id="iframe" src="" frameborder="0"></iframe>
+                    <iframe id="iframe" src="/WelcomeServlet" frameborder="0"></iframe>
                 </div>
             </div>
         </div>

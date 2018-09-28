@@ -30,9 +30,9 @@
 </fieldset>
 <form class="layui-form layui-form-pane" action="<%=basePath%>CustomServlet" method="post" enctype = "multipart/form-data">
     <div class="layui-form-item">
-        <label class="layui-form-label">客户号</label>
+        <label class="layui-form-label">客户用户名</label>
         <div class="layui-input-inline">
-            <input type="text" name="cno" autocomplete="off" class="layui-input" value="${custom.cno}" readonly>
+            <input type="text" name="uname" autocomplete="off" class="layui-input" value="${custom.uname}" readonly>
         </div>
     </div>
     <div class="layui-form-item">
@@ -57,7 +57,6 @@
     </div>
     <div class="layui-form-item">
         <input class="layui-btn" lay-filter="demo2" type="submit" value="返回">
-        <input class="layui-btn" lay-filter="demo2" type="submit" value="关闭" onclick="window.close() ">
     </div>
     <br>
     <div>${msg}</div>

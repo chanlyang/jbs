@@ -1,5 +1,6 @@
 package jbs.biz;
 
+import jbs.Entity.BackList;
 import jbs.Entity.TurnPage;
 import jbs.dao.BackListDao;
 import jbs.dto.BackListInfo;
@@ -7,11 +8,11 @@ import jbs.dto.BackListInfo;
 import java.util.List;
 
 public class BackListBiz {
-    public List<BackListInfo> getBackListInfo(String rno, String sno, String cno, String autocard, TurnPage tp) throws Exception{
+    public List<BackListInfo> getBackListInfo(String rno, String suname, String cuname, String autocard, TurnPage tp) throws Exception{
         List<BackListInfo> backListInfoList;
         BackListDao dao = new BackListDao();
         try{
-            backListInfoList = dao.getBackListInfo(rno,sno,cno,autocard,tp);
+            backListInfoList = dao.getBackListInfo(rno,suname,cuname,autocard,tp);
         }catch (Exception e){
             throw e;
         }finally {
@@ -44,5 +45,43 @@ public class BackListBiz {
             dao.closeConnection();
         }
         return b;
+    }
+
+    public List<BackListInfo> getBackList(String rno, String suname, String cuname, String autocard, TurnPage tp) throws Exception{
+        List<BackListInfo> backListInfoList;
+        BackListDao dao = new BackListDao();
+        try{
+            backListInfoList = dao.getBackList(rno,suname,cuname,autocard,tp);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return backListInfoList;
+    }
+
+    public BackListInfo getBackListDetail(String rno) throws Exception {
+        BackListInfo backListInfo;
+        BackListDao dao = new BackListDao();
+        try{
+            backListInfo = dao.getBackListDetail(rno);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return backListInfo;
+    }
+
+    public void addBacklist(BackList backList) throws Exception{
+        BackListDao dao = new BackListDao();
+        try{
+            dao.addBacklist(backList);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+
     }
 }

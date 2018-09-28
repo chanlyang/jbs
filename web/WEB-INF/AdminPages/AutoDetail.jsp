@@ -84,7 +84,6 @@
     <div class="layui-form-item">
         <label class="layui-form-label">图片</label><img src="${auto.picurl}" alt="无法显示图片" name="pic"><br><br><br>
         <input class="layui-btn" lay-filter="demo2" type="submit" value="返回">
-        <input class="layui-btn" lay-filter="demo2" type="submit" value="返回" onclick="window.close()">
     </div>
     <br>
     <div>${msg}</div>

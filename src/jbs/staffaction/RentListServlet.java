@@ -19,12 +19,11 @@ public class RentListServlet extends HttpServlet {
         RentListBiz biz = new RentListBiz();
         HttpSession session = req.getSession();
         String rno = req.getParameter("rno");
-        String cno = req.getParameter("cno");
+        String cuname = req.getParameter("cuname");
         String autocard = req.getParameter("autocard");
         String page = req.getParameter("page");
         String uname = (String) session.getAttribute("uname");
         try{
-            String sno = biz.getSno(uname);
             TurnPage tp = new TurnPage();
             tp.rows = 6;
             if(page != null) {
@@ -34,11 +33,11 @@ public class RentListServlet extends HttpServlet {
                 }
                 tp.page = iPage;         //当前页号，永远不能<1
             }
-            List<RentListInfo> rentListInfoList = biz.getRentListInfo(rno,sno,cno,autocard,tp);
+            List<RentListInfo> rentListInfoList = biz.getRentList(rno,cuname,autocard,tp);
             req.setAttribute("rentListInfoList",rentListInfoList);
-            req.setAttribute("sno",sno);
+            req.setAttribute("uname",uname);
             req.setAttribute("rno",rno);
-            req.setAttribute("cno",cno);
+            req.setAttribute("cuname",cuname);
             req.setAttribute("autocard",autocard);
             req.setAttribute("tp",tp);
             req.getRequestDispatcher("/WEB-INF/StaffPages/RentList.jsp").forward(req, resp);

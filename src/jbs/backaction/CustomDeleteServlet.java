@@ -18,9 +18,9 @@ public class CustomDeleteServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String cno = request.getParameter("cno");
+        String uname = request.getParameter("uname");
         Custom custom = new Custom();
-        custom.setCno(cno);
+        custom.setUname(uname);
         UserBiz biz = new UserBiz();
         try {
             boolean b = biz.CustomDelete(custom);

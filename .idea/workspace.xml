@@ -7,79 +7,140 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df299333-2e6a-4741-87cf-96c5059ff4d7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/filter/UserFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/frontaction/CarAServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/CustomPages/autodetail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jbs/staffaction/AutoQueryServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jbs/staffaction/BackListAddServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jbs/staffaction/BackListDeleteServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jbs/staffaction/BackListDetailServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jbs/staffaction/BackListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jbs/staffaction/CLAddServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jbs/staffaction/ChangeListAddServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jbs/staffaction/ChangeListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jbs/staffaction/ChangeListUpdateServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jbs/staffaction/ChangeMoneyQueryServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jbs/staffaction/RentAllListDetailServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jbs/staffaction/RentAllListServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jbs/staffaction/WelcomeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/StaffPages/AutoQuery.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/StaffPages/BackList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/StaffPages/BackListAdd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/StaffPages/BackListDetail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/StaffPages/ChangeList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/StaffPages/ChangeListAdd.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/StaffPages/ChangeListUpdate.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/StaffPages/ChangeMoneyQuery.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/StaffPages/RentAllList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/StaffPages/RentAllListDetail.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/WEB-INF/StaffPages/welcome.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/animate-text.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/animate.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/color/color1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/color/color2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/color/color3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/color/color4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/color/color5.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/color/color6.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/color/color7.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/color/color8.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/color/color9.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/magnific-popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/owl.theme.default.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/slicknav.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/doc/TOC.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/doc/css.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/doc/extend.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/doc/faq.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/doc/html.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/doc/js.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/doc/misc.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/doc/usage.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/js/animate-text.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/js/colors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/js/gmaps.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/js/isotope.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/js/jquery.counterup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/js/jquery.magnific-popup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/js/jquery.nav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/js/jquery.scrollUp.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/js/jquery.slicknav.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/js/jquery.stellar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/js/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/js/particle-code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/js/particles.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/js/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/welcome/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jbs/Entity/Auto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/Entity/Auto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jbs/biz/CustomBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/biz/CustomBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jbs/dao/CustomDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/dao/CustomDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jbs/dto/AutoInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/dto/AutoInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jbs/frontaction/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/frontaction/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/CustomPages/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/CustomPages/welcome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/tip.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/tip.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/backaction/AutoDeleteAllServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/backaction/AutoDeleteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/backaction/BackDeleteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/backaction/BackDetailServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/backaction/BackListInfoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/backaction/ChangeMoneyDeleteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/backaction/ChangeMoneyDetailServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/backaction/ChangeMoneyServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/backaction/CustomDeleteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/backaction/CustomDetailServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/backaction/CustomUpdateServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/backaction/RentDeleteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/backaction/RentDetailServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/backaction/RentListInfoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/backaction/StaffDeleteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/backaction/StaffDetailServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/backaction/StaffUpdateServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/biz/BackListBiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/biz/RentListBiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/dao/BackListDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/dao/RentListDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/dto/BackListInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/dto/RentListInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/staffaction/CalServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/staffaction/RentListDeleteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/staffaction/RentListDetailServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jbs/staffaction/RentListServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/BackDetail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/BackList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/ChangeMoneyDetail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/ChangeMoneyQuery.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/CustomDetail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/CustomUpdate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/RentList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/RentListDetail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/StaffDetail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/StaffUpdate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/StaffPages/RentList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/StaffPages/RentListDetail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filter/CharacterEncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/filter/CharacterEncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jbs/Entity/Auto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/Entity/Auto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jbs/Entity/BackList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/Entity/BackList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jbs/Entity/ChangeMoney.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/Entity/ChangeMoney.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/Entity/ChangeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/Entity/ChangeList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/Entity/Custom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/Entity/Custom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/Entity/IRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/Entity/IRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/Entity/RentDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/Entity/RentDetail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jbs/Entity/RentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/Entity/RentList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jbs/Entity/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/Entity/Staff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jbs/backaction/AutoAddServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/backaction/AutoAddServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jbs/backaction/AutoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/backaction/AutoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/Entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jbs/backaction/AutoUpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/backaction/AutoUpdateServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/backaction/BackListInfoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/backaction/BackListInfoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/backaction/CustomDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/backaction/CustomDeleteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/backaction/CustomDetailServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/backaction/CustomDetailServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/backaction/CustomServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/backaction/CustomServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/backaction/CustomUpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/backaction/CustomUpdateServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/backaction/RentListInfoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/backaction/RentListInfoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/backaction/StaffDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/backaction/StaffDeleteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/backaction/StaffDetailServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/backaction/StaffDetailServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/backaction/StaffServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/backaction/StaffServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/backaction/StaffUpdateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/backaction/StaffUpdateServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jbs/biz/AutoBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/biz/AutoBiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/biz/BackListBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/biz/BackListBiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/biz/RentListBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/biz/RentListBiz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jbs/biz/UserBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/biz/UserBiz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jbs/dao/AutoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/dao/AutoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/dao/BackListDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/dao/BackListDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/dao/RentListDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/dao/RentListDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jbs/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/jbs/dto/AutoInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/dto/AutoInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/dto/BackListInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/dto/BackListInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/dto/RentListInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/dto/RentListInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/staffaction/CalServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/staffaction/CalServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/staffaction/RentListDetailServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/staffaction/RentListDetailServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jbs/staffaction/RentListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jbs/staffaction/RentListServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/AdminPages/AdminMain.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/AdminMain.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/AdminPages/AutoDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/AutoDetail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/AdminPages/AutoQuery.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/AutoQuery.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/AdminPages/AutoUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/AutoUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/AdminPages/BackDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/BackDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/AdminPages/BackList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/BackList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/AdminPages/CustomDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/CustomDetail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/AdminPages/CustomQuery.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/CustomQuery.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/AdminPages/CustomUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/CustomUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/AdminPages/RentList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/RentList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/AdminPages/RentListDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/RentListDetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/AdminPages/RentManage.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/AdminPages/StaffDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/StaffDetail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/AdminPages/StaffQuery.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/StaffQuery.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/AdminPages/StaffUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/AdminPages/StaffUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/CustomPages/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/CustomPages/welcome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/StaffPages/RentList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/StaffPages/RentList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/StaffPages/RentListDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/StaffPages/RentListDetail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/StaffPages/StaffMain.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/StaffPages/StaffMain.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -94,120 +155,13 @@
     <favorites_list name="jbs_1" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="welcome.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/CustomPages/welcome.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jbs/frontaction/MainServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarAServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jbs/frontaction/CarAServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autodetail.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/CustomPages/autodetail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="39" column="63" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="37" column="50" lean-forward="true" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserFilter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/filter/UserFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomBiz.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jbs/biz/CustomBiz.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jbs/dao/CustomDAO.java">
-    <leaf>
-      <file leaf-file-name="AutoQuery.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/AutoQuery.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="89" column="104" lean-forward="true" selection-start-line="89" selection-start-column="104" selection-end-line="89" selection-end-column="104" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RentList.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/RentList.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="68" column="140" lean-forward="true" selection-start-line="68" selection-start-column="140" selection-end-line="68" selection-end-column="140" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RentList.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/StaffPages/RentList.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="71" column="28" lean-forward="true" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RentListDetail.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/StaffPages/RentListDetail.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="136" column="97" selection-start-line="136" selection-start-column="97" selection-end-line="136" selection-end-column="97" />
-            <state relative-caret-position="474">
-              <caret line="61" column="67" lean-forward="true" selection-start-line="61" selection-start-column="67" selection-end-line="61" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
         <option value="Jsp File" />
       </list>
     </option>
@@ -217,6 +171,7 @@
       <find>&lt;%=basePath%&gt;</find>
       <find>table</find>
       <find>tr</find>
+      <find>sno</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -228,70 +183,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/jbs/backaction/AutoUpdateServlet.java" />
-        <option value="$PROJECT_DIR$/src/jbs/backaction/AutoServlet.java" />
-        <option value="$PROJECT_DIR$/src/jbs/backaction/RentListInfoServlet.java" />
-        <option value="$PROJECT_DIR$/src/jbs/Entity/RentList.java" />
-        <option value="$PROJECT_DIR$/src/jbs/dto/RentListInfo.java" />
-        <option value="$PROJECT_DIR$/src/jbs/backaction/RentDetailServlet.java" />
-        <option value="$PROJECT_DIR$/src/jbs/backaction/StaffDetailServlet.java" />
-        <option value="$PROJECT_DIR$/src/jbs/backaction/CustomDetailServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/RentListDetail.jsp" />
-        <option value="$PROJECT_DIR$/src/jbs/backaction/RentDeleteServlet.java" />
-        <option value="$PROJECT_DIR$/src/jbs/Entity/BackList.java" />
-        <option value="$PROJECT_DIR$/src/jbs/dto/BackListInfo.java" />
-        <option value="$PROJECT_DIR$/src/jbs/dao/BackListDao.java" />
-        <option value="$PROJECT_DIR$/src/jbs/biz/BackListBiz.java" />
-        <option value="$PROJECT_DIR$/src/jbs/backaction/BackListInfoServlet.java" />
-        <option value="$PROJECT_DIR$/src/jbs/backaction/BackDeleteServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/BackList.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/RentList.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/BackDetail.jsp" />
-        <option value="$PROJECT_DIR$/src/jbs/backaction/BackDetailServlet.java" />
-        <option value="$PROJECT_DIR$/src/jbs/biz/AutoBiz.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/CustomUpdate.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/CustomQuery.jsp" />
-        <option value="$PROJECT_DIR$/src/jbs/backaction/CustomDeleteServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/StaffQuery.jsp" />
-        <option value="$PROJECT_DIR$/src/jbs/backaction/StaffUpdateServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/StaffUpdate.jsp" />
-        <option value="$PROJECT_DIR$/src/jbs/backaction/StaffDeleteServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/CustomDetail.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/StaffDetail.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/AutoQuery.jsp" />
+        <option value="$PROJECT_DIR$/src/jbs/staffaction/BackListServlet.java" />
+        <option value="$PROJECT_DIR$/src/jbs/staffaction/BackListDetailServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/StaffPages/BackListDetail.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/StaffPages/BackList.jsp" />
+        <option value="$PROJECT_DIR$/src/jbs/staffaction/BackListDeleteServlet.java" />
         <option value="$PROJECT_DIR$/src/jbs/backaction/CustomUpdateServlet.java" />
+        <option value="$PROJECT_DIR$/src/jbs/staffaction/ChangeListAddServlet.java" />
+        <option value="$PROJECT_DIR$/src/jbs/staffaction/ChangeListServlet.java" />
+        <option value="$PROJECT_DIR$/src/jbs/Entity/ChangeList.java" />
+        <option value="$PROJECT_DIR$/src/jbs/staffaction/ChangeListUpdateServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/StaffPages/ChangeListUpdate.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/StaffPages/ChangeList.jsp" />
+        <option value="$PROJECT_DIR$/src/jbs/staffaction/CLAddServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/StaffPages/ChangeListAdd.jsp" />
+        <option value="$PROJECT_DIR$/src/jbs/biz/BackListBiz.java" />
+        <option value="$PROJECT_DIR$/src/jbs/staffaction/BackListAddServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/StaffPages/BackListAdd.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/SAwelcome.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/AdminMain.jsp" />
-        <option value="$PROJECT_DIR$/web/Login.jsp" />
-        <option value="$PROJECT_DIR$/src/jbs/Entity/Staff.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/StaffPages/StaffMain.jsp" />
-        <option value="$PROJECT_DIR$/src/jbs/backaction/UserServlet.java" />
-        <option value="$PROJECT_DIR$/src/jbs/biz/UserBiz.java" />
-        <option value="$PROJECT_DIR$/src/jbs/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/jbs/staffaction/RentListServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/SAwelcome.html" />
+        <option value="$PROJECT_DIR$/src/jbs/staffaction/WelcomeServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/StaffPages/welcome.html" />
+        <option value="$PROJECT_DIR$/src/jbs/Entity/RentList.java" />
+        <option value="$PROJECT_DIR$/src/jbs/dao/BackListDao.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/StaffPages/RentList.jsp" />
         <option value="$PROJECT_DIR$/src/jbs/staffaction/RentListDetailServlet.java" />
-        <option value="$PROJECT_DIR$/src/jbs/dao/RentListDao.java" />
+        <option value="$PROJECT_DIR$/src/jbs/Entity/RentDetail.java" />
+        <option value="$PROJECT_DIR$/src/jbs/staffaction/RentListServlet.java" />
         <option value="$PROJECT_DIR$/src/jbs/biz/RentListBiz.java" />
         <option value="$PROJECT_DIR$/src/jbs/staffaction/CalServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/StaffPages/RentList.jsp" />
-        <option value="$PROJECT_DIR$/src/jbs/staffaction/RentListDeleteServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/AutoQuery.jsp" />
-        <option value="$PROJECT_DIR$/src/jbs/backaction/AutoServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/AutoDetail.jsp" />
-        <option value="$PROJECT_DIR$/src/jbs/Entity/Auto.java" />
-        <option value="$PROJECT_DIR$/src/jbs/dto/AutoInfo.java" />
-        <option value="$PROJECT_DIR$/src/jbs/dao/AutoDao.java" />
-        <option value="$PROJECT_DIR$/src/jbs/Entity/Auto.java" />
-        <option value="$PROJECT_DIR$/web/tip.jsp" />
-        <option value="$PROJECT_DIR$/src/jbs/dto/AutoInfo.java" />
-        <option value="$PROJECT_DIR$/src/jbs/biz/CustomBiz.java" />
-        <option value="$PROJECT_DIR$/src/jbs/dao/CustomDAO.java" />
-        <option value="$PROJECT_DIR$/src/jbs/frontaction/AutoDetailServlet.java" />
-        <option value="$PROJECT_DIR$/src/jbs/frontaction/MainServlet.java" />
-        <option value="$PROJECT_DIR$/src/jbs/frontaction/CarAServlet.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/CustomPages/welcome.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/CustomPages/autodetail.jsp" />
-        <option value="$PROJECT_DIR$/web/Login.jsp" />
-        <option value="$PROJECT_DIR$/src/filter/UserFilter.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/StaffPages/RentListDetail.jsp" />
+        <option value="$PROJECT_DIR$/src/jbs/staffaction/RentAllListServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/StaffPages/RentAllListDetail.jsp" />
+        <option value="$PROJECT_DIR$/src/jbs/staffaction/RentAllListDetailServlet.java" />
+        <option value="$PROJECT_DIR$/src/jbs/dto/AutoInfo.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/StaffPages/AutoQuery.jsp" />
+        <option value="$PROJECT_DIR$/src/jbs/dao/AutoDao.java" />
+        <option value="$PROJECT_DIR$/src/jbs/biz/AutoBiz.java" />
+        <option value="$PROJECT_DIR$/src/jbs/staffaction/AutoQueryServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/StaffPages/ChangeMoneyQuery.jsp" />
+        <option value="$PROJECT_DIR$/src/jbs/staffaction/ChangeMoneyQueryServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/AutoDetail.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/StaffPages/StaffMain.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/StaffQuery.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/CustomDetail.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/AdminPages/StaffDetail.jsp" />
+        <option value="$PROJECT_DIR$/src/jbs/backaction/StaffUpdateServlet.java" />
+        <option value="$PROJECT_DIR$/src/jbs/dao/RentListDao.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/StaffPages/RentAllList.jsp" />
       </list>
     </option>
   </component>
@@ -312,10 +254,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-28" />
-    <option name="y" value="15" />
-    <option name="width" value="2576" />
-    <option name="height" value="1544" />
+    <option name="x" value="1268" />
+    <option name="width" value="1302" />
+    <option name="height" value="1542" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -325,8 +266,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -344,58 +283,18 @@
               <item name="jbs_1" type="b2602c69:ProjectViewProjectNode" />
               <item name="jbs_1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jbs_1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jbs_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="jbs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jbs_1" type="b2602c69:ProjectViewProjectNode" />
               <item name="jbs_1" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jbs_1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jbs_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="jbs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jbs_1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jbs_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="jbs" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jbs_1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jbs_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="jbs" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jbs_1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jbs_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="jbs" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jbs_1" type="b2602c69:ProjectViewProjectNode" />
               <item name="jbs_1" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jbs_1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jbs_1" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="CustomPages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jbs_1" type="b2602c69:ProjectViewProjectNode" />
@@ -406,17 +305,24 @@
             </path>
             <path>
               <item name="jbs_1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jbs_1" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="welcome" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jbs_1" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="D:/IDEA/OfferTest" />
@@ -425,18 +331,21 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\文档\Java课程\8-16\jbs_1\web\js" />
       <recent name="D:\文档\Java课程\8-16\jbs_1\web\WEB-INF\lib" />
-      <recent name="D:\文档\Java课程\8-16\jbs_1\web\WEB-INF" />
-      <recent name="D:\文档\Java课程\8-16\jbs_1\web\WEB-INF\AdminPages" />
       <recent name="D:\文档\Java课程\8-16\jbs_1\web" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\文档\Java课程\8-16\jbs_1\web\WEB-INF\lib" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\文档\Java课程\8-16\jbs_1\web\welcome\js" />
+      <recent name="D:\文档\Java课程\8-16\jbs_1\web\welcome" />
+      <recent name="D:\文档\Java课程\8-16\jbs_1\web\welcome\css" />
       <recent name="D:\文档\Java课程\8-16\jbs_1\web" />
+      <recent name="D:\文档\Java课程\8-16\jbs_1\web\fonts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -652,6 +561,8 @@
       <workItem from="1537834382682" duration="30735000" />
       <workItem from="1537920017003" duration="27620000" />
       <workItem from="1538006991691" duration="7500000" />
+      <workItem from="1538016578384" duration="32539000" />
+      <workItem from="1538093970029" duration="35115000" />
     </task>
     <task id="LOCAL-00001" summary="2018/9/17">
       <created>1537146489579</created>
@@ -678,14 +589,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105301000" />
-    <option name="totallyTimeSpent" value="148537000" />
+    <option name="totallyTimeSpent" value="216191000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <frame x="-7" y="-7" width="1477" height="888" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5031668" side_tool="true" weight="0.79779917" />
@@ -698,23 +605,23 @@
       <window_info id="Structure" order="2" sideWeight="0.4434907" side_tool="true" weight="0.3448276" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="6" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5429936" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35213205" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3280255" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.10041265" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.05254777" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4968332" visible="true" weight="0.16082802" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4968332" weight="0.27235213" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.55218214" visible="true" weight="0.19180088" />
-      <window_info active="true" id="Web" order="7" sideWeight="0.44781783" side_tool="true" visible="true" weight="0.19180088" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.731569" visible="true" weight="0.19985925" />
+      <window_info id="Web" order="7" sideWeight="0.268431" side_tool="true" weight="0.19985925" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32599726" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="5" sideWeight="0.4434907" side_tool="true" weight="0.3448276" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -723,63 +630,35 @@
       <window_info anchor="bottom" id="Application Servers" order="9" weight="0.2531847" />
       <window_info id="Designer" order="4" />
       <window_info anchor="right" id="Palette" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4968332" visible="true" weight="0.32961783" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4968332" visible="true" weight="0.27235213" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5031668" side_tool="true" weight="0.79779917" />
-      <window_info anchor="bottom" id="Application Servers" order="9" weight="0.2531847" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="1" />
-      <window_info id="Designer" order="4" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info id="Structure" order="2" sideWeight="0.4434907" side_tool="true" weight="0.3448276" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="6" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2503439" />
-      <window_info id="UI Designer" order="6" />
       <window_info id="Favorites" order="5" sideWeight="0.4434907" side_tool="true" weight="0.3448276" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5031668" side_tool="true" weight="0.79779917" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3280255" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.10041265" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49964812" weight="0.08888889" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info id="Image Layers" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.731569" visible="true" weight="0.19985925" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.15268226" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4968332" visible="true" weight="0.29711142" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8414873" visible="true" weight="0.20126672" />
-      <window_info id="Web" order="7" sideWeight="0.15851273" side_tool="true" visible="true" weight="0.20126672" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info id="Favorites" order="5" sideWeight="0.4434907" side_tool="true" weight="0.3448276" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.05254777" />
       <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.55414015" weight="0.19180088" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32599726" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Web" order="7" sideWeight="0.44585988" side_tool="true" weight="0.19180088" />
+      <window_info id="Web" order="7" sideWeight="0.268431" side_tool="true" visible="true" weight="0.19985925" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Structure" order="2" sideWeight="0.4434907" side_tool="true" weight="0.3448276" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5429936" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35213205" />
     </layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3287483" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -795,562 +674,371 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
-      <option name="time" value="42" />
+      <option name="time" value="87" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/json/nav_top_left.json">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/BackList.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/SAwelcome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="74" column="112" selection-start-line="74" selection-start-column="112" selection-end-line="74" selection-end-column="112" />
+        <state relative-caret-position="2976">
+          <caret line="96" column="7" selection-start-line="96" selection-start-column="7" selection-end-line="96" selection-end-column="7" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/BackDetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="103" column="76" selection-start-line="103" selection-start-column="76" selection-end-line="103" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/BackDetailServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/dao/CustomDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2387">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/AutoUpdateServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="88" column="13" selection-start-line="88" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/AutoUpdate.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/AutoDeleteAllServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/CustomUpdate.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1901">
-          <caret line="67" column="14" lean-forward="true" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/StaffUpdateServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="38" column="111" lean-forward="true" selection-start-line="38" selection-start-column="111" selection-end-line="38" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/StaffUpdate.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1078">
-          <caret line="65" column="10" lean-forward="true" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/AutoDeleteServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/CustomDeleteServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="20" selection-start-line="20" selection-end-line="34" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/StaffDeleteServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/tip.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/CustomPages/welcome.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-93" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/CustomQuery.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1209">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+        <state relative-caret-position="279">
+          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/StaffDetail.jsp">
+    <entry file="file://$PROJECT_DIR$/web/welcome/css/slicknav.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/welcome/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/welcome/js/gmaps.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/welcome/js/particle-code.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/staffaction/WelcomeServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="30" column="67" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
+        <state relative-caret-position="124">
+          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/RentManage.html" />
-    <entry file="file://$PROJECT_DIR$/web/css/style.css">
-    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/CustomUpdateServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/jbs/Entity/RentList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
+        <state relative-caret-position="124">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/dao/BackListDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1966">
+          <caret line="98" column="68" selection-start-line="98" selection-start-column="68" selection-end-line="98" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/RentListDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2046" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/RentList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="73" column="138" selection-start-line="73" selection-start-column="138" selection-end-line="73" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/dto/RentListInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/staffaction/CLAddServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="39" column="59" lean-forward="true" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="151" column="18" selection-start-line="151" selection-start-column="18" selection-end-line="151" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/biz/UserBiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="74" column="34" selection-start-line="74" selection-start-column="34" selection-end-line="74" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/CustomDetailServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/StaffPages/RentList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="68" column="103" selection-start-line="68" selection-start-column="103" selection-end-line="68" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/Entity/RentDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#714#715#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/staffaction/RentListServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="37" column="44" lean-forward="true" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/staffaction/CalServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/staffaction/RentAllListServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/staffaction/RentListDetailServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="21" selection-start-line="21" selection-end-line="41" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/StaffPages/RentListDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="148" column="21" lean-forward="true" selection-end-line="163" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/biz/RentListBiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/StaffPages/RentAllListDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-62">
+          <caret line="136" column="108" selection-start-line="136" selection-start-column="108" selection-end-line="136" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/staffaction/RentAllListDetailServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="37" column="68" selection-start-line="37" selection-start-column="68" selection-end-line="37" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/AutoQuery.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/dto/AutoInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#450#451#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/AutoServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="16" selection-start-line="16" selection-end-line="46" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/dao/AutoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1580">
+          <caret line="385" column="49" lean-forward="true" selection-start-line="385" selection-start-column="49" selection-end-line="385" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/biz/AutoBiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="210" column="20" lean-forward="true" selection-start-line="210" selection-start-column="20" selection-end-line="210" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/staffaction/AutoQueryServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/ChangeMoneyQuery.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="8" column="47" lean-forward="true" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/ChangeMoneyServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="17" selection-start-line="17" selection-end-line="39" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/staffaction/ChangeMoneyQueryServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="34" column="100" selection-start-line="34" selection-start-column="100" selection-end-line="34" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/StaffPages/ChangeMoneyQuery.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="74" column="18" lean-forward="true" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/StaffPages/ChangeListAdd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-837" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/StaffPages/AutoQuery.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="90" column="52" lean-forward="true" selection-start-line="90" selection-start-column="52" selection-end-line="90" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/AutoDetailServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="22" column="68" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/AutoDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="85" column="77" selection-start-line="85" selection-start-column="77" selection-end-line="85" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/StaffPages/StaffMain.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="69" column="25" lean-forward="true" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/StaffPages/welcome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1829">
+          <caret line="31" column="66" lean-forward="true" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/StaffQuery.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="57" column="21" lean-forward="true" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/AdminMain.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="69" column="43" lean-forward="true" selection-start-line="69" selection-start-column="43" selection-end-line="69" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/Entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/Entity/Staff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/RentListInfoServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/StaffPages/StaffMain.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="65" column="89" selection-start-line="65" selection-start-column="89" selection-end-line="65" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1116">
-          <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/AutoAdd.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1767" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/RentListDetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="83" column="8" lean-forward="true" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/CustomDetail.jsp">
-    <entry file="file://$PROJECT_DIR$/web/tips.jsp" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Object.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/String.java" />
-    <entry file="file://$PROJECT_DIR$/src/jbs/util/DbInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="55" column="14" lean-forward="true" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/RentDetailServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-155">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/biz/UserBiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/UserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/AutoAddServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="72" column="41" lean-forward="true" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/staffaction/RentListDetailServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/staffaction/CalServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="55" column="65" lean-forward="true" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
+        <state relative-caret-position="124">
+          <caret line="37" column="92" selection-start-line="37" selection-start-column="92" selection-end-line="37" selection-end-column="92" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/CustomQuery.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="35" />
+        <state relative-caret-position="-1395" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/CustomDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="58" column="77" selection-start-line="58" selection-start-column="77" selection-end-line="58" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/AdminMain.jsp">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/StaffDetail.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-836">
-          <caret line="90" column="36" lean-forward="true" selection-start-line="90" selection-start-column="36" selection-end-line="90" selection-end-column="36" />
+        <state relative-caret-position="6">
+          <caret line="64" column="77" selection-start-line="64" selection-start-column="77" selection-end-line="64" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/UserServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/CustomUpdateServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-        <state relative-caret-position="213">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+        <state relative-caret-position="-31">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/staffaction/RentListServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/StaffUpdateServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-        <state relative-caret-position="224">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/RentDeleteServlet.java">
-    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/CustomServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/AutoServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-        <state relative-caret-position="110">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-    <entry file="file://$PROJECT_DIR$/src/jbs/staffaction/RentListDeleteServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-        </state>
-        <state relative-caret-position="217">
-          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/biz/RentListBiz.java">
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/ojdbc6.jar!/oracle/jdbc/driver/OracleResultSet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        <state relative-caret-position="-67">
-          <caret line="367" selection-start-line="367" selection-end-line="367" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/ojdbc6.jar!/oracle/jdbc/driver/OracleResultSetImpl.class">
-    <entry file="file://$PROJECT_DIR$/src/jbs/dao/RentListDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="1577" selection-start-line="1577" selection-end-line="1577" />
-        <state relative-caret-position="310">
-          <caret line="113" column="29" lean-forward="true" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/Entity/Auto.java">
-    <entry file="jar://$PROJECT_DIR$/web/WEB-INF/lib/ojdbc6.jar!/oracle/jdbc/driver/OracleStatement.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="122" column="30" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
-          <folding>
-            <element signature="e#2213#2214#0" expanded="true" />
-            <element signature="e#2255#2256#0" expanded="true" />
-            <element signature="e#2289#2290#0" expanded="true" />
-          </folding>
-        <state relative-caret-position="136">
-          <caret line="1513" selection-start-line="1513" selection-end-line="1513" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/String.java">
-    <entry file="file://$PROJECT_DIR$/src/jbs/dto/AutoInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="1105" selection-start-line="1105" selection-end-line="1105" />
-        <state relative-caret-position="337">
-          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
-          <folding>
-            <element signature="e#1561#1562#0" expanded="true" />
-            <element signature="e#1589#1590#0" expanded="true" />
-            <element signature="e#1631#1632#0" expanded="true" />
-            <element signature="e#1665#1666#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/CustomPages/test.jsp">
-    <entry file="file://$PROJECT_DIR$/src/jbs/dao/AutoDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-        <state relative-caret-position="-4389">
-          <caret line="194" column="44" lean-forward="true" selection-start-line="194" selection-start-column="44" selection-end-line="194" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jbs/dao/BaseDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
-        <state relative-caret-position="175">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="93">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/sql/Statement.java">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/AutoDetail.jsp">
+    <entry file="file://$PROJECT_DIR$/src/jbs/dao/RentListDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="401" lean-forward="true" selection-start-line="401" selection-end-line="401" />
-        <state relative-caret-position="-4">
-          <caret line="74" column="18" lean-forward="true" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
+        <state relative-caret-position="279">
+          <caret line="23" column="100" selection-start-line="23" selection-start-column="100" selection-end-line="23" selection-end-column="100" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/Entity/Auto.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/StaffPages/RentAllList.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="109" column="36" lean-forward="true" selection-start-line="109" selection-start-column="36" selection-end-line="109" selection-end-column="36" />
-          <folding>
-            <element signature="e#1879#1880#0" expanded="true" />
-            <element signature="e#1905#1906#0" expanded="true" />
-            <element signature="e#1973#1974#0" expanded="true" />
-            <element signature="e#2006#2007#0" expanded="true" />
-            <element signature="e#2035#2036#0" expanded="true" />
-            <element signature="e#2079#2080#0" expanded="true" />
-            <element signature="e#2115#2116#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/backaction/AutoAddServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-        <state relative-caret-position="264">
-          <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/AutoQuery.jsp">
-    <entry file="file://$PROJECT_DIR$/web/tip.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="89" column="104" lean-forward="true" selection-start-line="89" selection-start-column="104" selection-end-line="89" selection-end-column="104" />
-        <state relative-caret-position="491">
-          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/AdminPages/RentList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        <state relative-caret-position="132">
-          <caret line="68" column="140" lean-forward="true" selection-start-line="68" selection-start-column="140" selection-end-line="68" selection-end-column="140" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/StaffPages/RentList.jsp">
-    <entry file="file://$PROJECT_DIR$/src/jbs/Entity/TurnPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="71" column="28" lean-forward="true" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
-        <state relative-caret-position="88">
-          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/Entity/Brand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/dto/AutoInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/StaffPages/RentListDetail.jsp">
-    <entry file="file://$PROJECT_DIR$/src/jbs/biz/CustomBiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/dao/CustomDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="61" column="67" lean-forward="true" selection-start-line="61" selection-start-column="67" selection-end-line="61" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/frontaction/AutoDetailServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/frontaction/MainServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jbs/frontaction/CarAServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/CustomPages/welcome.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/CustomPages/autodetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="39" column="63" selection-start-line="39" selection-start-column="63" selection-end-line="39" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="136" column="97" selection-start-line="136" selection-start-column="97" selection-end-line="136" selection-end-column="97" />
-        <state relative-caret-position="199">
-          <caret line="37" column="50" lean-forward="true" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/filter/UserFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="472">
+          <caret line="64" column="87" lean-forward="true" selection-start-line="64" selection-start-column="87" selection-end-line="64" selection-end-column="87" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
-    <states>
+    <state>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
@@ -1424,6 +1112,6 @@
           </splitter-proportions>
         </settings>
       </state>
-    </states>
+    </state>
   </component>
 </project>

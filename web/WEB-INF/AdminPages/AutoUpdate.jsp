@@ -120,9 +120,15 @@
                 <input type="text" name="dayrent" lay-verify="price" value="${auto.dayrent}" autocomplete="off" class="layui-input">
             </div>
         </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">押金</label>
+            <div class="layui-input-inline" style="width: 100px;">
+                <input type="text" name="extra" lay-verify="price" value="${auto.extra}" autocomplete="off" class="layui-input">
+            </div>
+        </div>
     </div>
     <div class="layui-form-item">
-        <label class="layui-form-label">上传图片</label><input class = "layui-btn" type="file" name="pic"><br><br><br>
+        <%--<label class="layui-form-label">上传图片</label><input class = "layui-btn" type="file" name="pic"><br><br><br>--%>
         <input class="layui-btn" lay-submit="" lay-filter="demo2" type="submit" value="提交">
     </div>
     <input type="hidden" name="cdate" id="clock">

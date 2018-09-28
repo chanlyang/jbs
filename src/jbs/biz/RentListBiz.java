@@ -1,17 +1,21 @@
 package jbs.biz;
 
+import jbs.Entity.ChangeList;
+import jbs.Entity.RentDetail;
+import jbs.Entity.RentList;
 import jbs.Entity.TurnPage;
 import jbs.dao.RentListDao;
 import jbs.dto.RentListInfo;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class RentListBiz {
-    public List<RentListInfo> getRentListInfo(String rno,String sno,String cno,String autocard,TurnPage tp) throws Exception{
+    public List<RentListInfo> getRentListInfo(String rno,String suname,String cuname,String autocard,TurnPage tp) throws Exception{
         List<RentListInfo> rentListInfoList;
         RentListDao dao = new RentListDao();
         try{
-            rentListInfoList = dao.getRentListInfo(rno,sno,cno,autocard,tp);
+            rentListInfoList = dao.getRentListInfo(rno,suname,cuname,autocard,tp);
         }catch (Exception e){
             throw e;
         }finally {
@@ -46,24 +50,23 @@ public class RentListBiz {
         return b;
     }
 
-    public String getSno(String uname) throws Exception {
-        String sno;
+    public String getUname(String uname) throws Exception {
         RentListDao dao = new RentListDao();
         try {
-            sno = dao.getSno(uname);
+            uname = dao.getUname(uname);
         }catch (Exception e){
             throw e;
         }finally {
             dao.closeConnection();
         }
-        return sno;
+        return uname;
     }
 
-    public List<RentListInfo> getRentList(String rno,String sno,String cno,String autocard,TurnPage tp) throws Exception{
+    public List<RentListInfo> getRentList(String rno,String cuname,String autocard,TurnPage tp) throws Exception{
         List<RentListInfo> rentListInfoList;
         RentListDao dao = new RentListDao();
         try{
-            rentListInfoList = dao.getRentList(rno,sno,cno,autocard,tp);
+            rentListInfoList = dao.getRentList(rno,cuname,autocard,tp);
         }catch (Exception e){
             throw e;
         }finally {
@@ -85,16 +88,167 @@ public class RentListBiz {
         return rentListInfo;
     }
 
-    public int calAllmoney(String rno,double allmoney) throws Exception {
-        int count;
+    public void makeRentList(String suname,String rno,double allmoney) throws Exception {
         RentListDao dao = new RentListDao();
         try{
-            count = dao.calAllmoney(rno,allmoney);
+            dao.makeRentList(suname,rno,allmoney);
         }catch (Exception e){
             throw e;
         }finally {
             dao.closeConnection();
         }
-        return count;
+    }
+    public int updateState(String rno) throws Exception{
+        int iRet;
+        RentListDao dao = new RentListDao();
+        try{
+            iRet = dao.updateState(rno);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return iRet;
+    }
+
+    public List<RentList> getRnoList() throws Exception{
+        List<RentList> rlist;
+        RentListDao dao = new RentListDao();
+        try{
+            rlist = dao.getRnoList();
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return rlist;
+    }
+
+    public String getAutocard(String rno) throws Exception {
+        String autocard;
+        RentListDao dao = new RentListDao();
+        try{
+            autocard = dao.getAutocard(rno);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return autocard;
+    }
+
+    public String getStaffName(String uname) throws Exception{
+        String sname;
+        RentListDao dao = new RentListDao();
+        try{
+            sname = dao.getStaffName(uname);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return sname;
+    }
+
+    public void addChangeList(ChangeList changeList) throws Exception{
+        RentListDao dao = new RentListDao();
+        try{
+            dao.addChangeList(changeList);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+    }
+
+    public List<ChangeList> getChangeList(String rno,TurnPage tp) throws Exception{
+        List<ChangeList> changeList;
+        RentListDao dao = new RentListDao();
+        try{
+            changeList = dao.getChangeList(rno,tp);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return changeList;
+    }
+
+    public int changeListUpdate(ChangeList changeList) throws Exception {
+        int iRet;
+        RentListDao dao = new RentListDao();
+        try{
+            iRet = dao.changeListUpdate(changeList);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return iRet;
+    }
+
+    public ChangeList getClist(String rno) throws Exception {
+        ChangeList cList;
+        RentListDao dao = new RentListDao();
+        try{
+            cList = dao.getClist(rno);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return cList;
+    }
+
+    public int autocardUpdate(String autocard,String rno) throws Exception {
+        int iRet;
+        RentListDao dao = new RentListDao();
+        try{
+            iRet = dao.autocardUpdate(autocard,rno);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return iRet;
+    }
+
+    public List<RentListInfo> getRentAllList(String rno,String suname,String cuname,String autocard,TurnPage tp) throws Exception {
+        List<RentListInfo> rentListInfos;
+        RentListDao dao = new RentListDao();
+        try{
+            rentListInfos = dao.getRentAllList(rno,suname,cuname,autocard,tp);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return rentListInfos;
+    }
+
+    public RentDetail getRentDetailDetail(String rno) throws Exception {
+        RentDetail rentDetail;
+        RentListDao dao = new RentListDao();
+        try{
+            rentDetail = dao.getRentDetailDetail(rno);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return rentDetail;
+    }
+
+    public String getRno(String rno) throws Exception{
+        String newrno;
+        RentListDao dao = new RentListDao();
+        try {
+            newrno = dao.getRno(rno);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return newrno;
     }
 }

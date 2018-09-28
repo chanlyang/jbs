@@ -29,7 +29,8 @@ public class AutoUpdateServlet extends HttpServlet {
         String gear = req.getParameter("gear");
         String tubo = req.getParameter("tubo");
         Double dayrent = Double.parseDouble(req.getParameter("dayrent"));
-        String picurl = req.getParameter("pic");
+       // String picurl = req.getParameter("pic");
+        Double extra = Double.parseDouble(req.getParameter("extra"));
         String cdate = req.getParameter("cdate");
         Auto auto = new Auto();
         auto.setAutocard(autocard);
@@ -41,9 +42,10 @@ public class AutoUpdateServlet extends HttpServlet {
         auto.setGear(gear);
         auto.setTubo(tubo);
         auto.setDayrent(dayrent);
+        auto.setExtra(extra);
         try {
             //String pictureurl = "D:\\文档\\Java课程\\8-16\\jbs_1\\web\\picture"+picurl;
-            String pictureurl = req.getScheme()+"://"+req.getServerName()+":"+req.getServerPort()+"/images/"+picurl;
+/*            String pictureurl = req.getScheme()+"://"+req.getServerName()+":"+req.getServerPort()+"/images/"+picurl;
             auto.setPicurl(pictureurl);
             File newFile = new File(pictureurl);
             if(!newFile.exists())
@@ -59,7 +61,7 @@ public class AutoUpdateServlet extends HttpServlet {
             }
             out.flush();
             out.close();
-            in.close();
+            in.close();*/
 
             AutoBiz biz = new AutoBiz();
             int i = biz.AutoUpdate(auto);
@@ -74,11 +76,11 @@ public class AutoUpdateServlet extends HttpServlet {
                 changeMoney.setAutocard(autocard);
                 changeMoney.setCdate(cdate);
                 HttpSession session = req.getSession();
-                double rent1 = (Double) session.getAttribute("brent");
+                double rent1 = (double)(session.getAttribute("brent"));
                 double rent2 = dayrent;
                 changeMoney.setBrent(rent1);
                 changeMoney.setArent(rent2);
-                if(rent1==rent2) {
+                if(rent1!=rent2) {
                     biz.addChangeMoney(changeMoney);
                     req.setAttribute("changemoney", changeMoney);
                     resp.sendRedirect("/AutoServlet");

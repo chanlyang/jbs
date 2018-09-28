@@ -201,4 +201,17 @@ public class AutoBiz {
         }
         return b;
     }
+
+    public List<AutoInfo> getStaffAutoInfo(String atype, String bname, String tname, String tubo,TurnPage tp) throws Exception{
+        List<AutoInfo> alist;
+        AutoDao dao = new AutoDao();
+        try{
+            alist = dao.getStaffAutoInfo(atype,bname,tname,tubo,tp);
+        }catch (Exception e){
+            throw e;
+        }finally {
+            dao.closeConnection();
+        }
+        return alist;
+    }
 }

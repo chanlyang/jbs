@@ -3,7 +3,7 @@ package jbs.Entity;
 import java.util.Date;
 
 public class Custom {
-    private String cno;
+    private String uname;
     private String cname;
     private String cidcard;
     private String phonenum;
@@ -36,12 +36,12 @@ public class Custom {
         this.money = money;
     }
 
-    public String getCno() {
-        return cno;
+    public String getUname() {
+        return uname;
     }
 
-    public void setCno(String cno) {
-        this.cno = cno;
+    public void setUname(String uname) {
+        this.uname = uname;
     }
 
     public String getCname() {

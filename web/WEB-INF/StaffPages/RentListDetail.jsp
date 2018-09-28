@@ -32,7 +32,7 @@
     <div class="layui-form-item" align="center">
         <label class="layui-form-label">租赁单号</label>
         <div class="layui-input-inline">
-            <input type="text" name="rno" autocomplete="off" class="layui-input" value="${rentListInfo.rno}" readonly>
+            <input type="text" name="rno" autocomplete="off" class="layui-input" value="${rentDetail.rno}" readonly>
         </div>
     </div>
     <br>
@@ -43,7 +43,7 @@
     <div class="layui-form-item">
         <label class="layui-form-label">客户编号</label>
         <div class="layui-input-inline">
-            <input type="text" name="cno" autocomplete="off" class="layui-input" value="${custom.cno}" readonly>
+            <input type="text" name="uname" autocomplete="off" class="layui-input" value="${custom.uname}" readonly>
         </div>
         <label class="layui-form-label">客户姓名</label>
         <div class="layui-input-inline">
@@ -116,29 +116,33 @@
     <div class="layui-form-item">
         <label class="layui-form-label">租赁日期</label>
         <div class="layui-input-inline">
-            <input type="text" name="rdate" autocomplete="off" class="layui-input" value="<fmt:formatDate value="${rentListInfo.rdate}" pattern="yyyy/MM/dd"/>" readonly>
+            <input type="text" name="rdate" autocomplete="off" class="layui-input" value="<fmt:formatDate value="${rentDetail.rdate}" pattern="yyyy/MM/dd"/>" readonly>
         </div>
         <label class="layui-form-label">租赁天数</label>
         <div class="layui-input-inline">
-            <input type="text" name="rdays" autocomplete="off" class="layui-input" value="${rentListInfo.rdays}" readonly>
+            <input type="text" name="rdays" autocomplete="off" class="layui-input" value="${rentDetail.rdays}" readonly>
         </div>
-    </div>
-    <div class="layui-form-item">
         <label class="layui-form-label">日租金</label>
         <div class="layui-input-inline" style="width: 100px;">
             <input type="text" name="dayrent" lay-verify="price" autocomplete="off" class="layui-input" value="${auto.dayrent}" readonly>
-        </div>
-        <label class="layui-form-label">租赁总金额</label>
-        <div class="layui-input-inline">
-            <input type="text" name="allmoney" autocomplete="off" class="layui-input" value="￥${rentListInfo.allmoney}" readonly>
         </div>
         <label class="layui-form-label">押金</label>
         <div class="layui-input-inline">
             <input type="text" name="extra" autocomplete="off" class="layui-input" value="￥${auto.extra}" readonly>
         </div>
     </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">租赁总金额</label>
+        <div class="layui-input-inline">
+            <input type="text" name="allmoney" autocomplete="off" class="layui-input">
+        </div>
+        <label class="layui-form-label">操作人</label>
+        <div class="layui-input-inline">
+            <input type="text" name="suname" autocomplete="off" class="layui-input" value="${name}">
+        </div>
+    </div>
     <div class="layui-form-item" align="center">
-        <a class="layui-btn" lay-filter="demo2" href="<%=basePath%>CalServlet?rno=${rentListInfo.rno}&rdays=${rentListInfo.rdays}&dayrent=${auto.dayrent}&extra=${rentListInfo.extra}">计算</a>
+        <a class="layui-btn" lay-filter="demo2" href="<%=basePath%>CalServlet?rno=${rentDetail.rno}&rdays=${rentDetail.rdays}&dayrent=${auto.dayrent}&extra=${auto.extra}">生成</a>
         <input class="layui-btn" lay-filter="demo2" type="submit" value="返回">
     </div>
     <br>
