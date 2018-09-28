@@ -1,5 +1,6 @@
 package jbs.backaction;
 
+import jbs.Entity.IRole;
 import jbs.Entity.User;
 import jbs.biz.UserBiz;
 
@@ -14,20 +15,22 @@ import java.io.IOException;
 
 @WebServlet(name = "UserServlet",urlPatterns = "/UserServlet")
 public class UserServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         String name = request.getParameter("uname");
-        session.setAttribute("uname", name);
         String pwd = request.getParameter("password");
         UserBiz biz = new UserBiz();
         try{
             User user = biz.login(name,pwd);
             int role = user.getUrole();
-            if(role == 1){
-                request.getRequestDispatcher("/Login.jsp").forward(request,response);
-            }else if(role ==2){
+            if(role == IRole.CUSTOMER){
+                session.setAttribute("uname", name);
+                response.sendRedirect("MainServlet");
+            }else if(role ==IRole.ADMIN){
+                session.setAttribute("uname", name);
                 request.getRequestDispatcher("/WEB-INF/StaffPages/StaffMain.jsp").forward(request,response);
-            }else if(role == 3) {
+            }else if(role == IRole.STAFF) {
+                session.setAttribute("uname", name);
                 request.getRequestDispatcher("/WEB-INF/AdminPages/AdminMain.jsp").forward(request,response);
             }
         }catch (Exception e){
@@ -37,7 +40,4 @@ public class UserServlet extends HttpServlet {
         }
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.doPost(request,response);
-    }
 }

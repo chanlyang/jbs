@@ -1,6 +1,7 @@
 package jbs.frontaction;
 
 import jbs.Entity.Auto;
+import jbs.Entity.AutoType;
 import jbs.Entity.TurnPage;
 import jbs.biz.CustomBiz;
 import jbs.dto.AutoInfo;
@@ -51,6 +52,10 @@ public class MainServlet extends HttpServlet {
             List<AutoInfo> autos1 = cb.quaryCarsByType(tp,"t002");
             List<AutoInfo> autos2 = cb.quaryCarsByType(tp2,"t001");
             List<AutoInfo> autos3 = cb.quaryCarsByType(tp3,"t004");
+            List<AutoType> type = cb.queryAutoType();
+            List<Auto> hot = cb.queryHotAuto();
+            request.setAttribute("hot",hot);
+            request.setAttribute("type",type);
             request.setAttribute("autos1", autos1);
             request.setAttribute("autos2", autos2);
             request.setAttribute("autos3", autos3);

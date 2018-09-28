@@ -8,6 +8,33 @@ public class Custom {
     private String cidcard;
     private String phonenum;
     private Date birthday;
+    private String password;
+    private double money;
+    private int role;
+
+    public int getRole() {
+        return role;
+    }
+
+    public void setRole(int role) {
+        this.role = role;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public double getMoney() {
+        return money;
+    }
+
+    public void setMoney(double money) {
+        this.money = money;
+    }
 
     public String getCno() {
         return cno;

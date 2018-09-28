@@ -6,6 +6,7 @@ import jbs.dto.AutoInfo;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class AutoDao extends BaseDao{
@@ -340,5 +341,23 @@ public class AutoDao extends BaseDao{
         else b = false;
         ps.close();
         return b;
+    }
+
+    /**
+     * chanlyang添加。
+     * 添加状态
+     * @param autocard
+     * @param date
+     * @throws Exception
+     */
+    public void insertAutoState(String autocard,Date date) throws Exception{
+        String sql = "insert into qstate(autocard,currentdate,state) values(?,?,?)";
+        this.openConnection();
+        PreparedStatement ps = this.conn.prepareStatement(sql);
+        ps.setString(1,autocard);
+        ps.setDate(2,new java.sql.Date(date.getTime()));
+        ps.setInt(3,1);
+        ps.executeUpdate();
+        ps.close();
     }
 }

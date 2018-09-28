@@ -1,5 +1,7 @@
 package jbs.frontaction;
 
+import jbs.Entity.Auto;
+import jbs.Entity.AutoType;
 import jbs.Entity.TurnPage;
 import jbs.biz.CustomBiz;
 import jbs.dto.AutoInfo;
@@ -18,7 +20,6 @@ public class CarAServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String page = request.getParameter("page");
         String type = request.getParameter("type");
-        System.out.println(type);
         CustomBiz cb = new CustomBiz();
         try {
             TurnPage tp = new TurnPage();
@@ -32,6 +33,10 @@ public class CarAServlet extends HttpServlet {
             }
 
             List<AutoInfo> autos = cb.quaryCarsByType(tp,type);
+            List<AutoType> ctype = cb.queryAutoType();
+            List<Auto> hot = cb.queryHotAuto();
+            request.setAttribute("hot",hot);
+            request.setAttribute("ctype",ctype);
             request.setAttribute("auto", autos);
             request.setAttribute("type",type);
             request.setAttribute("tp",tp);

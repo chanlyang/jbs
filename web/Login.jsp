@@ -25,7 +25,7 @@
 
 <div class="login-main">
     <header class="layui-elip">欢迎登录</header>
-    <form class="layui-form" action="/UserServlet" method="post">
+    <form class="layui-form" action="/UserServlet" method="get">
         <div class="layui-input-inline">
             <input type="text" name="uname" lay-verify="uname" placeholder="用户名" autocomplete="off"
                    class="layui-input">
@@ -42,7 +42,7 @@
             <button type="submit" class="layui-btn">登录</button>
         </div>
         <hr/>
-        <p><a href="javascript:;" class="fl">立即注册</a><%--<a href="javascript:;" class="fr">忘记密码？</a>--%></p>
+        <p><a href="javascript:;" class="fl">立即注册</a><a href="javascript:document.location = 'MainServlet';" class="fr">返回首页</a></p>
     </form>
 </div>
 

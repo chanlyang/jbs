@@ -102,9 +102,6 @@
             elem: '#date'
         });
     });
-    function forward() {
-        window.location("<%=basePath%>CustomServlet");
-    }
 </script>
 </body>
 </html>
