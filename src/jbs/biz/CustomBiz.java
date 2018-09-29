@@ -106,7 +106,7 @@ public class CustomBiz {
         LoginDao ld = new LoginDao();
         try {
             ld.beginTransaction();
-            ld.insertLoginInfo(custom.getCno(), custom.getPassword(), custom.getRole());
+            ld.insertLoginInfo(custom.getUname(), custom.getPassword(), custom.getRole());
             CustomDAO cd = new CustomDAO();
             cd.setConn(ld.getConn());
             cd.insertCustomInfo(custom);

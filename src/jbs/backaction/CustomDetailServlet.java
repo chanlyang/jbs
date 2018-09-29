@@ -2,6 +2,7 @@ package jbs.backaction;
 
 import jbs.Entity.Custom;
 import jbs.biz.UserBiz;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +21,7 @@ public class CustomDetailServlet extends HttpServlet {
             req.setAttribute("custom",custom);
             req.getRequestDispatcher("/WEB-INF/AdminPages/CustomDetail.jsp").forward(req, resp);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
             req.getRequestDispatcher("/WEB-INF/AdminPages/CustomQuery.jsp").forward(req, resp);
         }
     }

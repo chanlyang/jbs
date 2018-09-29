@@ -4,6 +4,7 @@ import jbs.Entity.Auto;
 import jbs.Entity.AutoType;
 import jbs.Entity.Brand;
 import jbs.biz.AutoBiz;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -28,7 +29,8 @@ public class AutoAddServlet extends HttpServlet {
         String gear = request.getParameter("gear");
         String tubo = request.getParameter("tubo");
         Double dayrent = Double.parseDouble(request.getParameter("dayrent"));
-        String picurl = request.getParameter("pic");
+      //String picurl = request.getParameter("pic");
+        Double extra = Double.parseDouble(request.getParameter("extra"));
         Auto auto = new Auto();
         auto.setAutocard(autocard);
         auto.setBno(bno);
@@ -39,28 +41,17 @@ public class AutoAddServlet extends HttpServlet {
         auto.setGear(gear);
         auto.setTubo(tubo);
         auto.setDayrent(dayrent);
+        auto.setExtra(extra);
         try {
             //String pictureurl = "D:\\文档\\Java课程\\8-16\\jbs_1\\web\\picture"+picurl;
-            String pictureurl = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+"/images/"+picurl;
-            auto.setPicurl(pictureurl);
-            File newFile = new File(pictureurl);
-            if(!newFile.exists())
-                newFile.createNewFile();
             Part part = request.getPart("pic");
-            InputStream in = part.getInputStream();
-            //ByteArrayOutputStream out = new ByteArrayOutputStream();
-            FileOutputStream out = new FileOutputStream(newFile);
-            byte[] buffer = new byte[1024];
-            int len;
-            while((len=in.read(buffer)) != -1){
-                out.write(buffer, 0, len);
-                out.flush();
-            }
-            out.flush();
-            out.close();
-            in.close();
-            //byte[] pic = out.toByteArray();
-            //auto.setPic(pic);
+            String name = part.getHeader("content-disposition");
+            String filename = name.substring(name.indexOf("filename=\"")+10, name.lastIndexOf("\""));
+            String root = "D:\\文档\\Java课程\\8-16\\jbs_1\\web\\images\\"+filename;
+            String pictureurl = "http://localhost:8080/images/"+filename;
+            auto.setPicurl(pictureurl);
+
+            part.write(root);
 
             AutoBiz biz = new AutoBiz();
             biz.addAuto(auto);
@@ -78,11 +69,12 @@ public class AutoAddServlet extends HttpServlet {
                 request.setAttribute("atlist",atlist);
                 request.setAttribute("blist",blist);
             } catch (Exception e2) {
+                Log.logger.info(e2);
             }
             request.setAttribute("msg", "添加失败，文件不能大于100K" );
             request.getRequestDispatcher("/AutoServlet").forward(request, response);
         } catch (Exception e){
-            e.printStackTrace();
+            Log.logger.error(e);
             request.getRequestDispatcher("/tip.jsp").forward(request, response);
         }
     }
@@ -96,7 +88,7 @@ public class AutoAddServlet extends HttpServlet {
             request.setAttribute("blist",blist);
             request.getRequestDispatcher("/WEB-INF/AdminPages/AutoAdd.jsp").forward(request,response);
         }catch (Exception e){
-            e.printStackTrace();
+            Log.logger.error(e);
             request.getRequestDispatcher("/tip.jsp").forward(request, response);
         }
     }

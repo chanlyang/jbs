@@ -13,6 +13,13 @@ import java.util.Date;
 import java.util.List;
 
 public class UserBiz {
+    /**
+     * 登录
+     * @param uname
+     * @param pwd
+     * @return
+     * @throws Exception
+     */
     public User login(String uname, String pwd) throws Exception {
         System.out.println(uname+" "+pwd);
         User user = null;
@@ -30,6 +37,16 @@ public class UserBiz {
         }
         return user;
     }
+
+    /**
+     * 获取顾客列表信息
+     * @param uname
+     * @param cname
+     * @param birthday
+     * @param tp
+     * @return
+     * @throws Exception
+     */
     public List<Custom> getCustomInfo(String uname, String cname, Date birthday, TurnPage tp) throws Exception {
         List<Custom> clist;
         UserDao dao = new UserDao();
@@ -42,6 +59,16 @@ public class UserBiz {
         }
         return clist;
     }
+
+    /**
+     * 获取员工列表信息
+     * @param uname
+     * @param sname
+     * @param sex
+     * @param tp
+     * @return
+     * @throws Exception
+     */
     public List<Staff> getStaffInfo(String uname,String sname,String sex,TurnPage tp) throws Exception{
         List<Staff> sList;
         UserDao dao = new UserDao();
@@ -55,6 +82,12 @@ public class UserBiz {
         return sList;
     }
 
+    /**
+     * 获取员工详细信息
+     * @param uname
+     * @return
+     * @throws Exception
+     */
     public Staff getStaffDetail(String uname) throws Exception {
         Staff staff ;
         UserDao dao = new UserDao();
@@ -68,6 +101,12 @@ public class UserBiz {
         return staff;
     }
 
+    /**
+     * 获取顾客详细信息
+     * @param uname
+     * @return
+     * @throws Exception
+     */
     public Custom getCustomDetail(String uname) throws Exception {
         Custom custom;
         UserDao dao = new UserDao();
@@ -81,6 +120,12 @@ public class UserBiz {
         return custom;
     }
 
+    /**
+     * 顾客信息修改
+     * @param custom
+     * @return
+     * @throws Exception
+     */
     public int CustomUpdate(Custom custom) throws Exception {
         int iRet;
         UserDao dao = new UserDao();
@@ -94,6 +139,12 @@ public class UserBiz {
         return iRet;
     }
 
+    /**
+     * 顾客信息删除
+     * @param custom
+     * @return
+     * @throws Exception
+     */
     public boolean CustomDelete(Custom custom) throws Exception {
         boolean b;
         UserDao dao = new UserDao();
@@ -107,6 +158,12 @@ public class UserBiz {
         return b;
     }
 
+    /**
+     * 员工信息修改
+     * @param staff
+     * @return
+     * @throws Exception
+     */
     public int StaffUpdate(Staff staff) throws Exception {
         int iRet;
         UserDao dao = new UserDao();
@@ -120,6 +177,12 @@ public class UserBiz {
         return iRet;
     }
 
+    /**
+     * 员工信息删除
+     * @param staff
+     * @return
+     * @throws Exception
+     */
     public boolean StaffDelete(Staff staff) throws Exception {
         boolean b;
         UserDao dao = new UserDao();

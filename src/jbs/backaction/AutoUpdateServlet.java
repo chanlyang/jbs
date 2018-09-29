@@ -5,6 +5,7 @@ import jbs.Entity.AutoType;
 import jbs.Entity.Brand;
 import jbs.Entity.ChangeMoney;
 import jbs.biz.AutoBiz;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -103,11 +104,12 @@ public class AutoUpdateServlet extends HttpServlet {
                 req.setAttribute("blist",blist);
                 req.setAttribute("auto",auto);
             } catch (Exception e2) {
+                Log.logger.info(e2);
             }
             req.setAttribute("msg", "修改失败，文件不能大于100K" );
             req.getRequestDispatcher("/WEB-INF/AdminPages/AutoUpdate.jsp").forward(req, resp);
         } catch (Exception e){
-            e.printStackTrace();
+            Log.logger.error(e);
             req.getRequestDispatcher("/tip.jsp").forward(req, resp);
         }
 

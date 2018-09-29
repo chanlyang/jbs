@@ -2,6 +2,7 @@ package jbs.backaction;
 
 import jbs.Entity.Custom;
 import jbs.biz.UserBiz;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -37,7 +38,7 @@ public class CustomUpdateServlet extends HttpServlet {
                 request.getRequestDispatcher("/WEB-INF/AdminPages/AutoUpdate.jsp").forward(request, response);
             }
         }catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
         }
     }
 
@@ -49,7 +50,7 @@ public class CustomUpdateServlet extends HttpServlet {
             request.setAttribute("custom",custom);
             request.getRequestDispatcher("/WEB-INF/AdminPages/CustomUpdate.jsp").forward(request, response);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
             request.getRequestDispatcher("/WEB-INF/AdminPages/CustomQuery.jsp").forward(request, response);
         }
     }

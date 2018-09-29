@@ -2,6 +2,7 @@ package jbs.backaction;
 
 import jbs.Entity.Staff;
 import jbs.biz.UserBiz;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +21,7 @@ public class StaffDetailServlet extends HttpServlet {
             req.setAttribute("staff",staff);
             req.getRequestDispatcher("/WEB-INF/AdminPages/StaffDetail.jsp").forward(req, resp);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
             req.getRequestDispatcher("/WEB-INF/AdminPages/StaffQuery.jsp").forward(req, resp);
         }
     }

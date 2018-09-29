@@ -2,6 +2,7 @@ package jbs.backaction;
 
 import jbs.Entity.Staff;
 import jbs.biz.UserBiz;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,7 +30,7 @@ public class StaffDeleteServlet extends HttpServlet {
                 request.setAttribute("msg", "删除失败--");
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
             request.getRequestDispatcher("/tip.jsp").forward(request, response);
         }
     }

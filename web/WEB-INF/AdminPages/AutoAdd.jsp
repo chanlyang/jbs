@@ -116,6 +116,12 @@
                 <input type="text" name="dayrent" lay-verify="price" placeholder="￥" autocomplete="off" class="layui-input">
             </div>
         </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">押金</label>
+            <div class="layui-input-inline" style="width: 100px;">
+                <input type="text" name="extra" lay-verify="price" placeholder="￥" autocomplete="off" class="layui-input">
+            </div>
+        </div>
     </div>
     <div class="layui-form-item">
         <label class="layui-form-label">上传图片</label><input class = "layui-btn" type="file" name="pic"><br><br><br>

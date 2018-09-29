@@ -118,7 +118,7 @@ public class CustomDAO extends BaseDao {
         String sql = "insert into constom values(?,?,?,?,?)";
         this.openConnection();
         PreparedStatement ps = this.conn.prepareStatement(sql);
-        ps.setString(1, custom.getCno());
+        ps.setString(1, custom.getUname());
         ps.setString(2, custom.getCname());
         ps.setString(3, custom.getCidcard());
         ps.setString(4, custom.getPhonenum());
@@ -200,7 +200,7 @@ public class CustomDAO extends BaseDao {
         Custom custom = null;
         while (rs.next()) {
             custom = new Custom();
-            custom.setCno(rs.getString("uname"));
+            custom.setUname(rs.getString("uname"));
             custom.setCname(rs.getString("cname"));
             custom.setCidcard(rs.getString("cidcard"));
             custom.setPhonenum(rs.getString("phonenum"));

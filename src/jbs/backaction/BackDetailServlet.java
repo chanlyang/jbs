@@ -2,6 +2,7 @@ package jbs.backaction;
 
 import jbs.biz.BackListBiz;
 import jbs.dto.BackListInfo;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +21,7 @@ public class BackDetailServlet extends HttpServlet {
             req.setAttribute("backListInfo",backListInfo);
             req.getRequestDispatcher("/WEB-INF/AdminPages/BackDetail.jsp").forward(req, resp);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
             req.getRequestDispatcher("/WEB-INF/AdminPages/BackList.jsp").forward(req, resp);
         }
     }

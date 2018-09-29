@@ -2,6 +2,7 @@ package jbs.backaction;
 
 import jbs.Entity.ChangeMoney;
 import jbs.biz.AutoBiz;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +21,7 @@ public class ChangeMoneyDetailServlet extends HttpServlet {
             req.setAttribute("changeMoney",changeMoney);
             req.getRequestDispatcher("/WEB-INF/AdminPages/ChangeMoneyDetail.jsp").forward(req, resp);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
             req.getRequestDispatcher("/WEB-INF/AdminPages/ChangeMoneyQuery.jsp").forward(req, resp);
         }
     }

@@ -2,6 +2,7 @@ package jbs.backaction;
 
 import jbs.biz.RentListBiz;
 import jbs.dto.RentListInfo;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +21,7 @@ public class RentDetailServlet extends HttpServlet {
             req.setAttribute("rentListInfo",rentListInfo);
             req.getRequestDispatcher("/WEB-INF/AdminPages/RentListDetail.jsp").forward(req, resp);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
             req.getRequestDispatcher("/WEB-INF/AdminPages/RentList.jsp").forward(req, resp);
         }
     }

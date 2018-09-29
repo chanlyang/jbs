@@ -8,6 +8,7 @@ import jbs.biz.RentListBiz;
 import jbs.biz.UserBiz;
 import jbs.dto.BackListInfo;
 import jbs.dto.RentListInfo;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -37,7 +38,7 @@ public class BackListDetailServlet extends HttpServlet {
             req.setAttribute("rentListInfo",rentListInfo);
             req.getRequestDispatcher("/WEB-INF/StaffPages/BackListDetail.jsp").forward(req, resp);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
             req.getRequestDispatcher("/WEB-INF/StaffPages/BackList.jsp").forward(req, resp);
         }
     }

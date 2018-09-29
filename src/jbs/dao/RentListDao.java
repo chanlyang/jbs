@@ -277,6 +277,11 @@ public class RentListDao extends BaseDao{
         return sname;
     }
 
+    /**
+     * 汽车变更记录添加
+     * @param changeList
+     * @throws Exception
+     */
     public void addChangeList(ChangeList changeList) throws Exception{
         String sql = "insert into changelist(rno,pautocard,nautocard,person,ctime) values(?,?,?,?,?) ";
         this.openConnection();
@@ -294,6 +299,13 @@ public class RentListDao extends BaseDao{
         ps.close();
     }
 
+    /**
+     * 获取汽车变更记录
+     * @param rno
+     * @param tp
+     * @return
+     * @throws Exception
+     */
     public List<ChangeList> getChangeList(String rno,TurnPage tp) throws Exception{
         List<ChangeList> changeList;
         String sql = "select rno,pautocard,nautocard,person,ctime from changelist";
@@ -326,6 +338,12 @@ public class RentListDao extends BaseDao{
         return changeList;
     }
 
+    /**
+     * 汽车变更记录修改
+     * @param changeList
+     * @return
+     * @throws Exception
+     */
     public int changeListUpdate(ChangeList changeList) throws Exception {
         int iRet;
         this.openConnection();
