@@ -2,6 +2,7 @@ package jbs.backaction;
 
 import jbs.Entity.Staff;
 import jbs.biz.UserBiz;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,7 +40,7 @@ public class StaffUpdateServlet extends HttpServlet {
                 request.getRequestDispatcher("/WEB-INF/AdminPages/StaffUpdate.jsp").forward(request, response);
             }
         }catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
         }
     }
 
@@ -51,7 +52,7 @@ public class StaffUpdateServlet extends HttpServlet {
             request.setAttribute("staff",staff);
             request.getRequestDispatcher("/WEB-INF/AdminPages/StaffUpdate.jsp").forward(request, response);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
             request.getRequestDispatcher("/WEB-INF/AdminPages/StaffQuery.jsp").forward(request, response);
         }
     }

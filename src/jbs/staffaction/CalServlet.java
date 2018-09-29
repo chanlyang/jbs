@@ -2,6 +2,7 @@ package jbs.staffaction;
 
 import jbs.biz.RentListBiz;
 import jbs.dao.RentListDao;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,7 +32,7 @@ public class CalServlet extends HttpServlet {
             if(count>0) resp.sendRedirect("/RentAllListServlet");
             else resp.sendRedirect("/RentListServlet");
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
         }
 
 

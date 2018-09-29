@@ -2,6 +2,7 @@ package jbs.backaction;
 
 import jbs.Entity.Auto;
 import jbs.biz.AutoBiz;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,7 +23,7 @@ public class AutoDetailServlet extends HttpServlet {
                 req.setAttribute("auto",auto);
                 req.getRequestDispatcher("/WEB-INF/AdminPages/AutoDetail.jsp").forward(req, resp);
             } catch (Exception e) {
-                e.printStackTrace();
+                Log.logger.error(e);
                 req.getRequestDispatcher("/WEB-INF/AdminPages/AutoQuery.jsp").forward(req, resp);
             }
         /*}else{

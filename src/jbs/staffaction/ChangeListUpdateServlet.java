@@ -3,6 +3,7 @@ package jbs.staffaction;
 import jbs.Entity.ChangeList;
 import jbs.Entity.RentList;
 import jbs.biz.RentListBiz;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,7 +36,7 @@ public class ChangeListUpdateServlet extends HttpServlet {
             if(count>0) response.sendRedirect("/ChangeListServlet");
             else response.sendRedirect("/ChangeListUpdateServlet");
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
             request.getRequestDispatcher("/tip.jsp").forward(request, response);
         }
 
@@ -51,7 +52,7 @@ public class ChangeListUpdateServlet extends HttpServlet {
             request.setAttribute("cList",cList);
             request.getRequestDispatcher("/WEB-INF/StaffPages/ChangeListUpdate.jsp").forward(request,response);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
             request.getRequestDispatcher("/tip.jsp").forward(request, response);
         }
     }

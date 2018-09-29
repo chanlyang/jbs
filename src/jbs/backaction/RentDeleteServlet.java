@@ -2,6 +2,7 @@ package jbs.backaction;
 
 import jbs.biz.RentListBiz;
 import jbs.dto.RentListInfo;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,7 +30,7 @@ public class RentDeleteServlet extends HttpServlet {
                 request.setAttribute("msg", "删除失败--");
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
             request.getRequestDispatcher("/tip.jsp").forward(request, response);
         }
     }

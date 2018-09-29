@@ -4,6 +4,7 @@ import jbs.Entity.ChangeList;
 import jbs.Entity.TurnPage;
 import jbs.biz.RentListBiz;
 import jbs.dao.RentListDao;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -34,7 +35,7 @@ public class ChangeListServlet extends HttpServlet {
             req.setAttribute("tp",tp);
             req.getRequestDispatcher("/WEB-INF/StaffPages/ChangeList.jsp").forward(req, resp);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
             req.getRequestDispatcher("/tip.jsp").forward(req, resp);
         }
     }

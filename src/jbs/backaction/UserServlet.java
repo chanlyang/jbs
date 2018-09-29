@@ -3,6 +3,7 @@ package jbs.backaction;
 import jbs.Entity.IRole;
 import jbs.Entity.User;
 import jbs.biz.UserBiz;
+import jbs.util.Log;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -34,6 +35,7 @@ public class UserServlet extends HttpServlet {
                 request.getRequestDispatcher("/WEB-INF/AdminPages/AdminMain.jsp").forward(request,response);
             }
         }catch (Exception e){
+            Log.logger.error(e);
             request.setAttribute("message", "您的账号或密码有误，请重新登录！");
             RequestDispatcher rd = request.getRequestDispatcher("/Login.jsp");
             rd.forward(request, response);

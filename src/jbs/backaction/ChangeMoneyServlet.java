@@ -3,6 +3,7 @@ package jbs.backaction;
 import jbs.Entity.ChangeMoney;
 import jbs.Entity.TurnPage;
 import jbs.biz.AutoBiz;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -34,7 +35,7 @@ public class ChangeMoneyServlet extends HttpServlet {
             req.setAttribute("tp",tp);
             req.getRequestDispatcher("/WEB-INF/AdminPages/ChangeMoneyQuery.jsp").forward(req, resp);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
             req.setAttribute("msg", "网络异常，请和管理员联系");
             req.getRequestDispatcher("/tip.jsp").forward(req, resp);
         }

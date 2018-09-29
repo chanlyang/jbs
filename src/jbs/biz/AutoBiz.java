@@ -139,6 +139,12 @@ public class AutoBiz {
         return b;
     }
 
+    /**
+     * 批量删除汽车信息
+     * @param autocards
+     * @return
+     * @throws Exception
+     */
     public boolean AutoDeleteAll(String[] autocards) throws Exception {
         boolean b;
         AutoDao dao = new AutoDao();
@@ -152,6 +158,11 @@ public class AutoBiz {
         return b;
     }
 
+    /**
+     * 添加租金变更记录
+     * @param changeMoney
+     * @throws Exception
+     */
     public void addChangeMoney(ChangeMoney changeMoney) throws Exception {
         AutoDao dao = new AutoDao();
         try {
@@ -163,6 +174,13 @@ public class AutoBiz {
         }
     }
 
+    /**
+     * 租金变更记录列表查询
+     * @param autocard
+     * @param tp
+     * @return
+     * @throws Exception
+     */
     public List<ChangeMoney> changeMoneyQuery(String autocard,TurnPage tp) throws Exception {
         List<ChangeMoney> changeMoneyList;
         AutoDao dao = new AutoDao();
@@ -176,6 +194,12 @@ public class AutoBiz {
         return changeMoneyList;
     }
 
+    /**
+     * 查看租金变更记录详细
+     * @param cid
+     * @return
+     * @throws Exception
+     */
     public ChangeMoney getChangeMoneyDetail(String cid) throws Exception {
         ChangeMoney changeMoney;
         AutoDao dao = new AutoDao();
@@ -189,6 +213,12 @@ public class AutoBiz {
         return changeMoney;
     }
 
+    /**
+     * 删除单条租金变更记录
+     * @param changeMoney
+     * @return
+     * @throws Exception
+     */
     public boolean ChangeMoneyDelete(ChangeMoney changeMoney) throws Exception {
         boolean b;
         AutoDao dao = new AutoDao();
@@ -202,6 +232,16 @@ public class AutoBiz {
         return b;
     }
 
+    /**
+     * 员工查询汽车列表
+     * @param atype
+     * @param bname
+     * @param tname
+     * @param tubo
+     * @param tp
+     * @return
+     * @throws Exception
+     */
     public List<AutoInfo> getStaffAutoInfo(String atype, String bname, String tname, String tubo,TurnPage tp) throws Exception{
         List<AutoInfo> alist;
         AutoDao dao = new AutoDao();

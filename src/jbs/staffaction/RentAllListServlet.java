@@ -5,6 +5,7 @@ import jbs.Entity.TurnPage;
 import jbs.biz.AutoBiz;
 import jbs.biz.RentListBiz;
 import jbs.dto.RentListInfo;
+import jbs.util.Log;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -44,7 +45,7 @@ public class RentAllListServlet extends HttpServlet {
             req.setAttribute("uname",uname);
             req.getRequestDispatcher("/WEB-INF/StaffPages/RentAllList.jsp").forward(req, resp);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.logger.error(e);
             req.setAttribute("msg", "网络异常，请和管理员联系");
             req.getRequestDispatcher("/tip.jsp").forward(req, resp);
         }
