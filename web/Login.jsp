@@ -42,7 +42,7 @@
             <button type="submit" class="layui-btn">登录</button>
         </div>
         <hr/>
-        <p><a href="javascript:;" class="fl">立即注册</a><a href="javascript:document.location = 'MainServlet';" class="fr">返回首页</a></p>
+        <p><a href="regist.jsp" class="fl">立即注册</a><a href="javascript:document.location = 'MainServlet';" class="fr">返回首页</a></p>
     </form>
 </div>
 

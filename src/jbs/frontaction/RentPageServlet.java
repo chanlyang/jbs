@@ -60,8 +60,13 @@ public class RentPageServlet extends HttpServlet {
                     list.add(sdf.format(c1.getTime()));
                 }
                 CustomBiz cb = new CustomBiz();
-                cb.insertRentInfoAndAutoState(ca,list);
-                response.sendRedirect("MainServlet");
+                if(cb.checkAuto(autocard,list)){
+                    cb.insertRentInfoAndAutoState(ca,list);
+                    response.sendRedirect("MainServlet");
+                }else{
+                    request.setAttribute("meg","您选的日期该辆车被租出去了，抱歉");
+                   request.getRequestDispatcher("tip.jsp").forward(request,response);
+                }
             } else {
                 request.getRequestDispatcher("tip.jsp").forward(request, response);
             }

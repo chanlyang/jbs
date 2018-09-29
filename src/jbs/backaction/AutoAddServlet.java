@@ -4,6 +4,9 @@ import jbs.Entity.Auto;
 import jbs.Entity.AutoType;
 import jbs.Entity.Brand;
 import jbs.biz.AutoBiz;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -18,6 +21,7 @@ import java.util.List;
 @WebServlet(name = "AutoAddServlet",urlPatterns = "/AutoAddServlet")
 @MultipartConfig(maxFileSize=100*1024)
 public class AutoAddServlet extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String autocard = request.getParameter("autocard");
         String bno = request.getParameter("bno");
@@ -28,7 +32,6 @@ public class AutoAddServlet extends HttpServlet {
         String gear = request.getParameter("gear");
         String tubo = request.getParameter("tubo");
         Double dayrent = Double.parseDouble(request.getParameter("dayrent"));
-        String picurl = request.getParameter("pic");
         Auto auto = new Auto();
         auto.setAutocard(autocard);
         auto.setBno(bno);
@@ -39,9 +42,11 @@ public class AutoAddServlet extends HttpServlet {
         auto.setGear(gear);
         auto.setTubo(tubo);
         auto.setDayrent(dayrent);
+
         try {
+
             //String pictureurl = "D:\\文档\\Java课程\\8-16\\jbs_1\\web\\picture"+picurl;
-            String pictureurl = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+"/images/"+picurl;
+            String pictureurl = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+"/images/";
             auto.setPicurl(pictureurl);
             File newFile = new File(pictureurl);
             if(!newFile.exists())

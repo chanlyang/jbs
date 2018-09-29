@@ -27,7 +27,7 @@
 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 10px;">
     <legend>汽车添加</legend>
 </fieldset>
-<form class="layui-form layui-form-pane" action="<%=basePath%>AutoAddServlet" method="post" enctype = "multipart/form-data">
+<form class="layui-form layui-form-pane" action="<%=basePath%>AutoAddServlet" method="post" enctype="multipart/form-data">
     <div class="layui-form-item">
         <label class="layui-form-label">车牌号</label>
         <div class="layui-input-inline">

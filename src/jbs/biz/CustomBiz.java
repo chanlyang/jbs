@@ -12,6 +12,7 @@ import jbs.dto.AutoInfo;
 import jbs.dto.AutoRentInfo;
 import jbs.dto.CustomAndAuto;
 import jbs.dto.CustomRentInfo;
+import jbs.util.Log;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -106,7 +107,7 @@ public class CustomBiz {
         LoginDao ld = new LoginDao();
         try {
             ld.beginTransaction();
-            ld.insertLoginInfo(custom.getCno(), custom.getPassword(), custom.getRole());
+            ld.insertLoginInfo(custom.getUname(), custom.getPassword(), custom.getRole());
             CustomDAO cd = new CustomDAO();
             cd.setConn(ld.getConn());
             cd.insertCustomInfo(custom);
@@ -168,6 +169,32 @@ public class CustomBiz {
         } finally {
             cd.closeConnection();
         }
+    }
+
+    /**
+     *
+     * @param autocard
+     * @param ldate
+     * @return
+     * @throws Exception
+     */
+    public boolean checkAuto(String autocard,List<String> ldate) throws Exception{
+        CustomDAO cd = new CustomDAO();
+        boolean temp = false;
+        try{
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            for (int i = 0; i < ldate.size(); i++) {
+                if(cd.checkAuto(autocard, sdf.parse(ldate.get(i)))){
+                    temp = true;
+                    break;
+                }
+            }
+        }catch (Exception e){
+            Log.logger.error(e);
+        }finally {
+            cd.closeConnection();
+        }
+        return temp;
     }
 
     /**

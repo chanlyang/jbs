@@ -42,7 +42,7 @@ public class RegistServlet extends HttpServlet {
             request.getRequestDispatcher("regist.jsp").forward(request,response);
         }
         Custom custom = new Custom();
-        custom.setCno(uname);
+        custom.setUname(uname);
         custom.setBirthday(birthday);
         custom.setCidcard(cid);
         custom.setCname(name);

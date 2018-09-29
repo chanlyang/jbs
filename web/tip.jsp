@@ -23,11 +23,10 @@
 <div class="my-page-box">
     <i class="layui-icon">&#xe60c;</i>
     <p class="msg">This is msg</p>
-    <p class="text">友情提示,页面崩了~~~</p>
-    <!--<div class="my-btn-box">
-        <a class="layui-btn layui-btn-small" href="javascript:;">返回首页</a>
-        <a class="layui-btn layui-btn-danger layui-btn-small " href="javascript:;">返回上页</a>
-    </div>-->
+    <p class="text">友情提示,${meg}</p>
+    <div class="my-btn-box">
+        <a class="layui-btn layui-btn-small" href="MainServlet">返回首页</a>
+    </div>
 </div>
 
 <script type="text/javascript" src="frame/layui/layui.js"></script>

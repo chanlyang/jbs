@@ -57,7 +57,7 @@
                                 <label class="layui-form-label">客户编号</label>
                                 <div class="layui-input-inline">
                                     <input type="text" name="cno" autocomplete="off" class="layui-input"
-                                           value="${custom.cno}" readonly>
+                                           value="${custom.uname}" readonly>
                                 </div>
                                 <label class="layui-form-label">客户姓名</label>
                                 <div class="layui-input-inline">
